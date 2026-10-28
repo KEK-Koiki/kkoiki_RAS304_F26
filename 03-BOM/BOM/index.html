@@ -7,9 +7,11 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
+        <meta name="description" content="Team 103 motor encoder subsystem — design, components, schematics and verification.">
       
       
-        <link rel="canonical" href="https://ras-embedded-systems.github.io/RAS304DataSheetTemplate/03-BOM/BOM/">
+      
+        <link rel="canonical" href="https://kek-koiki.github.io/kkoiki_RAS304_F26/03-BOM/BOM/">
       
       
         <link rel="prev" href="../../02-Component-Selection/Component-Selection/">
@@ -22,21 +24,21 @@
       
       
       <link rel="icon" href="../../static/logo304.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.8.0">
             
 
     
 
     
       
-        <title>Bill of Materials - RAS 304 Elijah Koiki Data Sheet</title>
+        <title>Bill of Materials - Elijah Koiki · RAS304</title>
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.ec1eaa64.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.57a0d79d.min.css">
       
         
-        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.fb2fffe2.min.css">
       
       
 
@@ -46,12 +48,6 @@
       
     
     
-      
-        
-        
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&amp;display=fallback">
-        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
       
     
     
@@ -83,7 +79,7 @@
     
     
     
-    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="indigo">
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="custom" data-md-color-accent="custom">
   
     
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
@@ -92,7 +88,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#overview" class="md-skip">
+        <a href="#bill-of-materials" class="md-skip">
           Skip to content
         </a>
       
@@ -108,9 +104,9 @@
 
 <header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="../.." title="RAS 304 Elijah Koiki Data Sheet" class="md-header__button md-logo" aria-label="RAS 304 Elijah Koiki Data Sheet" data-md-component="logo">
+    <a href="../.." title="Elijah Koiki · RAS304" class="md-header__button md-logo" aria-label="Elijah Koiki · RAS304" data-md-component="logo">
       
-  <img src="../../static/logo304.svg" alt="logo">
+  <img src="../../static/encoder-mark.svg" alt="logo">
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
@@ -121,7 +117,7 @@
       <div class="md-header__ellipsis">
         <div class="md-header__topic">
           <span class="md-ellipsis">
-            RAS 304 Elijah Koiki Data Sheet
+            Elijah Koiki · RAS304
           </span>
         </div>
         <div class="md-header__topic" data-md-component="header-topic">
@@ -181,13 +177,13 @@
     
     
       <div class="md-header__source">
-        <a href="https://github.com/ras-embedded-systems/RAS304DataSheetTemplate" title="Go to repository" class="md-source" data-md-component="source">
+        <a href="https://github.com/KEK-Koiki/kkoiki_RAS304_F26" title="Go to repository" class="md-source" data-md-component="source">
   <div class="md-source__icon md-icon">
     
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"></path></svg>
   </div>
   <div class="md-source__repository">
-    GitHub
+    KEK-Koiki / kkoiki_RAS304_F26
   </div>
 </a>
       </div>
@@ -212,7 +208,7 @@
   
     
   
-  Welcome
+  Overview
 
       </a>
     </li>
@@ -224,20 +220,17 @@
   
   
   
-    
-    
-      <li class="md-tabs__item">
-        <a href="../../01-Block-Diagram/Block-Diagram/" class="md-tabs__link">
-          
+    <li class="md-tabs__item">
+      <a href="../../01-Block-Diagram/Block-Diagram/" class="md-tabs__link">
+        
   
   
     
   
-  01 Block Diagram
+  Block Diagram
 
-        </a>
-      </li>
-    
+      </a>
+    </li>
   
 
       
@@ -246,20 +239,17 @@
   
   
   
-    
-    
-      <li class="md-tabs__item">
-        <a href="../../02-Component-Selection/Component-Selection/" class="md-tabs__link">
-          
+    <li class="md-tabs__item">
+      <a href="../../02-Component-Selection/Component-Selection/" class="md-tabs__link">
+        
   
   
     
   
-  02 Component Selection
+  Component Selection
 
-        </a>
-      </li>
-    
+      </a>
+    </li>
   
 
       
@@ -270,20 +260,17 @@
     
   
   
-    
-    
-      <li class="md-tabs__item md-tabs__item--active">
-        <a href="./" class="md-tabs__link">
-          
+    <li class="md-tabs__item md-tabs__item--active">
+      <a href="./" class="md-tabs__link">
+        
   
   
     
   
-  03 BOM
+  BOM
 
-        </a>
-      </li>
-    
+      </a>
+    </li>
   
 
       
@@ -292,20 +279,17 @@
   
   
   
-    
-    
-      <li class="md-tabs__item">
-        <a href="../../04-Schematic/schematic/" class="md-tabs__link">
-          
+    <li class="md-tabs__item">
+      <a href="../../04-Schematic/schematic/" class="md-tabs__link">
+        
   
   
     
   
-  04 Schematic
+  Schematic
 
-        </a>
-      </li>
-    
+      </a>
+    </li>
   
 
       
@@ -314,20 +298,17 @@
   
   
   
-    
-    
-      <li class="md-tabs__item">
-        <a href="../../05-Power-Budget/Power-Budget/" class="md-tabs__link">
-          
+    <li class="md-tabs__item">
+      <a href="../../05-Power-Budget/Power-Budget/" class="md-tabs__link">
+        
   
   
     
   
-  05 Power Budget
+  Power Budget
 
-        </a>
-      </li>
-    
+      </a>
+    </li>
   
 
       
@@ -336,20 +317,17 @@
   
   
   
-    
-    
-      <li class="md-tabs__item">
-        <a href="../../Appendix/" class="md-tabs__link">
-          
+    <li class="md-tabs__item">
+      <a href="../../Appendix/" class="md-tabs__link">
+        
   
   
     
   
-  Appendix
+  Review &amp; Resources
 
-        </a>
-      </li>
-    
+      </a>
+    </li>
   
 
       
@@ -381,22 +359,22 @@
 
 <nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../.." title="RAS 304 Elijah Koiki Data Sheet" class="md-nav__button md-logo" aria-label="RAS 304 Elijah Koiki Data Sheet" data-md-component="logo">
+    <a href="../.." title="Elijah Koiki · RAS304" class="md-nav__button md-logo" aria-label="Elijah Koiki · RAS304" data-md-component="logo">
       
-  <img src="../../static/logo304.svg" alt="logo">
+  <img src="../../static/encoder-mark.svg" alt="logo">
 
     </a>
-    RAS 304 Elijah Koiki Data Sheet
+    Elijah Koiki · RAS304
   </label>
   
     <div class="md-nav__source">
-      <a href="https://github.com/ras-embedded-systems/RAS304DataSheetTemplate" title="Go to repository" class="md-source" data-md-component="source">
+      <a href="https://github.com/KEK-Koiki/kkoiki_RAS304_F26" title="Go to repository" class="md-source" data-md-component="source">
   <div class="md-source__icon md-icon">
     
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"></path></svg>
   </div>
   <div class="md-source__repository">
-    GitHub
+    KEK-Koiki / kkoiki_RAS304_F26
   </div>
 </a>
     </div>
@@ -417,7 +395,7 @@
   <span class="md-ellipsis">
     
   
-    Welcome
+    Overview
   
 
     
@@ -436,37 +414,15 @@
   
   
   
-    
-    
-      
+    <li class="md-nav__item">
+      <a href="../../01-Block-Diagram/Block-Diagram/" class="md-nav__link">
         
-      
-    
-    
-    
-      
-      
-    
-    
-      
-        
-        
-      
-    
-    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
-      
-        
-  
-  
-  
-    <a href="../../01-Block-Diagram/Block-Diagram/" class="md-nav__link">
-      
   
   
   <span class="md-ellipsis">
     
   
-    01 Block Diagram
+    Block Diagram
   
 
     
@@ -474,13 +430,7 @@
   
   
 
-      
-        <span class="md-nav__icon md-icon"></span>
-      
-    </a>
-  
-
-      
+      </a>
     </li>
   
 
@@ -491,37 +441,15 @@
   
   
   
-    
-    
-      
+    <li class="md-nav__item">
+      <a href="../../02-Component-Selection/Component-Selection/" class="md-nav__link">
         
-      
-    
-    
-    
-      
-      
-    
-    
-      
-        
-        
-      
-    
-    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
-      
-        
-  
-  
-  
-    <a href="../../02-Component-Selection/Component-Selection/" class="md-nav__link">
-      
   
   
   <span class="md-ellipsis">
     
   
-    02 Component Selection
+    Component Selection
   
 
     
@@ -529,80 +457,13 @@
   
   
 
-      
-        <span class="md-nav__icon md-icon"></span>
-      
-    </a>
-  
-
-      
+      </a>
     </li>
   
 
     
       
       
-  
-  
-    
-  
-  
-  
-    
-    
-      
-        
-      
-    
-    
-    
-      
-        
-        
-      
-      
-    
-    
-      
-    
-    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
-      
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked="">
-        
-          
-          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
-            
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    03 BOM
-  
-
-    
-  </span>
-  
-  
-
-            <span class="md-nav__icon md-icon"></span>
-          </label>
-        
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
-          <label class="md-nav__title" for="__nav_4">
-            <span class="md-nav__icon md-icon"></span>
-            
-  
-    03 BOM
-  
-
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix="">
-            
-              
-                
   
   
     
@@ -614,6 +475,8 @@
       <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
       
       
+        
+      
       
         <label class="md-nav__link md-nav__link--active" for="__toc">
           
@@ -622,7 +485,7 @@
   <span class="md-ellipsis">
     
   
-    Bill of Materials
+    BOM
   
 
     
@@ -640,7 +503,7 @@
   <span class="md-ellipsis">
     
   
-    Bill of Materials
+    BOM
   
 
     
@@ -656,6 +519,8 @@
   
   
   
+    
+  
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
@@ -664,32 +529,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
       
         <li class="md-nav__item">
-  <a href="#overview" class="md-nav__link">
+  <a href="#procurement-and-assembly-notes" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Overview
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#bill-of-materials-example-as-table" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Bill of Materials Example (as Table)
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#bill-of-materials-example-as-image" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Bill of Materials Example (as Image)
+        Procurement and assembly notes
       
     </span>
   </a>
@@ -703,11 +546,30 @@
     </li>
   
 
-              
-            
-          </ul>
-        </nav>
+    
       
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../04-Schematic/schematic/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Schematic
+  
+
+    
+  </span>
+  
+  
+
+      </a>
     </li>
   
 
@@ -718,37 +580,15 @@
   
   
   
-    
-    
-      
+    <li class="md-nav__item">
+      <a href="../../05-Power-Budget/Power-Budget/" class="md-nav__link">
         
-      
-    
-    
-    
-      
-      
-    
-    
-      
-        
-        
-      
-    
-    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
-      
-        
-  
-  
-  
-    <a href="../../04-Schematic/schematic/" class="md-nav__link">
-      
   
   
   <span class="md-ellipsis">
     
   
-    04 Schematic
+    Power Budget
   
 
     
@@ -756,13 +596,7 @@
   
   
 
-      
-        <span class="md-nav__icon md-icon"></span>
-      
-    </a>
-  
-
-      
+      </a>
     </li>
   
 
@@ -773,37 +607,15 @@
   
   
   
-    
-    
-      
+    <li class="md-nav__item">
+      <a href="../../Appendix/" class="md-nav__link">
         
-      
-    
-    
-    
-      
-      
-    
-    
-      
-        
-        
-      
-    
-    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
-      
-        
-  
-  
-  
-    <a href="../../05-Power-Budget/Power-Budget/" class="md-nav__link">
-      
   
   
   <span class="md-ellipsis">
     
   
-    05 Power Budget
+    Review &amp; Resources
   
 
     
@@ -811,78 +623,7 @@
   
   
 
-      
-        <span class="md-nav__icon md-icon"></span>
-      
-    </a>
-  
-
-      
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
-    
-    
-      
-        
-          
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-    
-    
-    
-      
-      
-    
-    
-      
-        
-        
-      
-    
-    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
-      
-        
-  
-  
-  
-    <a href="../../Appendix/" class="md-nav__link">
-      
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Appendix
-  
-
-    
-  </span>
-  
-  
-
-      
-        <span class="md-nav__icon md-icon"></span>
-      
-    </a>
-  
-
-      
+      </a>
     </li>
   
 
@@ -904,6 +645,8 @@
   
   
   
+    
+  
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
@@ -912,32 +655,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
       
         <li class="md-nav__item">
-  <a href="#overview" class="md-nav__link">
+  <a href="#procurement-and-assembly-notes" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Overview
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#bill-of-materials-example-as-table" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Bill of Materials Example (as Table)
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#bill-of-materials-example-as-image" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Bill of Materials Example (as Image)
+        Procurement and assembly notes
       
     </span>
   </a>
@@ -955,61 +676,13 @@
           
             <div class="md-content" data-md-component="content">
               
-                
-
-
-
-  
-
-
-  <nav class="md-path" aria-label="Navigation">
-    <ol class="md-path__list">
-      
-        
-  
-  
-    <li class="md-path__item">
-      <a href="../.." class="md-path__link">
-        
-  <span class="md-ellipsis">
-    Welcome
-  </span>
-
-      </a>
-    </li>
-  
-
-      
-      
-        
-  
-  
-    
-    
-      <li class="md-path__item">
-        <a href="./" class="md-path__link">
-          
-  <span class="md-ellipsis">
-    03 BOM
-  </span>
-
-        </a>
-      </li>
-    
-  
-
-      
-    </ol>
-  </nav>
-
-              
               <article class="md-content__inner md-typeset">
                 
                   
 
 
   
-    <a href="https://github.com/ras-embedded-systems/RAS304DataSheetTemplate/edit/main/docs/03-BOM/BOM.md" title="Edit this page" class="md-content__button md-icon" rel="edit">
+    <a href="https://github.com/KEK-Koiki/kkoiki_RAS304_F26/edit/main/docs/03-BOM/BOM.md" title="Edit this page" class="md-content__button md-icon" rel="edit">
       
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4zm10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1z"></path></svg>
     </a>
@@ -1017,59 +690,241 @@
   
 
 
-  <h1>Bill of Materials</h1>
-
-<h2 id="overview">Overview</h2>
-<p>written context</p>
-<h2 id="bill-of-materials-example-as-table">Bill of Materials Example (as Table)</h2>
-<p><em>Table ##: An example of one approach to adding your BOM table to this section.</em></p>
+<h1 id="bill-of-materials">Bill of Materials<a class="headerlink" href="#bill-of-materials" title="Permanent link">¶</a></h1>
+<p>This design BOM is extracted from the <strong>Revision B exported KiCad netlist</strong>. Q1–Q4 are added explicitly because the off-board optical sensors are intentionally excluded from the PCB netlist. IC units count as one physical package each.</p>
+<p><a class="download" href="../encoder-revb-bom.csv">Download BOM CSV</a> <a class="download" href="../../04-Schematic/Team103_Encoder_EK_Project.zip">Download KiCad project</a></p>
 <table>
 <thead>
 <tr>
-<th style="text-align: left;"><strong>Part Name/Description</strong></th>
-<th style="text-align: left;"><strong>Qty</strong></th>
-<th style="text-align: left;"><strong>Unit Cost</strong></th>
-<th style="text-align: left;"><strong>Total Cost</strong></th>
-<th style="text-align: left;"><strong>Manufacture</strong></th>
-<th style="text-align: left;"><strong>Manufacturer #</strong></th>
-<th style="text-align: left;"><strong>Vendor Link</strong></th>
-<th style="text-align: left;"><strong>Datasheet Link</strong></th>
-<th style="text-align: left;"><strong>Schematic Reference Designators</strong></th>
+<th>References</th>
+<th style="text-align: right;">Quantity</th>
+<th>Description / value</th>
+<th>Procurement status</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td style="text-align: left;">8-bit SIPO/SISO Shift Register, SOIC-16 package</td>
-<td style="text-align: left;">1</td>
-<td style="text-align: left;">$0.49</td>
-<td style="text-align: left;">$ 0.49</td>
-<td style="text-align: left;">NXP</td>
-<td style="text-align: left;">74HC595D,112</td>
-<td style="text-align: left;"><a href="https://www.digikey.com/en/products/detail/nexperia-usa-inc/74HC595D-112/763550">DigiKey</a></td>
-<td style="text-align: left;"><a href="https://assets.nexperia.com/documents/data-sheet/74HC_HCT595.pdf">datasheet link</a></td>
-<td style="text-align: left;">U1</td>
+<td>A1</td>
+<td style="text-align: right;">1</td>
+<td>EK PIC18F57Q43 CURIOSITY NANO</td>
+<td>Package / sourcing pending</td>
 </tr>
 <tr>
-<td style="text-align: left;">0.1 µF Ceramic Capacitor, +/-10%, X7R, 50V, 0805 package</td>
-<td style="text-align: left;">10</td>
-<td style="text-align: left;">0.2750</td>
-<td style="text-align: left;">$2.75</td>
-<td style="text-align: left;">KEMET</td>
-<td style="text-align: left;">C0805F104K5RACTU</td>
-<td style="text-align: left;">PRLTA 109</td>
-<td style="text-align: left;">n/a</td>
-<td style="text-align: left;">C2, C4, C6, C7, C8, C9, C10, C11, C12, C16</td>
+<td>C1</td>
+<td style="text-align: right;">1</td>
+<td>0.33uF 25V</td>
+<td>Package / sourcing pending</td>
+</tr>
+<tr>
+<td>C2, C8, C9, C10</td>
+<td style="text-align: right;">4</td>
+<td>0.1uF 25V</td>
+<td>Package / sourcing pending</td>
+</tr>
+<tr>
+<td>C3</td>
+<td style="text-align: right;">1</td>
+<td>10uF 25V</td>
+<td>Package / sourcing pending</td>
+</tr>
+<tr>
+<td>C4, C5, C6, C7</td>
+<td style="text-align: right;">4</td>
+<td>1nF 25V</td>
+<td>Package / sourcing pending</td>
+</tr>
+<tr>
+<td>C11</td>
+<td style="text-align: right;">1</td>
+<td>100nF 25V</td>
+<td>Package / sourcing pending</td>
+</tr>
+<tr>
+<td>D1</td>
+<td style="text-align: right;">1</td>
+<td>GREEN / POWER</td>
+<td>Package / sourcing pending</td>
+</tr>
+<tr>
+<td>D2</td>
+<td style="text-align: right;">1</td>
+<td>YELLOW / DEBUG</td>
+<td>Package / sourcing pending</td>
+</tr>
+<tr>
+<td>F1</td>
+<td style="text-align: right;">1</td>
+<td>500 mA FAST / REMOVABLE</td>
+<td>Package / sourcing pending</td>
+</tr>
+<tr>
+<td>J1</td>
+<td style="text-align: right;">1</td>
+<td>9-12 V DC / CENTER +</td>
+<td>Package / sourcing pending</td>
+</tr>
+<tr>
+<td>J2</td>
+<td style="text-align: right;">1</td>
+<td>E1A SENSOR CABLE</td>
+<td>Package / sourcing pending</td>
+</tr>
+<tr>
+<td>J3</td>
+<td style="text-align: right;">1</td>
+<td>E1B SENSOR CABLE</td>
+<td>Package / sourcing pending</td>
+</tr>
+<tr>
+<td>J4</td>
+<td style="text-align: right;">1</td>
+<td>E2A SENSOR CABLE</td>
+<td>Package / sourcing pending</td>
+</tr>
+<tr>
+<td>J5</td>
+<td style="text-align: right;">1</td>
+<td>E2B SENSOR CABLE</td>
+<td>Package / sourcing pending</td>
+</tr>
+<tr>
+<td>J6</td>
+<td style="text-align: right;">1</td>
+<td>2x4 RIBBON / TEAM BUS</td>
+<td>Package / sourcing pending</td>
+</tr>
+<tr>
+<td>J7</td>
+<td style="text-align: right;">1</td>
+<td>SPARE GPIO / POWER</td>
+<td>Package / sourcing pending</td>
+</tr>
+<tr>
+<td>JP1</td>
+<td style="text-align: right;">1</td>
+<td>TX ISOLATE</td>
+<td>Package / sourcing pending</td>
+</tr>
+<tr>
+<td>R1, R18</td>
+<td style="text-align: right;">2</td>
+<td>1k 0.25W</td>
+<td>Package / sourcing pending</td>
+</tr>
+<tr>
+<td>R2, R6, R10, R14</td>
+<td style="text-align: right;">4</td>
+<td>220 0.25W</td>
+<td>Package / sourcing pending</td>
+</tr>
+<tr>
+<td>R3, R7, R11, R15</td>
+<td style="text-align: right;">4</td>
+<td>4.7k 0.25W</td>
+<td>Package / sourcing pending</td>
+</tr>
+<tr>
+<td>R4, R8, R12, R16, R19</td>
+<td style="text-align: right;">5</td>
+<td>10k 0.25W</td>
+<td>Package / sourcing pending</td>
+</tr>
+<tr>
+<td>R5, R9, R13, R17</td>
+<td style="text-align: right;">4</td>
+<td>20k 0.25W</td>
+<td>Package / sourcing pending</td>
+</tr>
+<tr>
+<td>SW1</td>
+<td style="text-align: right;">1</td>
+<td>DEBUG / N.O.</td>
+<td>Package / sourcing pending</td>
+</tr>
+<tr>
+<td>TP1</td>
+<td style="text-align: right;">1</td>
+<td>VIN_FUSED</td>
+<td>Package / sourcing pending</td>
+</tr>
+<tr>
+<td>TP2</td>
+<td style="text-align: right;">1</td>
+<td>+5V</td>
+<td>Package / sourcing pending</td>
+</tr>
+<tr>
+<td>TP3</td>
+<td style="text-align: right;">1</td>
+<td>GND</td>
+<td>Package / sourcing pending</td>
+</tr>
+<tr>
+<td>TP4</td>
+<td style="text-align: right;">1</td>
+<td>E1A_RAW</td>
+<td>Package / sourcing pending</td>
+</tr>
+<tr>
+<td>TP5</td>
+<td style="text-align: right;">1</td>
+<td>E1B_RAW</td>
+<td>Package / sourcing pending</td>
+</tr>
+<tr>
+<td>TP6</td>
+<td style="text-align: right;">1</td>
+<td>E2A_RAW</td>
+<td>Package / sourcing pending</td>
+</tr>
+<tr>
+<td>TP7</td>
+<td style="text-align: right;">1</td>
+<td>E2B_RAW</td>
+<td>Package / sourcing pending</td>
+</tr>
+<tr>
+<td>TP8</td>
+<td style="text-align: right;">1</td>
+<td>ENC_TX</td>
+<td>Package / sourcing pending</td>
+</tr>
+<tr>
+<td>TP9</td>
+<td style="text-align: right;">1</td>
+<td>ENC_RX</td>
+<td>Package / sourcing pending</td>
+</tr>
+<tr>
+<td>U1</td>
+<td style="text-align: right;">1</td>
+<td>L7805ACV</td>
+<td>Package / sourcing pending</td>
+</tr>
+<tr>
+<td>U2</td>
+<td style="text-align: right;">1</td>
+<td>MCP6004</td>
+<td>DIP-14 assigned; verify exact orderable suffix</td>
+</tr>
+<tr>
+<td>U3</td>
+<td style="text-align: right;">1</td>
+<td>SN74HC14N</td>
+<td>DIP-14 assigned; verify exact orderable suffix</td>
+</tr>
+<tr>
+<td>Q1–Q4</td>
+<td style="text-align: right;">4</td>
+<td>Vishay TCST2103 (off-board)</td>
+<td>Physical lead mapping and mounting pending</td>
 </tr>
 </tbody>
 </table>
-<p>Note: Setting it up as a table is nice because it is completely viewable without scaling issues. <ins>Downside</ins> is that you have to do the math.</p>
-<ul>
-<li>You could also import your BOM via a screenshot of the spreadsheet created BOM</li>
-</ul>
-<h2 id="bill-of-materials-example-as-image">Bill of Materials Example (as Image)</h2>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../BOM-Screenshot.png" data-desc-position="bottom"><img _2000_="&quot;2000&quot;" alt="" src="../BOM-Screenshot.png" style="style" width:="width:"></a>
-<strong>Figure 2:</strong> Example Bill of Materials as a screenshot.</p>
-<p>As you can see, the text can be difficult to read without opening the image.</p>
+<h2 id="procurement-and-assembly-notes">Procurement and assembly notes<a class="headerlink" href="#procurement-and-assembly-notes" title="Permanent link">¶</a></h2>
+<p>Prices and a procurement total are <strong>unavailable until the exact package and supplier choices are confirmed</strong>. The current schematic has several unassigned footprints; the Nano socket, jack, fuse holder, connectors and passive packages need a physical fit check. Use the <a href="../../02-Component-Selection/Component-Selection/">component selection references</a> to verify manufacturer specifications before ordering.</p>
+<p>The 500 mA removable fast fuse is the drawn value, not a completed protection study. Verify its time-current curve, holder rating and wire/trace protection against the actual load. Optical sensors, disks, mounting brackets, cables, an adapter, sockets and any heatsink must be included in the final purchasing list.</p>
+<p><strong>Consistency note:</strong> C11 is <strong>100 nF</strong> in the actual Revision B netlist. With R19 = 10 kΩ, its nominal RC time constant is <strong>1 ms</strong>. An older schematic note says 10 ms; review and correct that annotation or intentionally revise the component value before fabrication.</p>
 
 
 
@@ -1108,7 +963,7 @@
       <nav class="md-footer__inner md-grid" aria-label="Footer">
         
           
-          <a href="../../02-Component-Selection/Component-Selection/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Component Selection Example">
+          <a href="../../02-Component-Selection/Component-Selection/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Component Selection">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"></path></svg>
@@ -1118,7 +973,7 @@
                 Previous
               </span>
               <div class="md-ellipsis">
-                Component Selection Example
+                Component Selection
               </div>
             </div>
           </a>
@@ -1148,22 +1003,9 @@
       <div class="md-copyright">
   
     <div class="md-copyright__highlight">
-      Copyright © 2025 team-name-here
+      Copyright © 2026 Elijah Koiki · Team 103 · Arizona State University
     </div>
   
-  
-</div>
-      
-        
-<div class="md-social">
-  
-    
-    
-    
-    
-    <a href="/2025_fall" target="_blank" rel="noopener" title="2023 Site" class="md-social__link">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M64 48h112v88c0 39.8 32.2 72 72 72h88v240c0 8.8-7.2 16-16 16H64c-8.8 0-16-7.2-16-16V64c0-8.8 7.2-16 16-16m160 19.9 92.1 92.1H248c-13.3 0-24-10.7-24-24zM64 0C28.7 0 0 28.7 0 64v384c0 35.3 28.7 64 64 64h256c35.3 0 64-28.7 64-64V186.5c0-17-6.7-33.3-18.7-45.3L242.7 18.7C230.7 6.7 214.5 0 197.5 0zm106.2 295.6c8.6-10.1 7.5-25.2-2.6-33.8s-25.2-7.5-33.8 2.6l-48 56c-7.7 9-7.7 22.2 0 31.2l48 56c8.6 10.1 23.8 11.2 33.8 2.6s11.2-23.8 2.6-33.8L135.6 336zm80-31.2c-8.6-10.1-23.8-11.2-33.8-2.6s-11.2 23.8-2.6 33.8l34.6 40.4-34.6 40.4c-8.6 10.1-7.5 25.2 2.6 33.8s25.2 7.5 33.8-2.6l48-56c7.7-9 7.7-22.2 0-31.2z"></path></svg>
-    </a>
   
 </div>
       
@@ -1180,14 +1022,10 @@
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.tabs", "navigation.tabs.sticky", "toc.follow", "navigation.top", "navigation.path", "navigation.indexes", "navigation.prune", "content.action.edit", "navigation.footer"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.tabs", "navigation.tabs.sticky", "navigation.top", "navigation.footer", "content.action.edit", "search.highlight"], "search": "../../assets/javascripts/workers/search.a7633da7.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="../../assets/javascripts/bundle.d7400e89.min.js"></script>
-      
-        <script src="../../javascripts/mathjax.js"></script>
-      
-        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      <script src="../../assets/javascripts/bundle.c21346df.min.js"></script>
       
     
   

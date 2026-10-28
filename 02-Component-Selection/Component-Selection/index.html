@@ -7,9 +7,11 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
+        <meta name="description" content="Team 103 motor encoder subsystem — design, components, schematics and verification.">
       
       
-        <link rel="canonical" href="https://ras-embedded-systems.github.io/RAS304DataSheetTemplate/02-Component-Selection/Component-Selection/">
+      
+        <link rel="canonical" href="https://kek-koiki.github.io/kkoiki_RAS304_F26/02-Component-Selection/Component-Selection/">
       
       
         <link rel="prev" href="../../01-Block-Diagram/Block-Diagram/">
@@ -22,21 +24,21 @@
       
       
       <link rel="icon" href="../../static/logo304.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.8.0">
             
 
     
 
     
       
-        <title>Component Selection Example - RAS 304 Elijah Koiki Data Sheet</title>
+        <title>Component Selection - Elijah Koiki · RAS304</title>
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.ec1eaa64.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.57a0d79d.min.css">
       
         
-        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.fb2fffe2.min.css">
       
       
 
@@ -46,12 +48,6 @@
       
     
     
-      
-        
-        
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&amp;display=fallback">
-        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
       
     
     
@@ -83,7 +79,7 @@
     
     
     
-    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="indigo">
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="custom" data-md-color-accent="custom">
   
     
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
@@ -92,7 +88,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#examples" class="md-skip">
+        <a href="#component-selection" class="md-skip">
           Skip to content
         </a>
       
@@ -108,9 +104,9 @@
 
 <header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="../.." title="RAS 304 Elijah Koiki Data Sheet" class="md-header__button md-logo" aria-label="RAS 304 Elijah Koiki Data Sheet" data-md-component="logo">
+    <a href="../.." title="Elijah Koiki · RAS304" class="md-header__button md-logo" aria-label="Elijah Koiki · RAS304" data-md-component="logo">
       
-  <img src="../../static/logo304.svg" alt="logo">
+  <img src="../../static/encoder-mark.svg" alt="logo">
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
@@ -121,13 +117,13 @@
       <div class="md-header__ellipsis">
         <div class="md-header__topic">
           <span class="md-ellipsis">
-            RAS 304 Elijah Koiki Data Sheet
+            Elijah Koiki · RAS304
           </span>
         </div>
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Component Selection Example
+              Component Selection
             
           </span>
         </div>
@@ -181,13 +177,13 @@
     
     
       <div class="md-header__source">
-        <a href="https://github.com/ras-embedded-systems/RAS304DataSheetTemplate" title="Go to repository" class="md-source" data-md-component="source">
+        <a href="https://github.com/KEK-Koiki/kkoiki_RAS304_F26" title="Go to repository" class="md-source" data-md-component="source">
   <div class="md-source__icon md-icon">
     
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"></path></svg>
   </div>
   <div class="md-source__repository">
-    GitHub
+    KEK-Koiki / kkoiki_RAS304_F26
   </div>
 </a>
       </div>
@@ -212,7 +208,7 @@
   
     
   
-  Welcome
+  Overview
 
       </a>
     </li>
@@ -224,20 +220,17 @@
   
   
   
-    
-    
-      <li class="md-tabs__item">
-        <a href="../../01-Block-Diagram/Block-Diagram/" class="md-tabs__link">
-          
+    <li class="md-tabs__item">
+      <a href="../../01-Block-Diagram/Block-Diagram/" class="md-tabs__link">
+        
   
   
     
   
-  01 Block Diagram
+  Block Diagram
 
-        </a>
-      </li>
-    
+      </a>
+    </li>
   
 
       
@@ -248,20 +241,17 @@
     
   
   
-    
-    
-      <li class="md-tabs__item md-tabs__item--active">
-        <a href="./" class="md-tabs__link">
-          
+    <li class="md-tabs__item md-tabs__item--active">
+      <a href="./" class="md-tabs__link">
+        
   
   
     
   
-  02 Component Selection
+  Component Selection
 
-        </a>
-      </li>
-    
+      </a>
+    </li>
   
 
       
@@ -270,20 +260,17 @@
   
   
   
-    
-    
-      <li class="md-tabs__item">
-        <a href="../../03-BOM/BOM/" class="md-tabs__link">
-          
+    <li class="md-tabs__item">
+      <a href="../../03-BOM/BOM/" class="md-tabs__link">
+        
   
   
     
   
-  03 BOM
+  BOM
 
-        </a>
-      </li>
-    
+      </a>
+    </li>
   
 
       
@@ -292,20 +279,17 @@
   
   
   
-    
-    
-      <li class="md-tabs__item">
-        <a href="../../04-Schematic/schematic/" class="md-tabs__link">
-          
+    <li class="md-tabs__item">
+      <a href="../../04-Schematic/schematic/" class="md-tabs__link">
+        
   
   
     
   
-  04 Schematic
+  Schematic
 
-        </a>
-      </li>
-    
+      </a>
+    </li>
   
 
       
@@ -314,20 +298,17 @@
   
   
   
-    
-    
-      <li class="md-tabs__item">
-        <a href="../../05-Power-Budget/Power-Budget/" class="md-tabs__link">
-          
+    <li class="md-tabs__item">
+      <a href="../../05-Power-Budget/Power-Budget/" class="md-tabs__link">
+        
   
   
     
   
-  05 Power Budget
+  Power Budget
 
-        </a>
-      </li>
-    
+      </a>
+    </li>
   
 
       
@@ -336,20 +317,17 @@
   
   
   
-    
-    
-      <li class="md-tabs__item">
-        <a href="../../Appendix/" class="md-tabs__link">
-          
+    <li class="md-tabs__item">
+      <a href="../../Appendix/" class="md-tabs__link">
+        
   
   
     
   
-  Appendix
+  Review &amp; Resources
 
-        </a>
-      </li>
-    
+      </a>
+    </li>
   
 
       
@@ -381,22 +359,22 @@
 
 <nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../.." title="RAS 304 Elijah Koiki Data Sheet" class="md-nav__button md-logo" aria-label="RAS 304 Elijah Koiki Data Sheet" data-md-component="logo">
+    <a href="../.." title="Elijah Koiki · RAS304" class="md-nav__button md-logo" aria-label="Elijah Koiki · RAS304" data-md-component="logo">
       
-  <img src="../../static/logo304.svg" alt="logo">
+  <img src="../../static/encoder-mark.svg" alt="logo">
 
     </a>
-    RAS 304 Elijah Koiki Data Sheet
+    Elijah Koiki · RAS304
   </label>
   
     <div class="md-nav__source">
-      <a href="https://github.com/ras-embedded-systems/RAS304DataSheetTemplate" title="Go to repository" class="md-source" data-md-component="source">
+      <a href="https://github.com/KEK-Koiki/kkoiki_RAS304_F26" title="Go to repository" class="md-source" data-md-component="source">
   <div class="md-source__icon md-icon">
     
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"></path></svg>
   </div>
   <div class="md-source__repository">
-    GitHub
+    KEK-Koiki / kkoiki_RAS304_F26
   </div>
 </a>
     </div>
@@ -417,7 +395,7 @@
   <span class="md-ellipsis">
     
   
-    Welcome
+    Overview
   
 
     
@@ -436,37 +414,15 @@
   
   
   
-    
-    
-      
+    <li class="md-nav__item">
+      <a href="../../01-Block-Diagram/Block-Diagram/" class="md-nav__link">
         
-      
-    
-    
-    
-      
-      
-    
-    
-      
-        
-        
-      
-    
-    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
-      
-        
-  
-  
-  
-    <a href="../../01-Block-Diagram/Block-Diagram/" class="md-nav__link">
-      
   
   
   <span class="md-ellipsis">
     
   
-    01 Block Diagram
+    Block Diagram
   
 
     
@@ -474,13 +430,7 @@
   
   
 
-      
-        <span class="md-nav__icon md-icon"></span>
-      
-    </a>
-  
-
-      
+      </a>
     </li>
   
 
@@ -493,71 +443,12 @@
   
   
   
-    
-    
-      
-        
-      
-    
-    
-    
-      
-        
-        
-      
-      
-    
-    
-      
-    
-    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
-      
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked="">
-        
-          
-          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
-            
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    02 Component Selection
-  
-
-    
-  </span>
-  
-  
-
-            <span class="md-nav__icon md-icon"></span>
-          </label>
-        
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
-          <label class="md-nav__title" for="__nav_3">
-            <span class="md-nav__icon md-icon"></span>
-            
-  
-    02 Component Selection
-  
-
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix="">
-            
-              
-                
-  
-  
-    
-  
-  
-  
     <li class="md-nav__item md-nav__item--active">
       
       <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
       
+      
+        
       
       
         <label class="md-nav__link md-nav__link--active" for="__toc">
@@ -567,7 +458,7 @@
   <span class="md-ellipsis">
     
   
-    Component Selection Example
+    Component Selection
   
 
     
@@ -585,7 +476,7 @@
   <span class="md-ellipsis">
     
   
-    Component Selection Example
+    Component Selection
   
 
     
@@ -601,6 +492,8 @@
   
   
   
+    
+  
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
@@ -609,41 +502,68 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
       
         <li class="md-nav__item">
-  <a href="#examples" class="md-nav__link">
+  <a href="#optical-sensing-individual-subsystem" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Examples
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Examples">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#style-1" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Style 1
+        Optical sensing — individual subsystem
       
     </span>
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#style-2" class="md-nav__link">
+      
+        <li class="md-nav__item">
+  <a href="#analog-amplification-individual-subsystem" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Style 2
+        Analog amplification — individual subsystem
       
     </span>
   </a>
   
 </li>
-        
-      </ul>
-    </nav>
+      
+        <li class="md-nav__item">
+  <a href="#digital-edge-conditioning-individual-subsystem" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Digital edge conditioning — individual subsystem
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#regulation-and-power-source" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Regulation and power source
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pic-pins-and-mcc-configuration-plan" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        PIC pins and MCC configuration plan
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#what-remains-to-finalize" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        What remains to finalize
+      
+    </span>
+  </a>
   
 </li>
       
@@ -654,11 +574,30 @@
     </li>
   
 
-              
-            
-          </ul>
-        </nav>
+    
       
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../03-BOM/BOM/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    BOM
+  
+
+    
+  </span>
+  
+  
+
+      </a>
     </li>
   
 
@@ -669,37 +608,15 @@
   
   
   
-    
-    
-      
+    <li class="md-nav__item">
+      <a href="../../04-Schematic/schematic/" class="md-nav__link">
         
-      
-    
-    
-    
-      
-      
-    
-    
-      
-        
-        
-      
-    
-    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
-      
-        
-  
-  
-  
-    <a href="../../03-BOM/BOM/" class="md-nav__link">
-      
   
   
   <span class="md-ellipsis">
     
   
-    03 BOM
+    Schematic
   
 
     
@@ -707,13 +624,7 @@
   
   
 
-      
-        <span class="md-nav__icon md-icon"></span>
-      
-    </a>
-  
-
-      
+      </a>
     </li>
   
 
@@ -724,37 +635,15 @@
   
   
   
-    
-    
-      
+    <li class="md-nav__item">
+      <a href="../../05-Power-Budget/Power-Budget/" class="md-nav__link">
         
-      
-    
-    
-    
-      
-      
-    
-    
-      
-        
-        
-      
-    
-    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
-      
-        
-  
-  
-  
-    <a href="../../04-Schematic/schematic/" class="md-nav__link">
-      
   
   
   <span class="md-ellipsis">
     
   
-    04 Schematic
+    Power Budget
   
 
     
@@ -762,13 +651,7 @@
   
   
 
-      
-        <span class="md-nav__icon md-icon"></span>
-      
-    </a>
-  
-
-      
+      </a>
     </li>
   
 
@@ -779,37 +662,15 @@
   
   
   
-    
-    
-      
+    <li class="md-nav__item">
+      <a href="../../Appendix/" class="md-nav__link">
         
-      
-    
-    
-    
-      
-      
-    
-    
-      
-        
-        
-      
-    
-    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
-      
-        
-  
-  
-  
-    <a href="../../05-Power-Budget/Power-Budget/" class="md-nav__link">
-      
   
   
   <span class="md-ellipsis">
     
   
-    05 Power Budget
+    Review &amp; Resources
   
 
     
@@ -817,78 +678,7 @@
   
   
 
-      
-        <span class="md-nav__icon md-icon"></span>
-      
-    </a>
-  
-
-      
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
-    
-    
-      
-        
-          
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-    
-    
-    
-      
-      
-    
-    
-      
-        
-        
-      
-    
-    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
-      
-        
-  
-  
-  
-    <a href="../../Appendix/" class="md-nav__link">
-      
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Appendix
-  
-
-    
-  </span>
-  
-  
-
-      
-        <span class="md-nav__icon md-icon"></span>
-      
-    </a>
-  
-
-      
+      </a>
     </li>
   
 
@@ -910,6 +700,8 @@
   
   
   
+    
+  
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
@@ -918,41 +710,68 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
       
         <li class="md-nav__item">
-  <a href="#examples" class="md-nav__link">
+  <a href="#optical-sensing-individual-subsystem" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Examples
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Examples">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#style-1" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Style 1
+        Optical sensing — individual subsystem
       
     </span>
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#style-2" class="md-nav__link">
+      
+        <li class="md-nav__item">
+  <a href="#analog-amplification-individual-subsystem" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Style 2
+        Analog amplification — individual subsystem
       
     </span>
   </a>
   
 </li>
-        
-      </ul>
-    </nav>
+      
+        <li class="md-nav__item">
+  <a href="#digital-edge-conditioning-individual-subsystem" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Digital edge conditioning — individual subsystem
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#regulation-and-power-source" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Regulation and power source
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pic-pins-and-mcc-configuration-plan" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        PIC pins and MCC configuration plan
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#what-remains-to-finalize" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        What remains to finalize
+      
+    </span>
+  </a>
   
 </li>
       
@@ -967,61 +786,13 @@
           
             <div class="md-content" data-md-component="content">
               
-                
-
-
-
-  
-
-
-  <nav class="md-path" aria-label="Navigation">
-    <ol class="md-path__list">
-      
-        
-  
-  
-    <li class="md-path__item">
-      <a href="../.." class="md-path__link">
-        
-  <span class="md-ellipsis">
-    Welcome
-  </span>
-
-      </a>
-    </li>
-  
-
-      
-      
-        
-  
-  
-    
-    
-      <li class="md-path__item">
-        <a href="./" class="md-path__link">
-          
-  <span class="md-ellipsis">
-    02 Component Selection
-  </span>
-
-        </a>
-      </li>
-    
-  
-
-      
-    </ol>
-  </nav>
-
-              
               <article class="md-content__inner md-typeset">
                 
                   
 
 
   
-    <a href="https://github.com/ras-embedded-systems/RAS304DataSheetTemplate/edit/main/docs/02-Component-Selection/Component-Selection.md" title="Edit this page" class="md-content__button md-icon" rel="edit">
+    <a href="https://github.com/KEK-Koiki/kkoiki_RAS304_F26/edit/main/docs/02-Component-Selection/Component-Selection.md" title="Edit this page" class="md-content__button md-icon" rel="edit">
       
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4zm10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1z"></path></svg>
     </a>
@@ -1029,107 +800,211 @@
   
 
 
-  <h1>Component Selection Example</h1>
-
-<h2 id="examples">Examples</h2>
-<h3 id="style-1">Style 1</h3>
-<blockquote>
-<p>This is the example found in the assignment, uses more html</p>
-</blockquote>
-<p><em>Table 1: Example component selection</em></p>
-<p><strong>External Clock Module</strong></p>
+<h1 id="component-selection">Component Selection<a class="headerlink" href="#component-selection" title="Permanent link">¶</a></h1>
+<p>The current choices follow the revised <strong>two-motor optical encoder subsystem</strong>. These comparison tables explain engineering tradeoffs; choices already drawn in Revision B are distinguished from alternatives and decisions awaiting physical measurements.</p>
+<div class="admonition note">
+<p class="admonition-title">Selection status</p>
+<p>Current manufacturer pages are linked for verification. Exact orderable packages, supplier quotations and component photographs for every commercial alternative still need a procurement pass; no unverified prices are presented as quotations. Motor and ribbon decisions are deferred until the team confirms them.</p>
+</div>
+<h2 id="optical-sensing-individual-subsystem">Optical sensing — individual subsystem<a class="headerlink" href="#optical-sensing-individual-subsystem" title="Permanent link">¶</a></h2>
 <table>
 <thead>
 <tr>
-<th><strong>Solution</strong></th>
-<th><strong>Pros</strong></th>
-<th><strong>Cons</strong></th>
+<th>Candidate</th>
+<th>Advantages for this project</th>
+<th>Limitations</th>
+<th>Decision</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../image1.png" data-desc-position="bottom"><img alt="" src="../image1.png"></a><br>Option 1.<br> XC1259TR-ND surface mount crystal<br>$1/each<br><a href="http://www.digikey.com/product-detail/en/ECS-40.3-S-5PX-TR/XC1259TR-ND/827366">link to product</a></td>
-<td>* Inexpensive[^1]<br>* Compatible with PSoC<br>* Meets surface mount constraint of project</td>
-<td>* Requires external components and support circuitry for interface<br>* Needs special PCB layout.</td>
+<td><strong><a href="https://www.vishay.com/en/product/81147/">Vishay TCST2103</a></strong></td>
+<td>Bare transmissive LED/phototransistor; analog collector node accessible to the custom front end</td>
+<td>Needs a slotted disk, two sensors per shaft and rigid alignment</td>
+<td><strong>Current selection: four sensors</strong></td>
 </tr>
 <tr>
-<td><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../image3.png" data-desc-position="bottom"><img alt="" src="../image3.png"></a><br>* Option 2. <br>* CTX936TR-ND surface mount oscillator <br>* $1/each <br>* <a href="http://www.digikey.com/product-detail/en/636L3I001M84320/CTX936TR-ND/2292940">Link to product</a></td>
-<td>* Outputs a square wave <br>* Stable over operating temperature <br> * Direct interface with PSoC (no external circuitry required) range</td>
-<td>* More expensive <br>* Slow shipping speed</td>
+<td><a href="https://www.vishay.com/en/product/83764/">Vishay TCST1103 family</a></td>
+<td>Another bare transmissive option with a documented mechanical package</td>
+<td>Mechanical fit and optical response require comparison with the actual disk</td>
+<td>Alternative if mounting favors this package</td>
+</tr>
+<tr>
+<td>Custom reflective optical arrangement</td>
+<td>Could read a patterned surface without placing a disk inside a fork</td>
+<td>Depends on reflectance, ambient light and sensor standoff; needs new optical characterization</td>
+<td>Architecture alternative; specific part unselected</td>
 </tr>
 </tbody>
 </table>
-<p><strong>Choice:</strong> Option 2: CTX936TR-ND surface mount oscillator</p>
-<p><strong>Rationale:</strong> A clock oscillator is easier to work with because it requires no external circuitry in order to interface with the PSoC. This is particularly important because we are not sure of the electrical characteristics of the PCB, which could affect the oscillation of a crystal. While the shipping speed is slow, according to the website if we order this week it will arrive within 3 weeks.</p>
-<h3 id="style-2">Style 2</h3>
-<blockquote>
-<p>Also acceptable, more markdown friendly</p>
-</blockquote>
-<p><strong>External Clock Module</strong></p>
-<ol>
-<li>
-<p>XC1259TR-ND surface mount crystal</p>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../image1.png" data-desc-position="bottom"><img alt="" src="../image1.png"></a></p>
-<ul>
-<li>$1/each</li>
-<li><a href="http://www.digikey.com/product-detail/en/ECS-40.3-S-5PX-TR/XC1259TR-ND/827366">link to product</a></li>
-</ul>
+<p>The TCST2103 keeps the design based on ordinary motors and gives each shaft an A/B pair. The sensor choice is conditional on disk and bracket fit. A built-in encoder motor would simplify mounting but would change the project's selected approach and needs team approval.</p>
+<h2 id="analog-amplification-individual-subsystem">Analog amplification — individual subsystem<a class="headerlink" href="#analog-amplification-individual-subsystem" title="Permanent link">¶</a></h2>
 <table>
 <thead>
 <tr>
-<th>Pros</th>
-<th>Cons</th>
+<th>Candidate</th>
+<th>Advantages</th>
+<th>Limitations</th>
+<th>Decision</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>Inexpensive</td>
-<td>Requires external components and support circuitry for interface</td>
+<td><strong><a href="https://www.microchip.com/en-us/product/MCP6004">MCP6004</a></strong></td>
+<td>Four amplifier channels in one IC; rail-to-rail input/output family; 1 MHz class</td>
+<td>Current gain drives high inputs into saturation; recovery must be tested</td>
+<td><strong>Current selection: U2, nominal gain 1.5</strong></td>
 </tr>
 <tr>
-<td>Compatible with PSoC</td>
-<td>Needs special PCB layout.</td>
+<td><a href="https://www.microchip.com/en-us/product/mcp6024">MCP6024</a></td>
+<td>Quad rail-to-rail family with 10 MHz bandwidth</td>
+<td>More bandwidth may increase sensitivity to noise; power/package review needed</td>
+<td>Alternative if measured edge response requires it</td>
 </tr>
 <tr>
-<td>Meets surface mount constraint of project</td>
-<td></td>
+<td>Two dual amplifiers</td>
+<td>Splits channels across two packages for placement flexibility</td>
+<td>Larger BOM and layout; exact device and supply compatibility unselected</td>
+<td>Architecture alternative</td>
 </tr>
 </tbody>
 </table>
-</li>
-<li>
-<p>CTX936TR-ND surface mount oscillator</p>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../image3.png" data-desc-position="bottom"><img alt="" src="../image3.png"></a></p>
-<ul>
-<li>$1/each</li>
-<li><a href="http://www.digikey.com/product-detail/en/636L3I001M84320/CTX936TR-ND/2292940">Link to product</a></li>
-</ul>
+<p>Each channel uses a 10 kΩ feedback resistor and 20 kΩ resistor to ground: <code>1 + 10k/20k = 1.5</code>. The 4.7 kΩ / 1 nF network has a nominal pole near <strong>33.9 kHz</strong> and a time constant of <strong>4.7 µs</strong>. Phototransistor impedance changes the actual response. Optical contrast, amplifier rail behavior and pulse timing require measurement before these values can be accepted.</p>
+<h2 id="digital-edge-conditioning-individual-subsystem">Digital edge conditioning — individual subsystem<a class="headerlink" href="#digital-edge-conditioning-individual-subsystem" title="Permanent link">¶</a></h2>
 <table>
 <thead>
 <tr>
-<th>Pros</th>
-<th>Cons</th>
+<th>Candidate</th>
+<th>Advantages</th>
+<th>Limitations</th>
+<th>Decision</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>Outputs a square wave</td>
-<td>More expensive</td>
+<td><strong><a href="https://www.ti.com/product/SN74HC14">SN74HC14</a></strong></td>
+<td>Six Schmitt inverter gates; four are sufficient for the encoder signals</td>
+<td>Thresholds and dynamic supply current must be checked at operating voltage and edge rate</td>
+<td><strong>Current selection: SN74HC14N / U3</strong></td>
 </tr>
 <tr>
-<td>Stable over operating temperature</td>
-<td>Slow shipping speed</td>
+<td><a href="https://www.ti.com/product/CD40106B">CD40106B</a></td>
+<td>Six Schmitt inverter gates; broad supply range</td>
+<td>Timing and thresholds differ; cannot substitute without checking the pulse rate</td>
+<td>Alternative</td>
 </tr>
 <tr>
-<td>Direct interface with PSoC (no external circuitry required) range</td>
-<td></td>
+<td>PIC input conditioning only</td>
+<td>Fewer external components</td>
+<td>Relies on PIC input behavior and software; removes the explicit external Schmitt stage</td>
+<td>Architecture alternative requiring redesign</td>
 </tr>
 </tbody>
 </table>
-</li>
-</ol>
-<p><strong>Choice:</strong> Option 2: CTX936TR-ND surface mount oscillator</p>
-<p><strong>Rationale:</strong> A clock oscillator is easier to work with because it requires no external circuitry in order to interface with the PSoC. This is particularly important because we are not sure of the electrical characteristics of the PCB, which could affect the oscillation of a crystal. While the shipping speed is slow, according to the website if we order this week it will arrive within 3 weeks.</p>
+<p>The four used HC14 gates provide consistent edge conditioning. Unused inputs are tied to a defined level in the schematic. Both channels of each quadrature pair are inverted, so firmware must establish the actual forward direction during calibration.</p>
+<h2 id="regulation-and-power-source">Regulation and power source<a class="headerlink" href="#regulation-and-power-source" title="Permanent link">¶</a></h2>
+<table>
+<thead>
+<tr>
+<th>Regulator option</th>
+<th>Advantages</th>
+<th>Limitations</th>
+<th>Decision</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong><a href="https://www.st.com/en/power-management/l78.html">ST L78 / L7805ACV</a></strong></td>
+<td>Simple local 5 V rail; familiar through-hole package; matches Revision B</td>
+<td>Linear dissipation rises with input voltage; heatsink and load must be verified</td>
+<td><strong>Current schematic selection</strong></td>
+</tr>
+<tr>
+<td><a href="https://www.st.com/en/power-management/l4940.html">ST L4940V5</a></td>
+<td>Lower dropout can help when input headroom is limited</td>
+<td>At the same input/output/current, linear heat remains similar; stability and pinout need review</td>
+<td>Alternative, not a drop-in approval</td>
+</tr>
+</tbody>
+</table>
+<p>The team PRD specifies an individual <strong>9 V wall adapter</strong>; Revision B labels its jack 9–12 V. A current-limited bench supply is suitable for development. A final adapter model, plug dimensions, current rating and procurement price have not been selected. A battery option adds runtime, charging and discharge considerations without a current project need. The <a href="../../05-Power-Budget/Power-Budget/">power budget</a> explains why 9 V is thermally preferable to 12 V for the same load.</p>
+<h2 id="pic-pins-and-mcc-configuration-plan">PIC pins and MCC configuration plan<a class="headerlink" href="#pic-pins-and-mcc-configuration-plan" title="Permanent link">¶</a></h2>
+<p>This is the configuration to implement and verify in MCC, derived from the schematic's Nano connector labels. <strong>No completed MCC project or screenshot is available in the reviewed files.</strong> Edge numbers below refer to the Nano board, not the MCU package pins.</p>
+<table>
+<thead>
+<tr>
+<th>Signal</th>
+<th>PIC pin</th>
+<th>Nano edge</th>
+<th>Planned configuration</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>E1A_DIG</td>
+<td>RB0</td>
+<td>46</td>
+<td>Digital input; interrupt-on-change candidate</td>
+</tr>
+<tr>
+<td>E1B_DIG</td>
+<td>RB1</td>
+<td>10</td>
+<td>Digital input; interrupt-on-change candidate</td>
+</tr>
+<tr>
+<td>E2A_DIG</td>
+<td>RB2</td>
+<td>9</td>
+<td>Digital input; interrupt-on-change candidate</td>
+</tr>
+<tr>
+<td>E2B_DIG</td>
+<td>RB3</td>
+<td>47</td>
+<td>Digital input; interrupt-on-change candidate</td>
+</tr>
+<tr>
+<td>MCU_TX → JP1 → ENC_TX</td>
+<td>RC6</td>
+<td>13</td>
+<td>UART TX via peripheral pin select; final UART instance and baud pending</td>
+</tr>
+<tr>
+<td>ENC_RX</td>
+<td>RC7</td>
+<td>19</td>
+<td>UART RX via peripheral pin select; team protocol pending</td>
+</tr>
+<tr>
+<td>DEBUG_LED</td>
+<td>RA3</td>
+<td>16</td>
+<td>Digital output; choose initial low state</td>
+</tr>
+<tr>
+<td>DEBUG_BTN</td>
+<td>RA4</td>
+<td>17</td>
+<td>Digital input; stable-state firmware debounce</td>
+</tr>
+<tr>
+<td>Spare GPIO</td>
+<td>RA0 / RA1</td>
+<td>43 / 44</td>
+<td>Reserved; do not assign conflicting peripherals</td>
+</tr>
+<tr>
+<td>External +5 V</td>
+<td>VTG</td>
+<td>51</td>
+<td>Verify Nano external-power procedure; VOFF edge 55 tied to ground</td>
+</tr>
+</tbody>
+</table>
+<p>Disable analog functions on digital signals, configure the selected clock and timing source, initialize quadrature state before enabling interrupts, and verify the worst-case interrupt rate. A periodic timer and an atomic count snapshot can support speed reporting. UART framing, signed count width, update period and fault handling remain firmware design decisions.</p>
+<h2 id="what-remains-to-finalize">What remains to finalize<a class="headerlink" href="#what-remains-to-finalize" title="Permanent link">¶</a></h2>
+<p>Confirm motor and disk geometry; complete commercial comparisons with exact prices and photos; finalize the power adapter and package/footprint choices; capture the actual MCC pin/peripheral configuration; and obtain teaching-team feedback on the amplifier/filter design. The <a href="../../03-BOM/BOM/">BOM</a> lists the components currently drawn.</p>
 
 
 
@@ -1168,7 +1043,7 @@
       <nav class="md-footer__inner md-grid" aria-label="Footer">
         
           
-          <a href="../../01-Block-Diagram/Block-Diagram/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Individal Block Diagram">
+          <a href="../../01-Block-Diagram/Block-Diagram/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Block Diagram">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"></path></svg>
@@ -1178,20 +1053,20 @@
                 Previous
               </span>
               <div class="md-ellipsis">
-                Individal Block Diagram
+                Block Diagram
               </div>
             </div>
           </a>
         
         
           
-          <a href="../../03-BOM/BOM/" class="md-footer__link md-footer__link--next" aria-label="Next: Bill of Materials">
+          <a href="../../03-BOM/BOM/" class="md-footer__link md-footer__link--next" aria-label="Next: BOM">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Next
               </span>
               <div class="md-ellipsis">
-                Bill of Materials
+                BOM
               </div>
             </div>
             <div class="md-footer__button md-icon">
@@ -1208,22 +1083,9 @@
       <div class="md-copyright">
   
     <div class="md-copyright__highlight">
-      Copyright © 2025 team-name-here
+      Copyright © 2026 Elijah Koiki · Team 103 · Arizona State University
     </div>
   
-  
-</div>
-      
-        
-<div class="md-social">
-  
-    
-    
-    
-    
-    <a href="/2025_fall" target="_blank" rel="noopener" title="2023 Site" class="md-social__link">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M64 48h112v88c0 39.8 32.2 72 72 72h88v240c0 8.8-7.2 16-16 16H64c-8.8 0-16-7.2-16-16V64c0-8.8 7.2-16 16-16m160 19.9 92.1 92.1H248c-13.3 0-24-10.7-24-24zM64 0C28.7 0 0 28.7 0 64v384c0 35.3 28.7 64 64 64h256c35.3 0 64-28.7 64-64V186.5c0-17-6.7-33.3-18.7-45.3L242.7 18.7C230.7 6.7 214.5 0 197.5 0zm106.2 295.6c8.6-10.1 7.5-25.2-2.6-33.8s-25.2-7.5-33.8 2.6l-48 56c-7.7 9-7.7 22.2 0 31.2l48 56c8.6 10.1 23.8 11.2 33.8 2.6s11.2-23.8 2.6-33.8L135.6 336zm80-31.2c-8.6-10.1-23.8-11.2-33.8-2.6s-11.2 23.8-2.6 33.8l34.6 40.4-34.6 40.4c-8.6 10.1-7.5 25.2 2.6 33.8s25.2 7.5 33.8-2.6l48-56c7.7-9 7.7-22.2 0-31.2z"></path></svg>
-    </a>
   
 </div>
       
@@ -1240,14 +1102,10 @@
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.tabs", "navigation.tabs.sticky", "toc.follow", "navigation.top", "navigation.path", "navigation.indexes", "navigation.prune", "content.action.edit", "navigation.footer"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.tabs", "navigation.tabs.sticky", "navigation.top", "navigation.footer", "content.action.edit", "search.highlight"], "search": "../../assets/javascripts/workers/search.a7633da7.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="../../assets/javascripts/bundle.d7400e89.min.js"></script>
-      
-        <script src="../../javascripts/mathjax.js"></script>
-      
-        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      <script src="../../assets/javascripts/bundle.c21346df.min.js"></script>
       
     
   

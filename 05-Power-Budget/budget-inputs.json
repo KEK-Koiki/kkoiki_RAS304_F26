@@ -1,0 +1,51 @@
+{
+  "status": "preliminary planning estimate; not datasheet maximum or measured certification",
+  "rail_voltage": 5,
+  "margin": 0.25,
+  "rows": [
+    {
+      "name": "Nano board + MCU",
+      "quantity": 1,
+      "unit_ma": 100,
+      "basis": "Planning allowance; actual firmware/debugger load unmeasured"
+    },
+    {
+      "name": "TCST2103 emitters",
+      "quantity": 4,
+      "unit_ma": 17.045454545454543,
+      "basis": "Calculated nominal, 220 ohm / 1.25 V assumed LED drop"
+    },
+    {
+      "name": "Collector pull-ups",
+      "quantity": 4,
+      "unit_ma": 1.0638297872340425,
+      "basis": "All four raw nodes low; conservative pull-up bound"
+    },
+    {
+      "name": "MCP6004 + feedback",
+      "quantity": 1,
+      "unit_ma": 2,
+      "basis": "Planning allowance including output/feedback loading"
+    },
+    {
+      "name": "SN74HC14",
+      "quantity": 1,
+      "unit_ma": 5,
+      "basis": "Planning allowance; depends on input edges and frequency"
+    },
+    {
+      "name": "Power + debug LEDs",
+      "quantity": 2,
+      "unit_ma": 3,
+      "basis": "Planning allowance, 1k series resistors"
+    },
+    {
+      "name": "Debug pull-up",
+      "quantity": 1,
+      "unit_ma": 0.5,
+      "basis": "Button held low, 10k at 5 V"
+    }
+  ],
+  "total_ma": 185.93713733075435,
+  "with_margin_ma": 232.42142166344294
+}

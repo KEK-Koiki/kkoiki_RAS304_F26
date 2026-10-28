@@ -7,9 +7,11 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
+        <meta name="description" content="Team 103 motor encoder subsystem — design, components, schematics and verification.">
       
       
-        <link rel="canonical" href="https://ras-embedded-systems.github.io/RAS304DataSheetTemplate/05-Power-Budget/Power-Budget/">
+      
+        <link rel="canonical" href="https://kek-koiki.github.io/kkoiki_RAS304_F26/05-Power-Budget/Power-Budget/">
       
       
         <link rel="prev" href="../../04-Schematic/schematic/">
@@ -22,21 +24,21 @@
       
       
       <link rel="icon" href="../../static/logo304.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.8.0">
             
 
     
 
     
       
-        <title>Power Budget - RAS 304 Elijah Koiki Data Sheet</title>
+        <title>Power Budget - Elijah Koiki · RAS304</title>
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.ec1eaa64.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.57a0d79d.min.css">
       
         
-        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.fb2fffe2.min.css">
       
       
 
@@ -46,12 +48,6 @@
       
     
     
-      
-        
-        
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&amp;display=fallback">
-        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
       
     
     
@@ -83,7 +79,7 @@
     
     
     
-    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="indigo">
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="custom" data-md-color-accent="custom">
   
     
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
@@ -92,7 +88,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#overview" class="md-skip">
+        <a href="#power-budget" class="md-skip">
           Skip to content
         </a>
       
@@ -108,9 +104,9 @@
 
 <header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="../.." title="RAS 304 Elijah Koiki Data Sheet" class="md-header__button md-logo" aria-label="RAS 304 Elijah Koiki Data Sheet" data-md-component="logo">
+    <a href="../.." title="Elijah Koiki · RAS304" class="md-header__button md-logo" aria-label="Elijah Koiki · RAS304" data-md-component="logo">
       
-  <img src="../../static/logo304.svg" alt="logo">
+  <img src="../../static/encoder-mark.svg" alt="logo">
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
@@ -121,7 +117,7 @@
       <div class="md-header__ellipsis">
         <div class="md-header__topic">
           <span class="md-ellipsis">
-            RAS 304 Elijah Koiki Data Sheet
+            Elijah Koiki · RAS304
           </span>
         </div>
         <div class="md-header__topic" data-md-component="header-topic">
@@ -181,13 +177,13 @@
     
     
       <div class="md-header__source">
-        <a href="https://github.com/ras-embedded-systems/RAS304DataSheetTemplate" title="Go to repository" class="md-source" data-md-component="source">
+        <a href="https://github.com/KEK-Koiki/kkoiki_RAS304_F26" title="Go to repository" class="md-source" data-md-component="source">
   <div class="md-source__icon md-icon">
     
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"></path></svg>
   </div>
   <div class="md-source__repository">
-    GitHub
+    KEK-Koiki / kkoiki_RAS304_F26
   </div>
 </a>
       </div>
@@ -212,7 +208,7 @@
   
     
   
-  Welcome
+  Overview
 
       </a>
     </li>
@@ -224,20 +220,17 @@
   
   
   
-    
-    
-      <li class="md-tabs__item">
-        <a href="../../01-Block-Diagram/Block-Diagram/" class="md-tabs__link">
-          
+    <li class="md-tabs__item">
+      <a href="../../01-Block-Diagram/Block-Diagram/" class="md-tabs__link">
+        
   
   
     
   
-  01 Block Diagram
+  Block Diagram
 
-        </a>
-      </li>
-    
+      </a>
+    </li>
   
 
       
@@ -246,20 +239,17 @@
   
   
   
-    
-    
-      <li class="md-tabs__item">
-        <a href="../../02-Component-Selection/Component-Selection/" class="md-tabs__link">
-          
+    <li class="md-tabs__item">
+      <a href="../../02-Component-Selection/Component-Selection/" class="md-tabs__link">
+        
   
   
     
   
-  02 Component Selection
+  Component Selection
 
-        </a>
-      </li>
-    
+      </a>
+    </li>
   
 
       
@@ -268,20 +258,17 @@
   
   
   
-    
-    
-      <li class="md-tabs__item">
-        <a href="../../03-BOM/BOM/" class="md-tabs__link">
-          
+    <li class="md-tabs__item">
+      <a href="../../03-BOM/BOM/" class="md-tabs__link">
+        
   
   
     
   
-  03 BOM
+  BOM
 
-        </a>
-      </li>
-    
+      </a>
+    </li>
   
 
       
@@ -290,20 +277,17 @@
   
   
   
-    
-    
-      <li class="md-tabs__item">
-        <a href="../../04-Schematic/schematic/" class="md-tabs__link">
-          
+    <li class="md-tabs__item">
+      <a href="../../04-Schematic/schematic/" class="md-tabs__link">
+        
   
   
     
   
-  04 Schematic
+  Schematic
 
-        </a>
-      </li>
-    
+      </a>
+    </li>
   
 
       
@@ -314,20 +298,17 @@
     
   
   
-    
-    
-      <li class="md-tabs__item md-tabs__item--active">
-        <a href="./" class="md-tabs__link">
-          
+    <li class="md-tabs__item md-tabs__item--active">
+      <a href="./" class="md-tabs__link">
+        
   
   
     
   
-  05 Power Budget
+  Power Budget
 
-        </a>
-      </li>
-    
+      </a>
+    </li>
   
 
       
@@ -336,20 +317,17 @@
   
   
   
-    
-    
-      <li class="md-tabs__item">
-        <a href="../../Appendix/" class="md-tabs__link">
-          
+    <li class="md-tabs__item">
+      <a href="../../Appendix/" class="md-tabs__link">
+        
   
   
     
   
-  Appendix
+  Review &amp; Resources
 
-        </a>
-      </li>
-    
+      </a>
+    </li>
   
 
       
@@ -381,22 +359,22 @@
 
 <nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../.." title="RAS 304 Elijah Koiki Data Sheet" class="md-nav__button md-logo" aria-label="RAS 304 Elijah Koiki Data Sheet" data-md-component="logo">
+    <a href="../.." title="Elijah Koiki · RAS304" class="md-nav__button md-logo" aria-label="Elijah Koiki · RAS304" data-md-component="logo">
       
-  <img src="../../static/logo304.svg" alt="logo">
+  <img src="../../static/encoder-mark.svg" alt="logo">
 
     </a>
-    RAS 304 Elijah Koiki Data Sheet
+    Elijah Koiki · RAS304
   </label>
   
     <div class="md-nav__source">
-      <a href="https://github.com/ras-embedded-systems/RAS304DataSheetTemplate" title="Go to repository" class="md-source" data-md-component="source">
+      <a href="https://github.com/KEK-Koiki/kkoiki_RAS304_F26" title="Go to repository" class="md-source" data-md-component="source">
   <div class="md-source__icon md-icon">
     
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"></path></svg>
   </div>
   <div class="md-source__repository">
-    GitHub
+    KEK-Koiki / kkoiki_RAS304_F26
   </div>
 </a>
     </div>
@@ -417,7 +395,7 @@
   <span class="md-ellipsis">
     
   
-    Welcome
+    Overview
   
 
     
@@ -436,37 +414,15 @@
   
   
   
-    
-    
-      
+    <li class="md-nav__item">
+      <a href="../../01-Block-Diagram/Block-Diagram/" class="md-nav__link">
         
-      
-    
-    
-    
-      
-      
-    
-    
-      
-        
-        
-      
-    
-    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
-      
-        
-  
-  
-  
-    <a href="../../01-Block-Diagram/Block-Diagram/" class="md-nav__link">
-      
   
   
   <span class="md-ellipsis">
     
   
-    01 Block Diagram
+    Block Diagram
   
 
     
@@ -474,13 +430,7 @@
   
   
 
-      
-        <span class="md-nav__icon md-icon"></span>
-      
-    </a>
-  
-
-      
+      </a>
     </li>
   
 
@@ -491,37 +441,15 @@
   
   
   
-    
-    
-      
+    <li class="md-nav__item">
+      <a href="../../02-Component-Selection/Component-Selection/" class="md-nav__link">
         
-      
-    
-    
-    
-      
-      
-    
-    
-      
-        
-        
-      
-    
-    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
-      
-        
-  
-  
-  
-    <a href="../../02-Component-Selection/Component-Selection/" class="md-nav__link">
-      
   
   
   <span class="md-ellipsis">
     
   
-    02 Component Selection
+    Component Selection
   
 
     
@@ -529,13 +457,7 @@
   
   
 
-      
-        <span class="md-nav__icon md-icon"></span>
-      
-    </a>
-  
-
-      
+      </a>
     </li>
   
 
@@ -546,37 +468,15 @@
   
   
   
-    
-    
-      
+    <li class="md-nav__item">
+      <a href="../../03-BOM/BOM/" class="md-nav__link">
         
-      
-    
-    
-    
-      
-      
-    
-    
-      
-        
-        
-      
-    
-    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
-      
-        
-  
-  
-  
-    <a href="../../03-BOM/BOM/" class="md-nav__link">
-      
   
   
   <span class="md-ellipsis">
     
   
-    03 BOM
+    BOM
   
 
     
@@ -584,13 +484,7 @@
   
   
 
-      
-        <span class="md-nav__icon md-icon"></span>
-      
-    </a>
-  
-
-      
+      </a>
     </li>
   
 
@@ -601,37 +495,15 @@
   
   
   
-    
-    
-      
+    <li class="md-nav__item">
+      <a href="../../04-Schematic/schematic/" class="md-nav__link">
         
-      
-    
-    
-    
-      
-      
-    
-    
-      
-        
-        
-      
-    
-    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
-      
-        
-  
-  
-  
-    <a href="../../04-Schematic/schematic/" class="md-nav__link">
-      
   
   
   <span class="md-ellipsis">
     
   
-    04 Schematic
+    Schematic
   
 
     
@@ -639,80 +511,13 @@
   
   
 
-      
-        <span class="md-nav__icon md-icon"></span>
-      
-    </a>
-  
-
-      
+      </a>
     </li>
   
 
     
       
       
-  
-  
-    
-  
-  
-  
-    
-    
-      
-        
-      
-    
-    
-    
-      
-        
-        
-      
-      
-    
-    
-      
-    
-    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
-      
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" checked="">
-        
-          
-          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="">
-            
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    05 Power Budget
-  
-
-    
-  </span>
-  
-  
-
-            <span class="md-nav__icon md-icon"></span>
-          </label>
-        
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="true">
-          <label class="md-nav__title" for="__nav_6">
-            <span class="md-nav__icon md-icon"></span>
-            
-  
-    05 Power Budget
-  
-
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix="">
-            
-              
-                
   
   
     
@@ -723,6 +528,8 @@
       
       <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
       
+      
+        
       
       
         <label class="md-nav__link md-nav__link--active" for="__toc">
@@ -766,6 +573,8 @@
   
   
   
+    
+  
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
@@ -774,10 +583,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
       
         <li class="md-nav__item">
-  <a href="#overview" class="md-nav__link">
+  <a href="#a-loads-on-the-5-v-rail" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Overview
+        A · Loads on the +5 V rail
       
     </span>
   </a>
@@ -785,10 +594,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#conclusions" class="md-nav__link">
+  <a href="#b-rail-demand-and-margin" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Conclusions
+        B · Rail demand and margin
       
     </span>
   </a>
@@ -796,10 +605,43 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#resouces" class="md-nav__link">
+  <a href="#c-regulator-and-thermal-check" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Resouces
+        C · Regulator and thermal check
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#d-external-source" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        D · External source
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#e-battery-runtime" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        E · Battery runtime
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#reusable-calculation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Reusable calculation
       
     </span>
   </a>
@@ -813,14 +655,6 @@
     </li>
   
 
-              
-            
-          </ul>
-        </nav>
-      
-    </li>
-  
-
     
       
       
@@ -828,47 +662,15 @@
   
   
   
-    
-    
-      
+    <li class="md-nav__item">
+      <a href="../../Appendix/" class="md-nav__link">
         
-          
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-    
-    
-    
-      
-      
-    
-    
-      
-        
-        
-      
-    
-    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
-      
-        
-  
-  
-  
-    <a href="../../Appendix/" class="md-nav__link">
-      
   
   
   <span class="md-ellipsis">
     
   
-    Appendix
+    Review &amp; Resources
   
 
     
@@ -876,13 +678,7 @@
   
   
 
-      
-        <span class="md-nav__icon md-icon"></span>
-      
-    </a>
-  
-
-      
+      </a>
     </li>
   
 
@@ -904,6 +700,8 @@
   
   
   
+    
+  
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
@@ -912,10 +710,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
       
         <li class="md-nav__item">
-  <a href="#overview" class="md-nav__link">
+  <a href="#a-loads-on-the-5-v-rail" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Overview
+        A · Loads on the +5 V rail
       
     </span>
   </a>
@@ -923,10 +721,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#conclusions" class="md-nav__link">
+  <a href="#b-rail-demand-and-margin" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Conclusions
+        B · Rail demand and margin
       
     </span>
   </a>
@@ -934,10 +732,43 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#resouces" class="md-nav__link">
+  <a href="#c-regulator-and-thermal-check" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Resouces
+        C · Regulator and thermal check
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#d-external-source" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        D · External source
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#e-battery-runtime" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        E · Battery runtime
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#reusable-calculation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Reusable calculation
       
     </span>
   </a>
@@ -955,61 +786,13 @@
           
             <div class="md-content" data-md-component="content">
               
-                
-
-
-
-  
-
-
-  <nav class="md-path" aria-label="Navigation">
-    <ol class="md-path__list">
-      
-        
-  
-  
-    <li class="md-path__item">
-      <a href="../.." class="md-path__link">
-        
-  <span class="md-ellipsis">
-    Welcome
-  </span>
-
-      </a>
-    </li>
-  
-
-      
-      
-        
-  
-  
-    
-    
-      <li class="md-path__item">
-        <a href="./" class="md-path__link">
-          
-  <span class="md-ellipsis">
-    05 Power Budget
-  </span>
-
-        </a>
-      </li>
-    
-  
-
-      
-    </ol>
-  </nav>
-
-              
               <article class="md-content__inner md-typeset">
                 
                   
 
 
   
-    <a href="https://github.com/ras-embedded-systems/RAS304DataSheetTemplate/edit/main/docs/05-Power-Budget/Power-Budget.md" title="Edit this page" class="md-content__button md-icon" rel="edit">
+    <a href="https://github.com/KEK-Koiki/kkoiki_RAS304_F26/edit/main/docs/05-Power-Budget/Power-Budget.md" title="Edit this page" class="md-content__button md-icon" rel="edit">
       
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4zm10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1z"></path></svg>
     </a>
@@ -1017,20 +800,135 @@
   
 
 
-  <h1>Power Budget</h1>
-
-<h2 id="overview">Overview</h2>
-<p>Write a overview of what you did and why you did a Power Budget.</p>
-<blockquote>
-<p>Capture your power budge as a image to display. Take time to get clean breaks and a well organized layout.</p>
-</blockquote>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../budgetPg1.png" data-desc-position="bottom"><img alt="budget1" height:_300_="height:&quot;300;&quot;" src="../budgetPg1.png" style="style" width:_350_="width:&quot;350&quot;"></a></p>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../budgetPg2.png" data-desc-position="bottom"><img alt="budget2" height:_300_="height:&quot;300;&quot;" src="../budgetPg2.png" style="style" width:_350_="width:&quot;350&quot;"></a></p>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../budgetPg3.png" data-desc-position="bottom"><img alt="budget3" height:_300_="height:&quot;300;&quot;" src="../budgetPg3.png" style="style" width:_350_="width:&quot;350&quot;"></a></p>
-<h2 id="conclusions">Conclusions</h2>
-<p>From the prepare Power Budget, .....</p>
-<h2 id="resouces">Resouces</h2>
-<p>The power budget as a PDF download is available <a href="../PowerBudgetExample.pdf"><em>here</em></a>, and a Microsoft Excel Sheet <a href="../PowerBudgetExample.xlsx"><em>here</em></a>.</p>
+<h1 id="power-budget">Power Budget<a class="headerlink" href="#power-budget" title="Permanent link">¶</a></h1>
+<p>This <strong>preliminary encoder-board planning estimate</strong> accounts for the four emitters, PIC board, analog/logic ICs and support loads, then adds the required <strong>25% margin</strong>. Motors are powered on the motor-driver subsystem and are excluded from this local rail.</p>
+<div class="admonition warning">
+<p class="admonition-title">Estimate, not a verified maximum-current budget</p>
+<p>The Nano, amplifier and logic entries include explicitly labeled planning allowances. They are not measured results or datasheet absolute maxima. A final course-template budget requires verified worst-case operating currents, the exact adapter and thermal measurements. Absolute maximum ratings are stress limits and should not be used as intended operating points.</p>
+</div>
+<h2 id="a-loads-on-the-5-v-rail">A · Loads on the +5 V rail<a class="headerlink" href="#a-loads-on-the-5-v-rail" title="Permanent link">¶</a></h2>
+<table>
+<thead>
+<tr>
+<th>Load</th>
+<th style="text-align: right;">Quantity</th>
+<th style="text-align: right;">Unit current (mA)</th>
+<th style="text-align: right;">Total (mA)</th>
+<th>Basis</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Nano board + MCU</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">100.00</td>
+<td style="text-align: right;">100.00</td>
+<td>Planning allowance; actual firmware/debugger load unmeasured</td>
+</tr>
+<tr>
+<td>TCST2103 emitters</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">17.05</td>
+<td style="text-align: right;">68.18</td>
+<td>Calculated nominal, 220 ohm / 1.25 V assumed LED drop</td>
+</tr>
+<tr>
+<td>Collector pull-ups</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">1.06</td>
+<td style="text-align: right;">4.26</td>
+<td>All four raw nodes low; conservative pull-up bound</td>
+</tr>
+<tr>
+<td>MCP6004 + feedback</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">2.00</td>
+<td style="text-align: right;">2.00</td>
+<td>Planning allowance including output/feedback loading</td>
+</tr>
+<tr>
+<td>SN74HC14</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">5.00</td>
+<td style="text-align: right;">5.00</td>
+<td>Planning allowance; depends on input edges and frequency</td>
+</tr>
+<tr>
+<td>Power + debug LEDs</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">3.00</td>
+<td style="text-align: right;">6.00</td>
+<td>Planning allowance, 1k series resistors</td>
+</tr>
+<tr>
+<td>Debug pull-up</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">0.50</td>
+<td style="text-align: right;">0.50</td>
+<td>Button held low, 10k at 5 V</td>
+</tr>
+</tbody>
+</table>
+<h2 id="b-rail-demand-and-margin">B · Rail demand and margin<a class="headerlink" href="#b-rail-demand-and-margin" title="Permanent link">¶</a></h2>
+<table>
+<thead>
+<tr>
+<th>Result</th>
+<th style="text-align: right;">Planning estimate</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Sum of local +5 V loads</td>
+<td style="text-align: right;"><strong>185.94 mA</strong></td>
+</tr>
+<tr>
+<td>Safety margin</td>
+<td style="text-align: right;"><strong>25%</strong></td>
+</tr>
+<tr>
+<td>+5 V design-current estimate with margin</td>
+<td style="text-align: right;"><strong>232.42 mA</strong></td>
+</tr>
+<tr>
+<td>Output power at the margin load</td>
+<td style="text-align: right;"><strong>1.162 W</strong></td>
+</tr>
+</tbody>
+</table>
+<p>The emitters alone account for about 68 mA under the nominal forward-drop assumption. Measure blocked/unblocked sensor currents and the running Nano board to replace the allowances. Current uncertainty and regulator heating matter more than the regulator's headline current rating.</p>
+<h2 id="c-regulator-and-thermal-check">C · Regulator and thermal check<a class="headerlink" href="#c-regulator-and-thermal-check" title="Permanent link">¶</a></h2>
+<p>The schematic uses <strong>L7805ACV</strong>. Ignoring regulator ground current, <code>P_loss = (V_in − 5 V) × I_out</code>.</p>
+<table>
+<thead>
+<tr>
+<th>Input</th>
+<th style="text-align: right;">Dissipation at 232.42 mA</th>
+<th style="text-align: right;">Ideal linear conversion efficiency</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>9 V</td>
+<td style="text-align: right;"><strong>0.930 W</strong></td>
+<td style="text-align: right;">55.6%</td>
+</tr>
+<tr>
+<td>12 V</td>
+<td style="text-align: right;"><strong>1.627 W</strong></td>
+<td style="text-align: right;">41.7%</td>
+</tr>
+</tbody>
+</table>
+<p>Regulator ground current adds input demand and dissipation. A heatsink/thermal design cannot be accepted from these numbers alone: check the actual package's junction-to-ambient or heatsink path, ambient temperature, maximum junction temperature and mounting. At the earlier review example of 250 mA, 12 V input produces approximately <strong>1.75 W</strong> before ground-current loss.</p>
+<h2 id="d-external-source">D · External source<a class="headerlink" href="#d-external-source" title="Permanent link">¶</a></h2>
+<p>The team PRD specifies a <strong>9 V wall adapter</strong>, while the schematic allows 9–12 V at J1. A particular adapter is still unselected. Its usable continuous current must exceed the margin load plus regulator ground current, with appropriate polarity and connector fit. Until its rated output and regulator current are verified, remaining source capacity is <strong>unavailable</strong>. Start bring-up with a current-limited bench supply.</p>
+<p>The drawn 500 mA fuse does not establish a safe supply rating or guaranteed semiconductor protection. Check the time-current characteristic, inrush, wiring and regulator thermal limits before accepting it.</p>
+<h2 id="e-battery-runtime">E · Battery runtime<a class="headerlink" href="#e-battery-runtime" title="Permanent link">¶</a></h2>
+<p><strong>Not applicable to the current wall-powered concept.</strong> If a battery is selected later, add usable capacity, discharge limits, conversion loss and runtime at the verified load.</p>
+<h2 id="reusable-calculation">Reusable calculation<a class="headerlink" href="#reusable-calculation" title="Permanent link">¶</a></h2>
+<p><a class="download" href="../Team103_Encoder_Power_Budget.xlsx">Editable power-budget workbook</a> <a class="download" href="../budget-inputs.json">Machine-readable inputs</a></p>
+<p>The workbook follows sections A–E and exposes the assumptions. It is a working planning model; final supplier and measurement data must replace the marked allowances before claiming a completed worst-case course budget.</p>
 
 
 
@@ -1086,13 +984,13 @@
         
         
           
-          <a href="../../Appendix/" class="md-footer__link md-footer__link--next" aria-label="Next: Appendix - Main Page">
+          <a href="../../Appendix/" class="md-footer__link md-footer__link--next" aria-label="Next: Review &amp; Resources">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Next
               </span>
               <div class="md-ellipsis">
-                Appendix - Main Page
+                Review &amp; Resources
               </div>
             </div>
             <div class="md-footer__button md-icon">
@@ -1109,22 +1007,9 @@
       <div class="md-copyright">
   
     <div class="md-copyright__highlight">
-      Copyright © 2025 team-name-here
+      Copyright © 2026 Elijah Koiki · Team 103 · Arizona State University
     </div>
   
-  
-</div>
-      
-        
-<div class="md-social">
-  
-    
-    
-    
-    
-    <a href="/2025_fall" target="_blank" rel="noopener" title="2023 Site" class="md-social__link">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M64 48h112v88c0 39.8 32.2 72 72 72h88v240c0 8.8-7.2 16-16 16H64c-8.8 0-16-7.2-16-16V64c0-8.8 7.2-16 16-16m160 19.9 92.1 92.1H248c-13.3 0-24-10.7-24-24zM64 0C28.7 0 0 28.7 0 64v384c0 35.3 28.7 64 64 64h256c35.3 0 64-28.7 64-64V186.5c0-17-6.7-33.3-18.7-45.3L242.7 18.7C230.7 6.7 214.5 0 197.5 0zm106.2 295.6c8.6-10.1 7.5-25.2-2.6-33.8s-25.2-7.5-33.8 2.6l-48 56c-7.7 9-7.7 22.2 0 31.2l48 56c8.6 10.1 23.8 11.2 33.8 2.6s11.2-23.8 2.6-33.8L135.6 336zm80-31.2c-8.6-10.1-23.8-11.2-33.8-2.6s-11.2 23.8-2.6 33.8l34.6 40.4-34.6 40.4c-8.6 10.1-7.5 25.2 2.6 33.8s25.2 7.5 33.8-2.6l48-56c7.7-9 7.7-22.2 0-31.2z"></path></svg>
-    </a>
   
 </div>
       
@@ -1141,14 +1026,10 @@
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.tabs", "navigation.tabs.sticky", "toc.follow", "navigation.top", "navigation.path", "navigation.indexes", "navigation.prune", "content.action.edit", "navigation.footer"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.tabs", "navigation.tabs.sticky", "navigation.top", "navigation.footer", "content.action.edit", "search.highlight"], "search": "../../assets/javascripts/workers/search.a7633da7.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="../../assets/javascripts/bundle.d7400e89.min.js"></script>
-      
-        <script src="../../javascripts/mathjax.js"></script>
-      
-        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      <script src="../../assets/javascripts/bundle.c21346df.min.js"></script>
       
     
   
