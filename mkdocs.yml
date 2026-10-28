@@ -1,69 +1,60 @@
-site_name: RAS 304 Elijah Koiki Data Sheet
-site_url: https://ras-embedded-systems.github.io/RAS304DataSheetTemplate/
-repo_url: https://github.com/ras-embedded-systems/RAS304DataSheetTemplate
+site_name: Elijah Koiki · RAS304
+site_description: Team 103 motor encoder subsystem — design, components, schematics and verification.
+site_url: https://kek-koiki.github.io/kkoiki_RAS304_F26/
+repo_url: https://github.com/KEK-Koiki/kkoiki_RAS304_F26
+repo_name: KEK-Koiki / kkoiki_RAS304_F26
 edit_uri: edit/main/docs/
 theme:
   name: material
   custom_dir: custom_theme/
   palette:
-    primary: blue
-    accent: indigo
-  font:
-    text: Roboto
-  logo: static/logo304.svg
+    primary: custom
+    accent: custom
+  font: false
+  logo: static/encoder-mark.svg
   favicon: static/logo304.png
-
   features:
     - navigation.tabs
     - navigation.tabs.sticky
-    - toc.follow    
     - navigation.top
-    - navigation.path
-    - navigation.indexes
-    - navigation.prune
-    - content.action.edit
     - navigation.footer
-#    - navigation.sections
-#    - navigation.expand
-#    - navigation.instant # doesn't work that well
-
+    - content.action.edit
+    - search.highlight
+nav:
+  - Overview: index.md
+  - Block Diagram: 01-Block-Diagram/Block-Diagram.md
+  - Component Selection: 02-Component-Selection/Component-Selection.md
+  - BOM: 03-BOM/BOM.md
+  - Schematic: 04-Schematic/schematic.md
+  - Power Budget: 05-Power-Budget/Power-Budget.md
+  - Review & Resources: Appendix/index.md
 markdown_extensions:
-  - attr_list #add attributes using curly brackets to images, see https://squidfunk.github.io/mkdocs-material/reference/images/
-  - md_in_html # see https://squidfunk.github.io/mkdocs-material/reference/images/
-  - footnotes
-  - pymdownx.arithmatex:
-      generic: true
-  - pymdownx.tilde: {}
-  - pymdownx.superfences:
-      custom_fences:
-        - name: mermaid
-          class: mermaid
-          format: !!python/name:pymdownx.superfences.fence_code_format
-
-draft_docs: |
-  **/*_unpublished.md
-  **/*_draft.md
-  **/*_draft**
-  
+  - attr_list
+  - md_in_html
+  - admonition
+  - tables
+  - toc:
+      permalink: true
+  - pymdownx.details
+  - pymdownx.superfences
 plugins:
   - search
-  - glightbox # allow resize images, see https://squidfunk.github.io/mkdocs-material/reference/images/
-
+  - glightbox
 extra_css:
-  - stylesheets/extra.css  
-
-extra_javascript:
- - javascripts/mathjax.js
- - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
-    
-not_in_nav: |
-  static
-  
-copyright: "Copyright &copy; 2025 team-name-here"
-
+  - stylesheets/extra.css
+exclude_docs: |
+  static/node_modules/
+  static/package*.json
+  Appendix/another-subfile.md
+  Appendix/basic-markdown-examples.md
+  Appendix/charts.md
+  Appendix/esp-32-table.md
+  04-Schematic/dummyZip.zip
+  04-Schematic/ExampleSchematic.pdf
+  04-Schematic/Screenshot.png
+  05-Power-Budget/PowerBudgetExample.pdf
+  05-Power-Budget/PowerBudgetExample.xlsx
+  05-Power-Budget/power-budject-new
+copyright: Copyright &copy; 2026 Elijah Koiki · Team 103 · Arizona State University
 extra:
   generator: false
-  social:
-    - icon: fontawesome/regular/file-code
-      link: /2025_fall
-      name: 2023 Site    

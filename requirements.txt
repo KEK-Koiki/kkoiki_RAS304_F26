@@ -1,5 +1,2 @@
-mkdocs-glightbox
-mkdocs-material
-mkdocs-material-extensions
-mkdocs-rss-plugin
-
+mkdocs-material==9.8.0
+mkdocs-glightbox==0.5.3

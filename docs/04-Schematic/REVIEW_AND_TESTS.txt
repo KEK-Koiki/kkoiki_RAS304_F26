@@ -1,0 +1,53 @@
+TEAM 103 ENCODER - REVISION B REVIEW
+Reviewed 2026-10-27 in KiCad 10.0.7.
+
+WHAT CHANGED
+- Original baseline: 2 power-pin-not-driven errors and 125 off-grid warnings.
+- Rebuilt schematic on 1.27 mm connection grid, including custom symbol pins.
+- Added PWR_FLAG on the fused external supply and common ground. These declare the external adapter source; they are not physical parts.
+- Replaced generic passive blocks with recognizable resistor, capacitor, LED, fuse, switch, test point and jumper symbols.
+- Split MCP6004 into four amplifier units plus supply unit, and HC14 into individual gates plus supply unit.
+- Drew the regulator, RC filters, amplifier feedback loops and debug circuits with wires.
+- Fixed overlapping feedback wire segments identified during GUI ERC; placed supply flag on an explicit junction.
+- Added section headings/dividers, aligned repeated channels, horizontal fields, revision title block and operating notes, following the assignment example's schematic organization.
+- EK Nano and optical sensor custom symbols retained. Other EK symbols adapt installed KiCad library geometry; this is not a claim that the student personally authored those drawings.
+
+VERIFIED IN SOFTWARE
+See erc_before.json and erc_after.json for the baseline and final CLI reports. Reports include all severities and use the same four default ignored check types: single global label, four-way junction, simulation model issue and footprint filter. No individual violations were excluded to obtain a pass.
+The exported final netlist was compared against the original by connected (reference,pin) sets. Every connected PCB component pin net is identical. Off-board Q1-Q4 are excluded from PCB netlist/BOM, as in the original. They are shown as wiring references and must be purchased separately.
+No firmware or SPICE simulation was supplied. Software checks do not demonstrate timing, optical contrast, position accuracy, EMC or physical fit.
+
+ELECTRICAL REVIEW / BENCH PLAN
+1. Before connecting the Nano or USB, power from a current-limited supply. Confirm center-positive jack wiring, fuse continuity, VIN_FUSED, +5 V and absence of shorts. Start with a low current limit appropriate to the disconnected board.
+2. Confirm physical regulator pin orientation: L7805 IN=1, GND=2, OUT=3. Heatsink design remains required: at 12 V and 250 mA, nominal dissipation is 1.75 W, excluding regulator quiescent loss.
+3. Nano VTG edge 51 receives +5 V; VOFF 55 is grounded; VBUS 56 is NC. This follows Microchip DS40002186B section 3.3.2 for external power. Verify the actual board/socket orientation before connection. Nano symbol is a passive connector representation; ERC does not enforce firmware pin directions.
+4. TCST2103 bare sensors use four physical leads. The drawn pin numbers are logical IDs, not an approved footprint. Check Vishay D+/E+ markings and wire LED cathode and transistor emitter to cable common ground. J2-J5 pin 1 LED drive, 2 collector signal, 3 ground.
+5. With approximately 1.25 V LED drop, each 220 ohm resistor gives about 17 mA and dissipates about 64 mW at 5 V. Four emitters draw about 68 mA before Nano/logic loads. Measure actual load before final fuse and heatsink selection.
+6. Probe TP4-TP7 blocked and unblocked: verify raw low/high levels, U2 amplified levels and clean U3 logic edges. Nominal non-inverting gain is 1.5. A high raw input drives the amplifier into positive saturation; verify recovery and rail levels on real hardware. If pulse shape/timing is poor, revisit gain/bias/filter with instructor rather than assuming ERC proves analog suitability.
+7. The 4.7k/1nF network has a nominal 33.9 kHz pole and 4.7 us time constant. Phototransistor impedance and wiring affect the response. Choose encoder slots and maximum shaft RPM before accepting it: per-channel pulse frequency = slots * shaft RPM / 60. Account for fourfold quadrature edge counting and gearing.
+8. Mount each A/B pair 90 electrical degrees apart. Rotate both directions and verify the phase order at RB0-RB3. Establish a home reference because these are incremental encoders.
+9. Configure RB0-RB3 digital inputs and the chosen UART PPS on RC6/RC7. DEBUG_LED is RA3 (edge16), DEBUG_BTN is RA4 (edge17); UART RX is RC7 (edge19). RA0/RA1 spare are edges43/44. Check netlist and symbol labels before firmware.
+10. Test SW1 bounce. Revision B actually specifies R19=10k and C11=100nF, giving nominal 1 ms recharge; the older 10 ms note is inconsistent, but do not guarantee debounce for every switch. Verify Schmitt input configuration and add stable-state firmware debounce if needed.
+11. Fit JP1 for encoder TX operation and remove for isolation. Agree J6 pin1 TX/pin2 RX, 5 V logic levels, ground8, physical 2x4 numbering, upstream/downstream chain and power-off behavior with the team before connection.
+
+ASSIGNMENT / FABRICATION REMAINING
+- Student should review and understand custom-symbol authorship and required initials; labels alone do not establish personal design work.
+- Instructor must review the optical analog approach, gain and filter selection.
+- Select and verify missing footprints, especially Nano sockets, jack, fuse receptacle, headers, capacitors, LEDs, switch and test points. HC14 and MCP6004 DIP-14 footprints are assigned; no PCB was laid out or checked.
+- Confirm resistor/capacitor package rules and current ratings against the component-selection assignment and mill capabilities.
+- Update the earlier block diagram to include amplification/filtering.
+- Schematics webpage updated locally. Publish and export that webpage PDF separately for Canvas; the schematic PDF alone is not the webpage export.
+
+PRIMARY REFERENCES
+Microchip Nano guide: https://ww1.microchip.com/downloads/aemDocuments/documents/MCU08/ProductDocuments/UserGuides/PIC18F57Q43-Curiosity-Nano-HW-UserGuide-DS40002186B.pdf
+Vishay sensor: https://www.vishay.com/docs/81147/tcst2103.pdf
+TI Schmitt inverter: https://www.ti.com/lit/ds/symlink/sn74hc14.pdf
+Microchip MCP6004: https://www.microchip.com/en-us/product/MCP6004
+ST regulator: https://www.st.com/en/power-management/l78.html
+
+
+FINAL GUI RESULT
+KiCad 10.0.7 Schematic Editor ERC on the reloaded Revision B reported 0 errors and 0 warnings. CLI ERC likewise reported 0 violations. The four default ignored test categories were retained; no new exclusions were added.
+
+COURSE CONTEXT
+Reviewed the component-selection and project-description PDFs and Team 103 PRD from the linked chat. Through-hole passives, simple active components, regulators, connectors and fuse holders are permitted by the project description; peripheral daughter boards are not. This design uses bare optical sensors and ICs, plus the required Curiosity Nano development board. Full component comparison tables and the required power budget (including 25 percent margin) are separate deliverables and were not created here. The original PRD predates the user's revised encoder role and two-motor decision; use the current team diagram and agreed interface when reconciling it.
