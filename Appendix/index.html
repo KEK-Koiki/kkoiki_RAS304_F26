@@ -832,9 +832,9 @@
 <td>Re-run after any electrical change.</td>
 </tr>
 <tr>
-<td>Component comparisons</td>
-<td>Current selections and tradeoffs documented</td>
-<td>Complete commercial alternatives, exact unit costs and photos.</td>
+<td>Component selection / priced BOM</td>
+<td>Orderable core parts, photos, unit prices and extended costs added</td>
+<td>Complete remaining alternative comparisons; reconfirm quotations and physical fit before ordering.</td>
 </tr>
 <tr>
 <td>Power budget</td>
@@ -873,7 +873,7 @@
 <ol>
 <li>Inspect connector orientation and continuity with power disconnected. Confirm fuse, regulator pins and the Nano external-power wiring.</li>
 <li>Power the disconnected logic board from a current-limited supply; measure VIN_FUSED and +5 V, then check full-load temperature with the complete assembly.</li>
-<li>Block and unblock each optical sensor. Probe TP4–TP7, U2 outputs and HC14 outputs for voltage levels, noise and saturation recovery.</li>
+<li>Block and unblock each optical sensor. Probe TP4â€“TP7, U2 outputs and HC14 outputs for voltage levels, noise and saturation recovery.</li>
 <li>Rotate each disk in both directions. Check A/B phase order, known counts per revolution and the highest required edge rate.</li>
 <li>Implement firmware counting, a home/reference procedure and stable-state button debounce; verify interrupt loading and count snapshot integrity.</li>
 <li>Agree the final serial link and connect one board at a time. Test TX isolation, framing, stale-data behavior and power-off conditions.</li>
@@ -885,15 +885,16 @@
 <p><a class="download" href="EK_Sensor103_Project.zip">Sensor assignment project ZIP</a> <a class="download" href="EK103_JLCDFM_Results.pdf">Recorded DFM PDF</a> <a class="download" href="EK103_Schematic_PCB.pdf">Sensor schematic / PCB PDF</a></p>
 <h2 id="primary-references">Primary references<a class="headerlink" href="#primary-references" title="Permanent link">¶</a></h2>
 <ul>
-<li><a href="https://ww1.microchip.com/downloads/aemDocuments/documents/MCU08/ProductDocuments/UserGuides/PIC18F57Q43-Curiosity-Nano-HW-UserGuide-DS40002186B.pdf">Microchip PIC18F57Q43 Curiosity Nano hardware user guide</a> — board pinout and external power.</li>
-<li><a href="https://www.vishay.com/docs/81147/tcst2103.pdf">Vishay TCST2103 family datasheet</a> — sensor package, optical/electrical characteristics and lead markings.</li>
-<li><a href="https://www.microchip.com/en-us/product/MCP6004">Microchip MCP6004</a> — quad amplifier documentation.</li>
-<li><a href="https://www.ti.com/product/SN74HC14">Texas Instruments SN74HC14</a> — Schmitt inverter electrical specifications.</li>
-<li><a href="https://www.st.com/en/power-management/l78.html">ST L78 family</a> — regulator pinout, operating limits and thermal specifications.</li>
-<li><a href="https://ras304-f26-103.github.io/">Team 103 report</a> — shared project context; older role/interface assignments need team reconciliation.</li>
+<li><a href="https://ww1.microchip.com/downloads/aemDocuments/documents/MCU08/ProductDocuments/UserGuides/PIC18F57Q43-Curiosity-Nano-HW-UserGuide-DS40002186B.pdf">Microchip PIC18F57Q43 Curiosity Nano hardware user guide</a> â€” board pinout and external power.</li>
+<li><a href="https://www.vishay.com/docs/81147/tcst2103.pdf">Vishay TCST2103 family datasheet</a> â€” sensor package, optical/electrical characteristics and lead markings.</li>
+<li><a href="https://www.microchip.com/en-us/product/MCP6004">Microchip MCP6004</a> â€” quad amplifier documentation.</li>
+<li><a href="https://www.ti.com/product/SN74HC14">Texas Instruments SN74HC14</a> â€” Schmitt inverter electrical specifications.</li>
+<li><a href="https://www.st.com/en/power-management/l78.html">ST L78 family</a> â€” regulator pinout, operating limits and thermal specifications.</li>
+<li><a href="https://ras304-f26-103.github.io/">Team 103 report</a> â€” shared project context; older role/interface assignments need team reconciliation.</li>
 </ul>
 <h2 id="design-record">Design record<a class="headerlink" href="#design-record" title="Permanent link">¶</a></h2>
 <p>October 27: local KiCad review rebuilt the schematic grid, corrected ERC findings and exported Revision B. October 28: individual datasheet replaced the template examples, embedded the reviewed circuit, updated the block diagram to include conditioning, documented component rationale and added a preliminary power model. Source symbol geometry includes custom and adapted library work; EK labels alone do not establish personal authorship.</p>
+<p>October 28 sourcing refinement: added a detailed four-channel architecture diagram, local supplier product photos, example manufacturer part numbers, a priced BOM and an external-power purchasing candidate. Prices are dated references; motor and ribbon decisions remain deferred.</p>
 
 
 

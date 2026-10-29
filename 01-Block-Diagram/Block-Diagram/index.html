@@ -475,6 +475,28 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
       
         <li class="md-nav__item">
+  <a href="#detailed-signal-pin-and-power-diagram" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Detailed signal, pin and power diagram
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#system-overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        System overview
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#signal-path-and-design-decisions" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -688,6 +710,28 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
       
         <li class="md-nav__item">
+  <a href="#detailed-signal-pin-and-power-diagram" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Detailed signal, pin and power diagram
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#system-overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        System overview
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#signal-path-and-design-decisions" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -758,8 +802,13 @@
 
 <h1 id="individual-block-diagram">Individual Block Diagram<a class="headerlink" href="#individual-block-diagram" title="Permanent link">¶</a></h1>
 <p>The encoder board converts the rotation of two motor shafts into four clean digital signals. This updated diagram includes the <strong>MCP6004 amplification and RC filtering stages</strong> required to keep the architecture consistent with the Revision B schematic.</p>
+<h2 id="detailed-signal-pin-and-power-diagram">Detailed signal, pin and power diagram<a class="headerlink" href="#detailed-signal-pin-and-power-diagram" title="Permanent link">¶</a></h2>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../encoder-detailed-block-diagram.png" data-desc-position="bottom"><img alt="Detailed encoder block diagram with four optical channels, filter/amplifier values, PIC input pins, local power, debug and proposed team link" src="../encoder-detailed-block-diagram.png"></a></p>
+<p><em>Figure 1. Detailed architecture matched to Revision B. Every motor has an A/B sensor pair; each of the four lanes shows its raw test point, RC values, amplifier unit, Schmitt gate and Nano input. The proposed ribbon allocation is explicitly separated from confirmed board connections.</em></p>
+<p><a class="download" href="../encoder-detailed-block-diagram.png">Full-size PNG</a> <a class="download" href="../encoder-detailed-block-diagram.svg">Editable detailed SVG</a> <a class="download" href="../encoder-block-diagram-source.zip">All diagram sources ZIP</a></p>
+<h2 id="system-overview">System overview<a class="headerlink" href="#system-overview" title="Permanent link">¶</a></h2>
 <p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../encoder-block-diagram.png" data-desc-position="bottom"><img alt="Two-motor optical encoder architecture with conditioning, PIC, power and team interfaces" src="../encoder-block-diagram.png"></a></p>
-<p><em>Figure 1. Two-motor encoder architecture. The arrows show the feedback path; the local power block supplies the sensing and logic circuits.</em></p>
+<p><em>Figure 2. Two-motor encoder architecture. The arrows show the feedback path; the local power block supplies the sensing and logic circuits.</em></p>
 <p><a class="download" href="../encoder-block-diagram.svg">Editable SVG</a> <a class="download" href="../encoder-block-diagram-source.zip">Diagram source ZIP</a></p>
 <h2 id="signal-path-and-design-decisions">Signal path and design decisions<a class="headerlink" href="#signal-path-and-design-decisions" title="Permanent link">¶</a></h2>
 <table>

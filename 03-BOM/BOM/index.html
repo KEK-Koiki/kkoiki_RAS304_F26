@@ -529,10 +529,87 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
       
         <li class="md-nav__item">
-  <a href="#procurement-and-assembly-notes" class="md-nav__link">
+  <a href="#cost-at-a-glance" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Procurement and assembly notes
+        Cost at a glance
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#core-electronics" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Core electronics
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#resistors-and-capacitors" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Resistors and capacitors
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#connectors-protection-and-debug" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Connectors, protection and debug
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#external-power-example" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        External power example
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fit-sourcing-and-assembly-notes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Fit, sourcing and assembly notes
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#items-still-requiring-a-quote-or-team-decision" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Items still requiring a quote or team decision
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#photo-credits-and-selection-status" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Photo credits and selection status
       
     </span>
   </a>
@@ -655,10 +732,87 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
       
         <li class="md-nav__item">
-  <a href="#procurement-and-assembly-notes" class="md-nav__link">
+  <a href="#cost-at-a-glance" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Procurement and assembly notes
+        Cost at a glance
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#core-electronics" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Core electronics
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#resistors-and-capacitors" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Resistors and capacitors
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#connectors-protection-and-debug" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Connectors, protection and debug
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#external-power-example" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        External power example
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fit-sourcing-and-assembly-notes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Fit, sourcing and assembly notes
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#items-still-requiring-a-quote-or-team-decision" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Items still requiring a quote or team decision
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#photo-credits-and-selection-status" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Photo credits and selection status
       
     </span>
   </a>
@@ -691,240 +845,372 @@
 
 
 <h1 id="bill-of-materials">Bill of Materials<a class="headerlink" href="#bill-of-materials" title="Permanent link">¶</a></h1>
-<p>This design BOM is extracted from the <strong>Revision B exported KiCad netlist</strong>. Q1–Q4 are added explicitly because the off-board optical sensors are intentionally excluded from the PCB netlist. IC units count as one physical package each.</p>
-<p><a class="download" href="../encoder-revb-bom.csv">Download BOM CSV</a> <a class="download" href="../../04-Schematic/Team103_Encoder_EK_Project.zip">Download KiCad project</a></p>
+<p>The purchasing examples below translate the <strong>Revision B encoder schematic</strong> into a priced parts list for one two-motor encoder subsystem. They include four off-board optical sensors, and count each multi-unit IC as one physical package. Fuse/holder and jumper/shunt are listed separately so those small but necessary pieces are not missed.</p>
+<div class="meta"><span>1 encoder subsystem</span><span>USD · quantity-one reference prices</span><span>Sources reviewed October 28, 2026</span></div>
+
+<h2 id="cost-at-a-glance">Cost at a glance<a class="headerlink" href="#cost-at-a-glance" title="Permanent link">¶</a></h2>
+<div class="stat-grid"><div class="stat"><b>$38.95</b><span>Sourced parts subtotal</span></div><div class="stat"><b>$20.94</b><span>Controller + sensors + ICs</span></div><div class="stat"><b>$8.90</b><span>Resistors + capacitors</span></div><div class="stat"><b>$9.11</b><span>Connectors + protection + debug</span></div></div>
+
+<p>Each line uses the supplier page's <strong>one-piece unit price multiplied by the quantity needed</strong>, without assuming volume discounts. These are dated reference prices, not a checkout quotation. Shipping, taxes, tariffs, custom PCBs, assembly, Nano sockets, mating cables, disk/bracket fabrication and thermal hardware are excluded. The optional adapter is listed separately below.</p>
+<p><a class="download" href="../encoder-revb-bom.csv">Download priced BOM CSV</a> <a class="download" href="../encoder-parts-sources.json">Download sourcing record</a> <a class="download" href="../../04-Schematic/Team103_Encoder_EK_Project.zip">Download KiCad project</a></p>
+<h2 id="core-electronics">Core electronics<a class="headerlink" href="#core-electronics" title="Permanent link">¶</a></h2>
+<div class="bom-table">
 <table>
 <thead>
 <tr>
-<th>References</th>
-<th style="text-align: right;">Quantity</th>
-<th>Description / value</th>
-<th>Procurement status</th>
+<th>Part / reference photo</th>
+<th>Ref. / Qty</th>
+<th>Manufacturer &amp; example MPN</th>
+<th style="text-align: right;">Unit USD</th>
+<th style="text-align: right;">Line USD</th>
+<th>Sources</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>A1</td>
-<td style="text-align: right;">1</td>
-<td>EK PIC18F57Q43 CURIOSITY NANO</td>
-<td>Package / sourcing pending</td>
+<td><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../static/parts/nano.jpg" data-desc-position="bottom"><img src="../../static/parts/nano.jpg" alt="DM164150 supplier reference photo" width="78" loading="lazy"></a><br><strong>PIC18F57Q43 Curiosity Nano</strong></td>
+<td>A1<br><strong>1 pcs</strong></td>
+<td>Microchip<br><code>DM164150</code></td>
+<td style="text-align: right;">$10.61</td>
+<td style="text-align: right;"><strong>$10.61</strong></td>
+<td><a href="https://www.digikey.com/en/products/detail/microchip-technology/DM164150/11586705">Supplier</a> · specs/docs on supplier page</td>
 </tr>
 <tr>
-<td>C1</td>
-<td style="text-align: right;">1</td>
-<td>0.33uF 25V</td>
-<td>Package / sourcing pending</td>
+<td><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../static/parts/tcst2103.jpg" data-desc-position="bottom"><img src="../../static/parts/tcst2103.jpg" alt="TCST2103 supplier reference photo" width="78" loading="lazy"></a><br><strong>Bare optical interrupter, 3.1 mm slot</strong></td>
+<td>Q1–Q4<br><strong>4 pcs</strong></td>
+<td>Vishay<br><code>TCST2103</code></td>
+<td style="text-align: right;">$1.84</td>
+<td style="text-align: right;"><strong>$7.36</strong></td>
+<td><a href="https://www.digikey.com/en/products/detail/vishay-semiconductor-opto-division/TCST2103/2354849">Supplier</a> · <a href="https://www.vishay.com/docs/81147/tcst2103.pdf">Datasheet</a></td>
 </tr>
 <tr>
-<td>C2, C8, C9, C10</td>
-<td style="text-align: right;">4</td>
-<td>0.1uF 25V</td>
-<td>Package / sourcing pending</td>
+<td><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../static/parts/mcp6004.jpg" data-desc-position="bottom"><img src="../../static/parts/mcp6004.jpg" alt="MCP6004-I/P supplier reference photo" width="78" loading="lazy"></a><br><strong>Quad rail-to-rail op-amp, PDIP-14</strong></td>
+<td>U2<br><strong>1 pcs</strong></td>
+<td>Microchip<br><code>MCP6004-I/P</code></td>
+<td style="text-align: right;">$0.60</td>
+<td style="text-align: right;"><strong>$0.60</strong></td>
+<td><a href="https://www.digikey.com/en/products/detail/MCP6004-I%2FP/MCP6004-I%2FP-ND/523060">Supplier</a> · <a href="https://ww1.microchip.com/downloads/en/DeviceDoc/MCP6001-1R-1U-2-4-1-MHz-Low-Power-Op-Amp-DS20001733L.pdf">Datasheet</a></td>
 </tr>
 <tr>
-<td>C3</td>
-<td style="text-align: right;">1</td>
-<td>10uF 25V</td>
-<td>Package / sourcing pending</td>
+<td><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../static/parts/hc14.jpg" data-desc-position="bottom"><img src="../../static/parts/hc14.jpg" alt="SN74HC14N supplier reference photo" width="78" loading="lazy"></a><br><strong>Hex Schmitt inverter, PDIP-14</strong></td>
+<td>U3<br><strong>1 pcs</strong></td>
+<td>Texas Instruments<br><code>SN74HC14N</code></td>
+<td style="text-align: right;">$1.15</td>
+<td style="text-align: right;"><strong>$1.15</strong></td>
+<td><a href="https://www.digikey.com/en/products/detail/texas-instruments/SN74HC14N/277223">Supplier</a> · specs/docs on supplier page</td>
 </tr>
 <tr>
-<td>C4, C5, C6, C7</td>
-<td style="text-align: right;">4</td>
-<td>1nF 25V</td>
-<td>Package / sourcing pending</td>
-</tr>
-<tr>
-<td>C11</td>
-<td style="text-align: right;">1</td>
-<td>100nF 25V</td>
-<td>Package / sourcing pending</td>
-</tr>
-<tr>
-<td>D1</td>
-<td style="text-align: right;">1</td>
-<td>GREEN / POWER</td>
-<td>Package / sourcing pending</td>
-</tr>
-<tr>
-<td>D2</td>
-<td style="text-align: right;">1</td>
-<td>YELLOW / DEBUG</td>
-<td>Package / sourcing pending</td>
-</tr>
-<tr>
-<td>F1</td>
-<td style="text-align: right;">1</td>
-<td>500 mA FAST / REMOVABLE</td>
-<td>Package / sourcing pending</td>
-</tr>
-<tr>
-<td>J1</td>
-<td style="text-align: right;">1</td>
-<td>9-12 V DC / CENTER +</td>
-<td>Package / sourcing pending</td>
-</tr>
-<tr>
-<td>J2</td>
-<td style="text-align: right;">1</td>
-<td>E1A SENSOR CABLE</td>
-<td>Package / sourcing pending</td>
-</tr>
-<tr>
-<td>J3</td>
-<td style="text-align: right;">1</td>
-<td>E1B SENSOR CABLE</td>
-<td>Package / sourcing pending</td>
-</tr>
-<tr>
-<td>J4</td>
-<td style="text-align: right;">1</td>
-<td>E2A SENSOR CABLE</td>
-<td>Package / sourcing pending</td>
-</tr>
-<tr>
-<td>J5</td>
-<td style="text-align: right;">1</td>
-<td>E2B SENSOR CABLE</td>
-<td>Package / sourcing pending</td>
-</tr>
-<tr>
-<td>J6</td>
-<td style="text-align: right;">1</td>
-<td>2x4 RIBBON / TEAM BUS</td>
-<td>Package / sourcing pending</td>
-</tr>
-<tr>
-<td>J7</td>
-<td style="text-align: right;">1</td>
-<td>SPARE GPIO / POWER</td>
-<td>Package / sourcing pending</td>
-</tr>
-<tr>
-<td>JP1</td>
-<td style="text-align: right;">1</td>
-<td>TX ISOLATE</td>
-<td>Package / sourcing pending</td>
-</tr>
-<tr>
-<td>R1, R18</td>
-<td style="text-align: right;">2</td>
-<td>1k 0.25W</td>
-<td>Package / sourcing pending</td>
-</tr>
-<tr>
-<td>R2, R6, R10, R14</td>
-<td style="text-align: right;">4</td>
-<td>220 0.25W</td>
-<td>Package / sourcing pending</td>
-</tr>
-<tr>
-<td>R3, R7, R11, R15</td>
-<td style="text-align: right;">4</td>
-<td>4.7k 0.25W</td>
-<td>Package / sourcing pending</td>
-</tr>
-<tr>
-<td>R4, R8, R12, R16, R19</td>
-<td style="text-align: right;">5</td>
-<td>10k 0.25W</td>
-<td>Package / sourcing pending</td>
-</tr>
-<tr>
-<td>R5, R9, R13, R17</td>
-<td style="text-align: right;">4</td>
-<td>20k 0.25W</td>
-<td>Package / sourcing pending</td>
-</tr>
-<tr>
-<td>SW1</td>
-<td style="text-align: right;">1</td>
-<td>DEBUG / N.O.</td>
-<td>Package / sourcing pending</td>
-</tr>
-<tr>
-<td>TP1</td>
-<td style="text-align: right;">1</td>
-<td>VIN_FUSED</td>
-<td>Package / sourcing pending</td>
-</tr>
-<tr>
-<td>TP2</td>
-<td style="text-align: right;">1</td>
-<td>+5V</td>
-<td>Package / sourcing pending</td>
-</tr>
-<tr>
-<td>TP3</td>
-<td style="text-align: right;">1</td>
-<td>GND</td>
-<td>Package / sourcing pending</td>
-</tr>
-<tr>
-<td>TP4</td>
-<td style="text-align: right;">1</td>
-<td>E1A_RAW</td>
-<td>Package / sourcing pending</td>
-</tr>
-<tr>
-<td>TP5</td>
-<td style="text-align: right;">1</td>
-<td>E1B_RAW</td>
-<td>Package / sourcing pending</td>
-</tr>
-<tr>
-<td>TP6</td>
-<td style="text-align: right;">1</td>
-<td>E2A_RAW</td>
-<td>Package / sourcing pending</td>
-</tr>
-<tr>
-<td>TP7</td>
-<td style="text-align: right;">1</td>
-<td>E2B_RAW</td>
-<td>Package / sourcing pending</td>
-</tr>
-<tr>
-<td>TP8</td>
-<td style="text-align: right;">1</td>
-<td>ENC_TX</td>
-<td>Package / sourcing pending</td>
-</tr>
-<tr>
-<td>TP9</td>
-<td style="text-align: right;">1</td>
-<td>ENC_RX</td>
-<td>Package / sourcing pending</td>
-</tr>
-<tr>
-<td>U1</td>
-<td style="text-align: right;">1</td>
-<td>L7805ACV</td>
-<td>Package / sourcing pending</td>
-</tr>
-<tr>
-<td>U2</td>
-<td style="text-align: right;">1</td>
-<td>MCP6004</td>
-<td>DIP-14 assigned; verify exact orderable suffix</td>
-</tr>
-<tr>
-<td>U3</td>
-<td style="text-align: right;">1</td>
-<td>SN74HC14N</td>
-<td>DIP-14 assigned; verify exact orderable suffix</td>
-</tr>
-<tr>
-<td>Q1–Q4</td>
-<td style="text-align: right;">4</td>
-<td>Vishay TCST2103 (off-board)</td>
-<td>Physical lead mapping and mounting pending</td>
+<td><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../static/parts/l7805.jpg" data-desc-position="bottom"><img src="../../static/parts/l7805.jpg" alt="L7805ACV supplier reference photo" width="78" loading="lazy"></a><br><strong>5 V linear regulator, TO-220</strong></td>
+<td>U1<br><strong>1 pcs</strong></td>
+<td>STMicroelectronics<br><code>L7805ACV</code></td>
+<td style="text-align: right;">$1.22</td>
+<td style="text-align: right;"><strong>$1.22</strong></td>
+<td><a href="https://www.digikey.com/en/products/detail/stmicroelectronics/L7805ACV/585962">Supplier</a> · <a href="https://www.st.com/content/ccc/resource/technical/document/datasheet/41/4f/b3/b0/12/d4/47/88/CD00000444.pdf/files/CD00000444.pdf/jcr%3Acontent/translations/en.CD00000444.pdf">Datasheet</a></td>
 </tr>
 </tbody>
 </table>
-<h2 id="procurement-and-assembly-notes">Procurement and assembly notes<a class="headerlink" href="#procurement-and-assembly-notes" title="Permanent link">¶</a></h2>
-<p>Prices and a procurement total are <strong>unavailable until the exact package and supplier choices are confirmed</strong>. The current schematic has several unassigned footprints; the Nano socket, jack, fuse holder, connectors and passive packages need a physical fit check. Use the <a href="../../02-Component-Selection/Component-Selection/">component selection references</a> to verify manufacturer specifications before ordering.</p>
-<p>The 500 mA removable fast fuse is the drawn value, not a completed protection study. Verify its time-current curve, holder rating and wire/trace protection against the actual load. Optical sensors, disks, mounting brackets, cables, an adapter, sockets and any heatsink must be included in the final purchasing list.</p>
-<p><strong>Consistency note:</strong> C11 is <strong>100 nF</strong> in the actual Revision B netlist. With R19 = 10 kΩ, its nominal RC time constant is <strong>1 ms</strong>. An older schematic note says 10 ms; review and correct that annotation or intentionally revise the component value before fabrication.</p>
+</div>
+<h2 id="resistors-and-capacitors">Resistors and capacitors<a class="headerlink" href="#resistors-and-capacitors" title="Permanent link">¶</a></h2>
+<div class="bom-table">
+<table>
+<thead>
+<tr>
+<th>Part / reference photo</th>
+<th>Ref. / Qty</th>
+<th>Manufacturer &amp; example MPN</th>
+<th style="text-align: right;">Unit USD</th>
+<th style="text-align: right;">Line USD</th>
+<th>Sources</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../static/parts/resistor.jpg" data-desc-position="bottom"><img src="../../static/parts/resistor.jpg" alt="CFR-25JB-52-220R supplier reference photo" width="78" loading="lazy"></a><br><strong>220 Ω, 0.25 W, ±5% axial resistor</strong></td>
+<td>R2, R6, R10, R14<br><strong>4 pcs</strong></td>
+<td>YAGEO<br><code>CFR-25JB-52-220R</code></td>
+<td style="text-align: right;">$0.10</td>
+<td style="text-align: right;"><strong>$0.40</strong></td>
+<td><a href="https://www.digikey.com/en/products/detail/yageo/CFR-25JB-52-220R/1295">Supplier</a> · specs/docs on supplier page</td>
+</tr>
+<tr>
+<td><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../static/parts/resistor.jpg" data-desc-position="bottom"><img src="../../static/parts/resistor.jpg" alt="CFR-25JB-52-1K supplier reference photo" width="78" loading="lazy"></a><br><strong>1 kΩ, 0.25 W, ±5% axial resistor</strong></td>
+<td>R1, R18<br><strong>2 pcs</strong></td>
+<td>YAGEO<br><code>CFR-25JB-52-1K</code></td>
+<td style="text-align: right;">$0.10</td>
+<td style="text-align: right;"><strong>$0.20</strong></td>
+<td><a href="https://www.digikey.com/en/products/detail/yageo/CFR-25JB-52-1K/96">Supplier</a> · <a href="https://yageogroup.com/content/datasheet/asset/file/YAGEO-CFR_DATASHEET">Datasheet</a></td>
+</tr>
+<tr>
+<td><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../static/parts/resistor.jpg" data-desc-position="bottom"><img src="../../static/parts/resistor.jpg" alt="CFR-25JB-52-4K7 supplier reference photo" width="78" loading="lazy"></a><br><strong>4.7 kΩ, 0.25 W, ±5% axial resistor</strong></td>
+<td>R3, R7, R11, R15<br><strong>4 pcs</strong></td>
+<td>YAGEO<br><code>CFR-25JB-52-4K7</code></td>
+<td style="text-align: right;">$0.10</td>
+<td style="text-align: right;"><strong>$0.40</strong></td>
+<td><a href="https://www.digikey.com/en/products/detail/yageo/CFR-25JB-52-4K7/1846">Supplier</a> · specs/docs on supplier page</td>
+</tr>
+<tr>
+<td><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../static/parts/resistor.jpg" data-desc-position="bottom"><img src="../../static/parts/resistor.jpg" alt="CFR-25JB-52-10K supplier reference photo" width="78" loading="lazy"></a><br><strong>10 kΩ, 0.25 W, ±5% axial resistor</strong></td>
+<td>R4, R8, R12, R16, R19<br><strong>5 pcs</strong></td>
+<td>YAGEO<br><code>CFR-25JB-52-10K</code></td>
+<td style="text-align: right;">$0.10</td>
+<td style="text-align: right;"><strong>$0.50</strong></td>
+<td><a href="https://www.digikey.com/en/products/detail/yageo/CFR-25JB-52-10K/338">Supplier</a> · specs/docs on supplier page</td>
+</tr>
+<tr>
+<td><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../static/parts/resistor.jpg" data-desc-position="bottom"><img src="../../static/parts/resistor.jpg" alt="CFR-25JB-52-20K supplier reference photo" width="78" loading="lazy"></a><br><strong>20 kΩ, 0.25 W, ±5% axial resistor</strong></td>
+<td>R5, R9, R13, R17<br><strong>4 pcs</strong></td>
+<td>YAGEO<br><code>CFR-25JB-52-20K</code></td>
+<td style="text-align: right;">$0.10</td>
+<td style="text-align: right;"><strong>$0.40</strong></td>
+<td><a href="https://www.digikey.com/en/products/detail/yageo/CFR-25JB-52-20K/880">Supplier</a> · specs/docs on supplier page</td>
+</tr>
+<tr>
+<td><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../static/parts/cap330nf.jpg" data-desc-position="bottom"><img src="../../static/parts/cap330nf.jpg" alt="C330C334M5U5TA supplier reference photo" width="78" loading="lazy"></a><br><strong>0.33 µF, 50 V, Z5U radial capacitor</strong></td>
+<td>C1<br><strong>1 pcs</strong></td>
+<td>KEMET<br><code>C330C334M5U5TA</code></td>
+<td style="text-align: right;">$0.87</td>
+<td style="text-align: right;"><strong>$0.87</strong></td>
+<td><a href="https://www.digikey.com/en/products/detail/kemet/C330C334M5U5TA/818186">Supplier</a> · specs/docs on supplier page</td>
+</tr>
+<tr>
+<td><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../static/parts/cap100nf.jpg" data-desc-position="bottom"><img src="../../static/parts/cap100nf.jpg" alt="C315C104M5U5TA supplier reference photo" width="78" loading="lazy"></a><br><strong>0.1 µF / 100 nF, 50 V, Z5U radial capacitor</strong></td>
+<td>C2, C8, C9, C10, C11<br><strong>5 pcs</strong></td>
+<td>KEMET<br><code>C315C104M5U5TA</code></td>
+<td style="text-align: right;">$0.58</td>
+<td style="text-align: right;"><strong>$2.90</strong></td>
+<td><a href="https://www.digikey.com/en/products/detail/kemet/C315C104M5U5TA/817927">Supplier</a> · <a href="https://yageogroup.com/content/datasheet/asset/file/KEM_C1051_GOLDMAX_Z5U">Datasheet</a></td>
+</tr>
+<tr>
+<td><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../static/parts/cap1nf.jpg" data-desc-position="bottom"><img src="../../static/parts/cap1nf.jpg" alt="C315C102J5G5TA supplier reference photo" width="78" loading="lazy"></a><br><strong>1 nF, 50 V, ±5% C0G radial capacitor</strong></td>
+<td>C4–C7<br><strong>4 pcs</strong></td>
+<td>KEMET<br><code>C315C102J5G5TA</code></td>
+<td style="text-align: right;">$0.71</td>
+<td style="text-align: right;"><strong>$2.84</strong></td>
+<td><a href="https://www.digikey.com/en/products/detail/kemet/C315C102J5G5TA/12700309">Supplier</a> · <a href="https://yageogroup.com/content/datasheet/asset/file/KEM_C1049_GOLDMAX_C0G">Datasheet</a></td>
+</tr>
+<tr>
+<td><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../static/parts/cap10uf.jpg" data-desc-position="bottom"><img src="../../static/parts/cap10uf.jpg" alt="EEA-FC1E100 supplier reference photo" width="78" loading="lazy"></a><br><strong>10 µF, 25 V, radial aluminum capacitor</strong></td>
+<td>C3<br><strong>1 pcs</strong></td>
+<td>Panasonic<br><code>EEA-FC1E100</code></td>
+<td style="text-align: right;">$0.39</td>
+<td style="text-align: right;"><strong>$0.39</strong></td>
+<td><a href="https://www.digikey.com/en/products/detail/panasonic-electronic-components/EEA-FC1E100/356116">Supplier</a> · specs/docs on supplier page</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p><em>Resistor photos are representative of the YAGEO CFR axial family; band colors vary with resistance. Supplier capacitor images can also represent a family. The printed MPN, electrical value and dimensional drawing govern selection.</em></p>
+<h2 id="connectors-protection-and-debug">Connectors, protection and debug<a class="headerlink" href="#connectors-protection-and-debug" title="Permanent link">¶</a></h2>
+<div class="bom-table">
+<table>
+<thead>
+<tr>
+<th>Part / reference photo</th>
+<th>Ref. / Qty</th>
+<th>Manufacturer &amp; example MPN</th>
+<th style="text-align: right;">Unit USD</th>
+<th style="text-align: right;">Line USD</th>
+<th>Sources</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../static/parts/jack.jpg" data-desc-position="bottom"><img src="../../static/parts/jack.jpg" alt="PJ-102A supplier reference photo" width="78" loading="lazy"></a><br><strong>Right-angle through-hole DC barrel jack</strong></td>
+<td>J1<br><strong>1 pcs</strong></td>
+<td>Same Sky<br><code>PJ-102A</code></td>
+<td style="text-align: right;">$0.75</td>
+<td style="text-align: right;"><strong>$0.75</strong></td>
+<td><a href="https://www.digikey.com/en/products/detail/same-sky-formerly-cui-devices/PJ-102A/275425">Supplier</a> · specs/docs on supplier page</td>
+</tr>
+<tr>
+<td><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../static/parts/fuse.jpg" data-desc-position="bottom"><img src="../../static/parts/fuse.jpg" alt="0217.500MXP supplier reference photo" width="78" loading="lazy"></a><br><strong>500 mA fast-acting 5 × 20 mm cartridge fuse</strong></td>
+<td>F1 fuse<br><strong>1 pcs</strong></td>
+<td>Littelfuse<br><code>0217.500MXP</code></td>
+<td style="text-align: right;">$0.57</td>
+<td style="text-align: right;"><strong>$0.57</strong></td>
+<td><a href="https://www.digikey.com/en/products/detail/littelfuse-inc/0217-500MXP/777537">Supplier</a> · <a href="https://www.littelfuse.com/assetdocs/littelfuse-fuse-217-datasheet?assetguid=af55be94-c42e-41b1-ad43-e070e09443fe">Datasheet</a></td>
+</tr>
+<tr>
+<td><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../static/parts/holder.jpg" data-desc-position="bottom"><img src="../../static/parts/holder.jpg" alt="0031.8201 supplier reference photo" width="78" loading="lazy"></a><br><strong>PCB fuse holder for 5 × 20 mm cartridge</strong></td>
+<td>F1 holder<br><strong>1 pcs</strong></td>
+<td>SCHURTER<br><code>0031.8201</code></td>
+<td style="text-align: right;">$1.36</td>
+<td style="text-align: right;"><strong>$1.36</strong></td>
+<td><a href="https://www.digikey.com/en/products/detail/schurter-inc/0031-8201/669925">Supplier</a> · <a href="https://us.schurter.com/en/datasheet/typ_OGN.pdf">Datasheet</a></td>
+</tr>
+<tr>
+<td><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../static/parts/header3.jpg" data-desc-position="bottom"><img src="../../static/parts/header3.jpg" alt="PRPC003SAAN-RC supplier reference photo" width="78" loading="lazy"></a><br><strong>1 × 3 male header, 2.54 mm</strong></td>
+<td>J2–J5<br><strong>4 pcs</strong></td>
+<td>Sullins<br><code>PRPC003SAAN-RC</code></td>
+<td style="text-align: right;">$0.10</td>
+<td style="text-align: right;"><strong>$0.40</strong></td>
+<td><a href="https://www.digikey.com/en/products/detail/sullins-connector-solutions/PRPC003SAAN-RC/2775251">Supplier</a> · <a href="https://mm.digikey.com/Volume0/opasdata/d220001/medias/docus/386/xRxCzzzSxxN-RC_ST_11635-B.pdf">Datasheet</a></td>
+</tr>
+<tr>
+<td><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../static/parts/header8.jpg" data-desc-position="bottom"><img src="../../static/parts/header8.jpg" alt="N2508-6002-RB supplier reference photo" width="78" loading="lazy"></a><br><strong>2 × 4 shrouded male header, 2.54 mm</strong></td>
+<td>J6<br><strong>1 pcs</strong></td>
+<td>3M<br><code>N2508-6002-RB</code></td>
+<td style="text-align: right;">$2.31</td>
+<td style="text-align: right;"><strong>$2.31</strong></td>
+<td><a href="https://www.digikey.com/en/products/detail/3m/N2508-6002-RB/2609703">Supplier</a> · specs/docs on supplier page</td>
+</tr>
+<tr>
+<td><br><strong>1 × 4 male header, 2.54 mm</strong></td>
+<td>J7<br><strong>1 pcs</strong></td>
+<td>Sullins<br><code>PRPC004SAAN-RC</code></td>
+<td style="text-align: right;">$0.10</td>
+<td style="text-align: right;"><strong>$0.10</strong></td>
+<td><a href="https://www.digikey.com/en/products/detail/sullins-connector-solutions/PRPC004SAAN-RC/2775250">Supplier</a> · specs/docs on supplier page</td>
+</tr>
+<tr>
+<td><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../static/parts/header2.jpg" data-desc-position="bottom"><img src="../../static/parts/header2.jpg" alt="PRPC002SAAN-RC supplier reference photo" width="78" loading="lazy"></a><br><strong>1 × 2 male header, 2.54 mm</strong></td>
+<td>JP1 header<br><strong>1 pcs</strong></td>
+<td>Sullins<br><code>PRPC002SAAN-RC</code></td>
+<td style="text-align: right;">$0.10</td>
+<td style="text-align: right;"><strong>$0.10</strong></td>
+<td><a href="https://www.digikey.com/en/products/detail/sullins-connector-solutions/PRPC002SAAN-RC/2775252">Supplier</a> · specs/docs on supplier page</td>
+</tr>
+<tr>
+<td><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../static/parts/shunt.jpg" data-desc-position="bottom"><img src="../../static/parts/shunt.jpg" alt="NPC02SXON-RC supplier reference photo" width="78" loading="lazy"></a><br><strong>2.54 mm removable jumper shunt</strong></td>
+<td>JP1 shunt<br><strong>1 pcs</strong></td>
+<td>Sullins<br><code>NPC02SXON-RC</code></td>
+<td style="text-align: right;">$0.10</td>
+<td style="text-align: right;"><strong>$0.10</strong></td>
+<td><a href="https://www.digikey.com/en/products/detail/sullins-connector-solutions/NPC02SXON-RC/2618266">Supplier</a> · specs/docs on supplier page</td>
+</tr>
+<tr>
+<td><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../static/parts/green.jpg" data-desc-position="bottom"><img src="../../static/parts/green.jpg" alt="WP7113GD supplier reference photo" width="78" loading="lazy"></a><br><strong>5 mm green through-hole LED</strong></td>
+<td>D1<br><strong>1 pcs</strong></td>
+<td>Kingbright<br><code>WP7113GD</code></td>
+<td style="text-align: right;">$0.23</td>
+<td style="text-align: right;"><strong>$0.23</strong></td>
+<td><a href="https://www.digikey.com/en/products/detail/kingbright/WP7113GD/1747662">Supplier</a> · specs/docs on supplier page</td>
+</tr>
+<tr>
+<td><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../static/parts/yellow.jpg" data-desc-position="bottom"><img src="../../static/parts/yellow.jpg" alt="WP7113YD supplier reference photo" width="78" loading="lazy"></a><br><strong>5 mm yellow through-hole LED</strong></td>
+<td>D2<br><strong>1 pcs</strong></td>
+<td>Kingbright<br><code>WP7113YD</code></td>
+<td style="text-align: right;">$0.23</td>
+<td style="text-align: right;"><strong>$0.23</strong></td>
+<td><a href="https://www.digikey.com/en/products/detail/kingbright/WP7113YD/1747683">Supplier</a> · <a href="https://www.kingbrightusa.com/images/catalog/SPEC/WP7113YD.pdf">Datasheet</a></td>
+</tr>
+<tr>
+<td><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../static/parts/switch.jpg" data-desc-position="bottom"><img src="../../static/parts/switch.jpg" alt="B3F-1000 supplier reference photo" width="78" loading="lazy"></a><br><strong>Through-hole momentary SPST-NO tactile switch</strong></td>
+<td>SW1<br><strong>1 pcs</strong></td>
+<td>Omron<br><code>B3F-1000</code></td>
+<td style="text-align: right;">$0.35</td>
+<td style="text-align: right;"><strong>$0.35</strong></td>
+<td><a href="https://www.digikey.com/en/products/detail/omron-electronics-inc-emc-div/B3F-1000/33150">Supplier</a> · <a href="https://omronfs.omron.com/en_US/ecb/products/pdf/en-b3f.pdf">Datasheet</a></td>
+</tr>
+<tr>
+<td><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../static/parts/testpoint.jpg" data-desc-position="bottom"><img src="../../static/parts/testpoint.jpg" alt="5010 supplier reference photo" width="78" loading="lazy"></a><br><strong>Through-hole loop test point</strong></td>
+<td>TP1–TP9<br><strong>9 pcs</strong></td>
+<td>Keystone<br><code>5010</code></td>
+<td style="text-align: right;">$0.29</td>
+<td style="text-align: right;"><strong>$2.61</strong></td>
+<td><a href="https://www.digikey.com/en/products/detail/keystone-electronics/5010/255332">Supplier</a> · specs/docs on supplier page</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h2 id="external-power-example">External power example<a class="headerlink" href="#external-power-example" title="Permanent link">¶</a></h2>
+<div class="bom-table">
+<table>
+<thead>
+<tr>
+<th>Part / reference photo</th>
+<th>Ref. / Qty</th>
+<th>Manufacturer &amp; example MPN</th>
+<th style="text-align: right;">Unit USD</th>
+<th style="text-align: right;">Line USD</th>
+<th>Sources</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../static/parts/adapter.jpg" data-desc-position="bottom"><img src="../../static/parts/adapter.jpg" alt="GST18A09-P1J supplier reference photo" width="78" loading="lazy"></a><br><strong>9 V / 2 A desktop adapter</strong></td>
+<td>External to board<br><strong>1 pcs</strong></td>
+<td>MEAN WELL<br><code>GST18A09-P1J</code></td>
+<td style="text-align: right;">$14.10</td>
+<td style="text-align: right;"><strong>$14.10</strong></td>
+<td><a href="https://www.digikey.com/en/products/detail/mean-well-usa-inc/GST18A09-P1J/7703606">Supplier</a> · <a href="https://www.meanwellusa.com/upload/pdf/GST18A/GST18A-spec.pdf">Datasheet</a></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>Adding this adapter gives an illustrative <strong>$53.05 parts-plus-adapter subtotal</strong>, before the exclusions above. Its AC input cord is sold separately. Check its 5.5 × 2.1 mm center-positive plug against the chosen jack and confirm the mains cord needed locally. This adapter's 2 A rating is available capacity; it does not mean the encoder consumes 2 A or resolves regulator heating.</p>
+<h2 id="fit-sourcing-and-assembly-notes">Fit, sourcing and assembly notes<a class="headerlink" href="#fit-sourcing-and-assembly-notes" title="Permanent link">¶</a></h2>
+<ul>
+<li><strong>A1 / DM164150:</strong> Board already specified; include replacement cost even if course-provided.</li>
+<li><strong>Q1–Q4 / TCST2103:</strong> Off-board A/B sensors; fit to the disk and bracket still required.</li>
+<li><strong>U2 / MCP6004-I/P:</strong> Orderable through-hole example for the MCP6004 drawn in Revision B.</li>
+<li><strong>U3 / SN74HC14N:</strong> Four gates used; two unused inputs held at a defined level.</li>
+<li><strong>U1 / L7805ACV:</strong> Thermal design and heatsink remain to be verified.</li>
+<li><strong>R5, R9, R13, R17 / CFR-25JB-52-20K:</strong> DigiKey page lists backorder; compare Mouser availability before ordering.</li>
+<li><strong>C1 / C330C334M5U5TA:</strong> 50 V example exceeds the schematic’s 25 V rating; check 5.08 mm lead spacing.</li>
+<li><strong>C2, C8, C9, C10, C11 / C315C104M5U5TA:</strong> Example value/rating match; X7R may be preferable where stability matters.</li>
+<li><strong>C4–C7 / C315C102J5G5TA:</strong> C0G dielectric supports a more stable filter capacitance.</li>
+<li><strong>C3 / EEA-FC1E100:</strong> Polarized example: verify + terminal and footprint lead spacing.</li>
+<li><strong>J1 / PJ-102A:</strong> Example only: confirm plug fit, polarity and physical pad numbering.</li>
+<li><strong>F1 fuse / 0217.500MXP:</strong> Separate removable fuse and holder; validate protection and DC application.</li>
+<li><strong>F1 holder / 0031.8201:</strong> Physical holder example; footprint must match its drawing.</li>
+<li><strong>J2–J5 / PRPC003SAAN-RC:</strong> Board-side sensor headers only; mating housings/cables excluded.</li>
+<li><strong>J6 / N2508-6002-RB:</strong> Example sold individually; final ribbon connector and pinout require team agreement.</li>
+<li><strong>J7 / PRPC004SAAN-RC:</strong> Spare GPIO / +5 V / GND.</li>
+<li><strong>JP1 shunt / NPC02SXON-RC:</strong> Separate shunt needed to close TX isolation jumper.</li>
+<li><strong>SW1 / B3F-1000:</strong> Four physical legs, two electrical contacts; verify paired pins in the footprint.</li>
+<li><strong>TP1–TP9 / 5010:</strong> One red example for pricing; distinguish GND by marking or a black variant.</li>
+</ul>
+<h2 id="items-still-requiring-a-quote-or-team-decision">Items still requiring a quote or team decision<a class="headerlink" href="#items-still-requiring-a-quote-or-team-decision" title="Permanent link">¶</a></h2>
+<table>
+<thead>
+<tr>
+<th>Item</th>
+<th>Quantity / scope</th>
+<th>Why it is outside the priced subtotal</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Nano carrier sockets</td>
+<td>Two 1 × 28 receptacles; example Sullins PPPC281LFBN-RC</td>
+<td>Confirm stack height, footprint and current small-quantity quote.</td>
+</tr>
+<tr>
+<td>Sensor cables and mates</td>
+<td>Four three-conductor assemblies</td>
+<td>Length, strain relief, connector polarization and motor placement remain open.</td>
+</tr>
+<tr>
+<td>Ribbon cable and IDC mate</td>
+<td>Team cable assembly</td>
+<td>Final connector orientation, length and signal allocation are deferred.</td>
+</tr>
+<tr>
+<td>Encoder disks and brackets</td>
+<td>Two disks / four sensor mounts</td>
+<td>Shaft diameter, slots and clearances depend on the selected motors.</td>
+</tr>
+<tr>
+<td>Regulator heatsink / hardware</td>
+<td>As required by thermal measurements</td>
+<td>TO-220 fit, airflow and temperature rise must be checked.</td>
+</tr>
+<tr>
+<td>Custom encoder PCB and mounting hardware</td>
+<td>One board</td>
+<td>Layout is not yet complete; obtain fabrication/assembly pricing later.</td>
+</tr>
+<tr>
+<td>Motors</td>
+<td>Two, on the driver subsystem</td>
+<td>Team-selected actuation hardware; excluded from this individual encoder BOM.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="photo-credits-and-selection-status">Photo credits and selection status<a class="headerlink" href="#photo-credits-and-selection-status" title="Permanent link">¶</a></h2>
+<p>Reference product images are supplied by the linked manufacturers through DigiKey; attribution and original image URLs are retained in the sourcing record. Images are hosted locally for reliable display. Photographs show purchasing examples, not parts already owned or assembled. New support-component MPNs are <strong>fit-check candidates</strong>; they do not imply assigned or verified PCB footprints.</p>
+<p><strong>Revision B consistency:</strong> C11 is 100 nF in the exported netlist. With R19 = 10 kΩ, the nominal time constant is 1 ms. Resolve the older 10 ms annotation before fabrication. No schematic electrical values were changed during this website refinement.</p>
 
 
 
