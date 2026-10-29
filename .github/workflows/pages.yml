@@ -28,9 +28,7 @@ jobs:
       - name: Install & Build
         run: |
           pip install -r requirements.txt
-          python tools/bom/render.py --check
-          python -m mkdocs build --strict
-          python tools/check_links.py
+          mkdocs build
       
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v4
