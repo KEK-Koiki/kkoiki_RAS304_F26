@@ -1,5 +1,8 @@
+# Generated website and local dependencies
 site/
+node_modules/
+docs/static/node_modules/
+_artifacts/
 __pycache__/
 .venv/
 *.log
-docs/static/node_modules/

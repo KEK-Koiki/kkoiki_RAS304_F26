@@ -1,0 +1,39 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Website: preview",
+      "type": "process",
+      "command": "python",
+      "args": ["-m", "mkdocs", "serve"],
+      "options": { "cwd": "${workspaceFolder}" },
+      "problemMatcher": []
+    },
+    {
+      "label": "Website: build",
+      "type": "process",
+      "command": "python",
+      "args": ["-m", "mkdocs", "build", "--strict"],
+      "options": { "cwd": "${workspaceFolder}" },
+      "problemMatcher": [],
+      "group": { "kind": "build", "isDefault": true }
+    },
+    {
+      "label": "Website: check generated tables",
+      "type": "process",
+      "command": "python",
+      "args": ["tools/bom/render.py", "--check"],
+      "options": { "cwd": "${workspaceFolder}" },
+      "problemMatcher": []
+    },
+    {
+      "label": "Website: check links",
+      "type": "process",
+      "command": "python",
+      "args": ["tools/check_links.py"],
+      "options": { "cwd": "${workspaceFolder}" },
+      "dependsOn": "Website: build",
+      "problemMatcher": []
+    }
+  ]
+}
