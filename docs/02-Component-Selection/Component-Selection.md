@@ -7,8 +7,74 @@ title: Component Selection
 
 The current choices follow the revised **two-motor optical encoder subsystem**. These comparison tables explain engineering tradeoffs; choices already drawn in Revision B are distinguished from alternatives and decisions awaiting physical measurements.
 
-!!! note "Selection status"
-    Current manufacturer pages are linked for verification. Exact orderable packages, supplier quotations and component photographs for every commercial alternative still need a procurement pass; no unverified prices are presented as quotations. Motor and ribbon decisions are deferred until the team confirms them.
+## Selected parts at a glance
+
+These are example orderable versions of the components already drawn in Revision B. Prices are **USD per piece at the supplier's quantity-one tier**, reviewed October 28, 2026. The four sensors therefore cost four times the displayed sensor unit price. The [detailed BOM](../03-BOM/BOM.md) includes quantities, line totals, passives, connectors and fit-check notes.
+
+<div class="component-cards" markdown>
+<div class="component-card" markdown>
+<img src="../../static/parts/nano.jpg" alt="DM164150 supplier reference photo" width="160" loading="lazy">
+<div class="number">A1 · 1 piece</div>
+### DM164150
+PIC18F57Q43 Curiosity Nano
+
+**$10.61 each · $10.61 extended**
+
+[Supplier & price](https://www.digikey.com/en/products/detail/microchip-technology/DM164150/11586705) · [Manufacturer documentation](https://www.digikey.com/en/products/detail/microchip-technology/DM164150/11586705)
+</div>
+<div class="component-card" markdown>
+<img src="../../static/parts/tcst2103.jpg" alt="TCST2103 supplier reference photo" width="160" loading="lazy">
+<div class="number">Q1–Q4 · 4 pieces</div>
+### TCST2103
+Bare optical interrupter, 3.1 mm slot
+
+**$1.84 each · $7.36 extended**
+
+[Supplier & price](https://www.digikey.com/en/products/detail/vishay-semiconductor-opto-division/TCST2103/2354849) · [Manufacturer documentation](https://www.vishay.com/docs/81147/tcst2103.pdf)
+</div>
+<div class="component-card" markdown>
+<img src="../../static/parts/mcp6004.jpg" alt="MCP6004-I/P supplier reference photo" width="160" loading="lazy">
+<div class="number">U2 · 1 piece</div>
+### MCP6004-I/P
+Quad rail-to-rail op-amp, PDIP-14
+
+**$0.60 each · $0.60 extended**
+
+[Supplier & price](https://www.digikey.com/en/products/detail/MCP6004-I%2FP/MCP6004-I%2FP-ND/523060) · [Manufacturer documentation](https://ww1.microchip.com/downloads/en/DeviceDoc/MCP6001-1R-1U-2-4-1-MHz-Low-Power-Op-Amp-DS20001733L.pdf)
+</div>
+<div class="component-card" markdown>
+<img src="../../static/parts/hc14.jpg" alt="SN74HC14N supplier reference photo" width="160" loading="lazy">
+<div class="number">U3 · 1 piece</div>
+### SN74HC14N
+Hex Schmitt inverter, PDIP-14
+
+**$1.15 each · $1.15 extended**
+
+[Supplier & price](https://www.digikey.com/en/products/detail/texas-instruments/SN74HC14N/277223) · [Manufacturer documentation](https://www.digikey.com/en/products/detail/texas-instruments/SN74HC14N/277223)
+</div>
+<div class="component-card" markdown>
+<img src="../../static/parts/l7805.jpg" alt="L7805ACV supplier reference photo" width="160" loading="lazy">
+<div class="number">U1 · 1 piece</div>
+### L7805ACV
+5 V linear regulator, TO-220
+
+**$1.22 each · $1.22 extended**
+
+[Supplier & price](https://www.digikey.com/en/products/detail/stmicroelectronics/L7805ACV/585962) · [Manufacturer documentation](https://www.st.com/content/ccc/resource/technical/document/datasheet/41/4f/b3/b0/12/d4/47/88/CD00000444.pdf/files/CD00000444.pdf/jcr%3Acontent/translations/en.CD00000444.pdf)
+</div>
+<div class="component-card" markdown>
+<img src="../../static/parts/adapter.jpg" alt="GST18A09-P1J supplier reference photo" width="160" loading="lazy">
+<div class="number">EXTERNAL POWER · PURCHASING CANDIDATE</div>
+### GST18A09-P1J
+9 V / 2 A desktop supply; input cord sold separately.
+
+**$14.10 each**
+
+[Supplier & price](https://www.digikey.com/en/products/detail/mean-well-usa-inc/GST18A09-P1J/7703606) · [Datasheet](https://www.meanwellusa.com/upload/pdf/GST18A/GST18A-spec.pdf)
+</div>
+</div>
+
+*Product images: manufacturer reference photos via the linked DigiKey listings. Images are representative; confirm suffix, package and dimensions from the datasheet. This sourcing pass does not establish final mounting or team interface approval.*
 
 ## Optical sensing — individual subsystem
 
@@ -70,4 +136,4 @@ Disable analog functions on digital signals, configure the selected clock and ti
 
 ## What remains to finalize
 
-Confirm motor and disk geometry; complete commercial comparisons with exact prices and photos; finalize the power adapter and package/footprint choices; capture the actual MCC pin/peripheral configuration; and obtain teaching-team feedback on the amplifier/filter design. The [BOM](../03-BOM/BOM.md) lists the components currently drawn.
+Confirm motor and disk geometry; complete the remaining alternative-product comparisons and recheck supplier prices before ordering; finalize the power adapter and package/footprint choices; capture the actual MCC pin/peripheral configuration; and obtain teaching-team feedback on the amplifier/filter design. The [BOM](../03-BOM/BOM.md) lists the components currently drawn.

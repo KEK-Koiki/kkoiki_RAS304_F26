@@ -17,7 +17,7 @@ For the October 29, 2026 design review, use the [overview](../index.md) to intro
 | Block diagram | Updated to include amplification/filtering | Review after final mechanical and interface decisions. |
 | Schematic downloads and visible raster image | Revision B provided | Correct C11 annotation mismatch before fabrication. |
 | Schematic ERC evidence | Recorded pass | Re-run after any electrical change. |
-| Component comparisons | Current selections and tradeoffs documented | Complete commercial alternatives, exact unit costs and photos. |
+| Component selection / priced BOM | Orderable core parts, photos, unit prices and extended costs added | Complete remaining alternative comparisons; reconfirm quotations and physical fit before ordering. |
 | Power budget | Preliminary calculation with 25% margin | Verify load currents, adapter rating, regulator ground current and thermal limits. |
 | MCC configuration | Pin/peripheral plan documented | Implement and capture the actual MCC configuration. |
 | Motors and disks | Pending, intentionally deferred | Confirm shaft dimensions, speed, gearing, slot count and bracket design. |
@@ -31,7 +31,7 @@ The [team PRD](https://ras304-f26-103.github.io/04-Product-Requirements/) still 
 
 1. Inspect connector orientation and continuity with power disconnected. Confirm fuse, regulator pins and the Nano external-power wiring.
 2. Power the disconnected logic board from a current-limited supply; measure VIN_FUSED and +5 V, then check full-load temperature with the complete assembly.
-3. Block and unblock each optical sensor. Probe TP4–TP7, U2 outputs and HC14 outputs for voltage levels, noise and saturation recovery.
+3. Block and unblock each optical sensor. Probe TP4â€“TP7, U2 outputs and HC14 outputs for voltage levels, noise and saturation recovery.
 4. Rotate each disk in both directions. Check A/B phase order, known counts per revolution and the highest required edge rate.
 5. Implement firmware counting, a home/reference procedure and stable-state button debounce; verify interrupt loading and count snapshot integrity.
 6. Agree the final serial link and connect one board at a time. Test TX isolation, framing, stale-data behavior and power-off conditions.
@@ -48,13 +48,15 @@ The prior conversation recorded **0 danger findings and 7 warnings**. The warnin
 
 ## Primary references
 
-- [Microchip PIC18F57Q43 Curiosity Nano hardware user guide](https://ww1.microchip.com/downloads/aemDocuments/documents/MCU08/ProductDocuments/UserGuides/PIC18F57Q43-Curiosity-Nano-HW-UserGuide-DS40002186B.pdf) — board pinout and external power.
-- [Vishay TCST2103 family datasheet](https://www.vishay.com/docs/81147/tcst2103.pdf) — sensor package, optical/electrical characteristics and lead markings.
-- [Microchip MCP6004](https://www.microchip.com/en-us/product/MCP6004) — quad amplifier documentation.
-- [Texas Instruments SN74HC14](https://www.ti.com/product/SN74HC14) — Schmitt inverter electrical specifications.
-- [ST L78 family](https://www.st.com/en/power-management/l78.html) — regulator pinout, operating limits and thermal specifications.
-- [Team 103 report](https://ras304-f26-103.github.io/) — shared project context; older role/interface assignments need team reconciliation.
+- [Microchip PIC18F57Q43 Curiosity Nano hardware user guide](https://ww1.microchip.com/downloads/aemDocuments/documents/MCU08/ProductDocuments/UserGuides/PIC18F57Q43-Curiosity-Nano-HW-UserGuide-DS40002186B.pdf) â€” board pinout and external power.
+- [Vishay TCST2103 family datasheet](https://www.vishay.com/docs/81147/tcst2103.pdf) â€” sensor package, optical/electrical characteristics and lead markings.
+- [Microchip MCP6004](https://www.microchip.com/en-us/product/MCP6004) â€” quad amplifier documentation.
+- [Texas Instruments SN74HC14](https://www.ti.com/product/SN74HC14) â€” Schmitt inverter electrical specifications.
+- [ST L78 family](https://www.st.com/en/power-management/l78.html) â€” regulator pinout, operating limits and thermal specifications.
+- [Team 103 report](https://ras304-f26-103.github.io/) â€” shared project context; older role/interface assignments need team reconciliation.
 
 ## Design record
 
 October 27: local KiCad review rebuilt the schematic grid, corrected ERC findings and exported Revision B. October 28: individual datasheet replaced the template examples, embedded the reviewed circuit, updated the block diagram to include conditioning, documented component rationale and added a preliminary power model. Source symbol geometry includes custom and adapted library work; EK labels alone do not establish personal authorship.
+
+October 28 sourcing refinement: added a detailed four-channel architecture diagram, local supplier product photos, example manufacturer part numbers, a priced BOM and an external-power purchasing candidate. Prices are dated references; motor and ribbon decisions remain deferred.
