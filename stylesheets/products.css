@@ -1,0 +1,86 @@
+/* Products styles. See EDITING.md before changing cascade order. */
+
+.component-cards {
+  display: grid;
+  grid-template-columns: repeat(2,minmax(0,1fr));
+  gap: 1rem;
+  margin: 1rem 0 1.7rem;
+}
+
+.component-card {
+  padding: 1.2rem;
+  background: #fff;
+  border: 1px solid #d8e3e4;
+  border-radius: 10px;
+  min-width: 0;
+}
+
+.component-card>p:first-child {
+  background: white;
+  text-align: center;
+}
+
+.component-card img {
+  width: 150px;
+  height: 140px;
+  object-fit: contain;
+  margin: 0 auto .6rem;
+  display: block;
+}
+
+.component-card h3 {
+  font-size: 1rem;
+  margin: .5rem 0;
+}
+
+.component-card .number {
+  font-size: .64rem;
+  letter-spacing: .07em;
+  color: #157c83;
+  font-weight: 750;
+}
+
+.component-card p {
+  font-size: .73rem;
+}
+
+.bom-table td:first-child {
+  min-width: 10rem;
+  max-width: 15rem;
+}
+
+.bom-table td img {
+  display: block;
+  width: 70px;
+  height: 65px;
+  object-fit: contain;
+  background: white;
+  margin: .1rem 0 .45rem;
+}
+
+.bom-table code {
+  white-space: normal;
+  overflow-wrap: anywhere;
+}
+
+.bom-table td {
+  min-width: 4rem;
+}
+
+.bom-table .md-typeset__table {
+  display: block;
+}
+
+.bom-table td:nth-child(4),.bom-table td:nth-child(5) {
+  white-space: nowrap;
+}
+
+.bom-table table {
+  width: 100%;
+}
+
+@media(max-width:650px) {
+  .component-cards {
+    grid-template-columns: 1fr;
+  }
+}

@@ -1,0 +1,27 @@
+/* Layout styles. See EDITING.md before changing cascade order. */
+
+@media(min-width:76.25em) {
+  body:has(.bom-table) .md-sidebar--primary {
+    display: none;
+  }
+
+  body:has(.component-cards) .md-sidebar--primary {
+    display: none;
+  }
+
+  body:has(img[src*="encoder-detailed-block-diagram"]) .md-sidebar--primary {
+    display: none;
+  }
+}
+
+.bom-table table:not([class]) th {
+  min-width: 0;
+}
+
+.bom-table td:nth-child(6) {
+  min-width: 5rem;
+}
+
+.bom-table td:nth-child(2) {
+  min-width: 4rem;
+}
