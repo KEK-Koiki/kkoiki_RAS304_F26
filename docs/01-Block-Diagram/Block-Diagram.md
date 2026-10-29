@@ -5,23 +5,11 @@ title: Individual Block Diagram
 
 # Individual Block Diagram
 
-The encoder board converts the rotation of two motor shafts into four clean digital signals. This updated diagram includes the **MCP6004 amplification and RC filtering stages** required to keep the architecture consistent with the Revision B schematic.
+Two motors. Four optical channels. One encoder board.
 
-## Detailed signal, pin and power diagram
+![Motor encoder board connections](encoder-detailed-block-diagram.png)
 
-![Detailed encoder block diagram with four optical channels, filter/amplifier values, PIC input pins, local power, debug and proposed team link](encoder-detailed-block-diagram.png)
-
-*Figure 1. Detailed architecture matched to Revision B. Every motor has an A/B sensor pair; each of the four lanes shows its raw test point, RC values, amplifier unit, Schmitt gate and Nano input. The proposed ribbon allocation is explicitly separated from confirmed board connections.*
-
-[Full-size PNG](encoder-detailed-block-diagram.png){.download} [Editable detailed SVG](encoder-detailed-block-diagram.svg){.download} [All diagram sources ZIP](encoder-block-diagram-source.zip){.download}
-
-## System overview
-
-![Two-motor optical encoder architecture with conditioning, PIC, power and team interfaces](encoder-block-diagram.png)
-
-*Figure 2. Two-motor encoder architecture. The arrows show the feedback path; the local power block supplies the sensing and logic circuits.*
-
-[Editable SVG](encoder-block-diagram.svg){.download} [Diagram source ZIP](encoder-block-diagram-source.zip){.download}
+[Full-size PNG](encoder-detailed-block-diagram.png){.download} [Editable SVG](encoder-detailed-block-diagram.svg){.download} [Source ZIP](encoder-block-diagram-source.zip){.download}
 
 ## Signal path and design decisions
 
