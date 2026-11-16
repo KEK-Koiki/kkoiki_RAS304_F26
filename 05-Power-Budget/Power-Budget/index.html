@@ -17,7 +17,7 @@
         <link rel="prev" href="../../04-Schematic/schematic/">
       
       
-        <link rel="next" href="../../Appendix/">
+        <link rel="next" href="../../06-PCB-Design/PCB-Design/">
       
       
         
@@ -318,6 +318,25 @@
   
   
     <li class="md-tabs__item">
+      <a href="../../06-PCB-Design/PCB-Design/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  PCB Design
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
       <a href="../../Appendix/" class="md-tabs__link">
         
   
@@ -532,24 +551,6 @@
         
       
       
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Power Budget
-  
-
-    
-  </span>
-  
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
@@ -567,91 +568,33 @@
 
       </a>
       
-        
+    </li>
+  
 
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+    
+      
+      
   
   
   
+  
+    <li class="md-nav__item">
+      <a href="../../06-PCB-Design/PCB-Design/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
     
   
+    PCB Design
   
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
-      
-        <li class="md-nav__item">
-  <a href="#a-loads-on-the-5-v-rail" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        A · Loads on the +5 V rail
-      
-    </span>
-  </a>
+
+    
+  </span>
   
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#b-rail-demand-and-margin" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        B · Rail demand and margin
-      
-    </span>
-  </a>
   
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#c-regulator-and-thermal-check" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        C · Regulator and thermal check
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#d-external-source" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        D · External source
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#e-battery-runtime" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        E · Battery runtime
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#reusable-calculation" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Reusable calculation
-      
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
+
+      </a>
     </li>
   
 
@@ -703,80 +646,6 @@
     
   
   
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
-      
-        <li class="md-nav__item">
-  <a href="#a-loads-on-the-5-v-rail" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        A · Loads on the +5 V rail
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#b-rail-demand-and-margin" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        B · Rail demand and margin
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#c-regulator-and-thermal-check" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        C · Regulator and thermal check
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#d-external-source" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        D · External source
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#e-battery-runtime" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        E · Battery runtime
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#reusable-calculation" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Reusable calculation
-      
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
 </nav>
                   </div>
                 </div>
@@ -801,134 +670,50 @@
 
 
 <h1 id="power-budget">Power Budget<a class="headerlink" href="#power-budget" title="Permanent link">¶</a></h1>
-<p>This <strong>preliminary encoder-board planning estimate</strong> accounts for the four emitters, PIC board, analog/logic ICs and support loads, then adds the required <strong>25% margin</strong>. Motors are powered on the motor-driver subsystem and are excluded from this local rail.</p>
-<div class="admonition warning">
-<p class="admonition-title">Estimate, not a verified maximum-current budget</p>
-<p>The Nano, amplifier and logic entries include explicitly labeled planning allowances. They are not measured results or datasheet absolute maxima. A final course-template budget requires verified worst-case operating currents, the exact adapter and thermal measurements. Absolute maximum ratings are stress limits and should not be used as intended operating points.</p>
-</div>
-<h2 id="a-loads-on-the-5-v-rail">A · Loads on the +5 V rail<a class="headerlink" href="#a-loads-on-the-5-v-rail" title="Permanent link">¶</a></h2>
+<p>Revision D powers the encoders and logic from the local 5 V regulator. The motor winding supply is separate and is not part of this regulator load.</p>
 <table>
 <thead>
 <tr>
 <th>Load</th>
-<th style="text-align: right;">Quantity</th>
-<th style="text-align: right;">Unit current (mA)</th>
-<th style="text-align: right;">Total (mA)</th>
+<th style="text-align: right;">Planning allocation</th>
 <th>Basis</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>Nano board + MCU</td>
-<td style="text-align: right;">1</td>
-<td style="text-align: right;">100.00</td>
-<td style="text-align: right;">100.00</td>
-<td>Planning allowance; actual firmware/debugger load unmeasured</td>
+<td>Two encoder sensor boards</td>
+<td style="text-align: right;">20 mA</td>
+<td>Supplier attachment: 10 mA maximum each</td>
 </tr>
 <tr>
-<td>TCST2103 emitters</td>
-<td style="text-align: right;">4</td>
-<td style="text-align: right;">17.05</td>
-<td style="text-align: right;">68.18</td>
-<td>Calculated nominal, 220 ohm / 1.25 V assumed LED drop</td>
+<td>Nano target circuitry</td>
+<td style="text-align: right;">50 mA</td>
+<td>Unmeasured engineering allocation, not a measured maximum</td>
 </tr>
 <tr>
-<td>Collector pull-ups</td>
-<td style="text-align: right;">4</td>
-<td style="text-align: right;">1.06</td>
-<td style="text-align: right;">4.26</td>
-<td>All four raw nodes low; conservative pull-up bound</td>
+<td>MCP6004 + HC14</td>
+<td style="text-align: right;">5 mA</td>
+<td>Conservative planning allocation; dynamic load depends on edges</td>
 </tr>
 <tr>
-<td>MCP6004 + feedback</td>
-<td style="text-align: right;">1</td>
-<td style="text-align: right;">2.00</td>
-<td style="text-align: right;">2.00</td>
-<td>Planning allowance including output/feedback loading</td>
+<td>LEDs, pull-ups and other loads</td>
+<td style="text-align: right;">25 mA</td>
+<td>Planning allowance, not measured consumption</td>
 </tr>
 <tr>
-<td>SN74HC14</td>
-<td style="text-align: right;">1</td>
-<td style="text-align: right;">5.00</td>
-<td style="text-align: right;">5.00</td>
-<td>Planning allowance; depends on input edges and frequency</td>
+<td>Total allocation</td>
+<td style="text-align: right;">100 mA</td>
+<td>Provisional</td>
 </tr>
 <tr>
-<td>Power + debug LEDs</td>
-<td style="text-align: right;">2</td>
-<td style="text-align: right;">3.00</td>
-<td style="text-align: right;">6.00</td>
-<td>Planning allowance, 1k series resistors</td>
-</tr>
-<tr>
-<td>Debug pull-up</td>
-<td style="text-align: right;">1</td>
-<td style="text-align: right;">0.50</td>
-<td style="text-align: right;">0.50</td>
-<td>Button held low, 10k at 5 V</td>
+<td>With 25% margin</td>
+<td style="text-align: right;">125 mA</td>
+<td>Design planning load</td>
 </tr>
 </tbody>
 </table>
-<h2 id="b-rail-demand-and-margin">B · Rail demand and margin<a class="headerlink" href="#b-rail-demand-and-margin" title="Permanent link">¶</a></h2>
-<table>
-<thead>
-<tr>
-<th>Result</th>
-<th style="text-align: right;">Planning estimate</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Sum of local +5 V loads</td>
-<td style="text-align: right;"><strong>185.94 mA</strong></td>
-</tr>
-<tr>
-<td>Safety margin</td>
-<td style="text-align: right;"><strong>25%</strong></td>
-</tr>
-<tr>
-<td>+5 V design-current estimate with margin</td>
-<td style="text-align: right;"><strong>232.42 mA</strong></td>
-</tr>
-<tr>
-<td>Output power at the margin load</td>
-<td style="text-align: right;"><strong>1.162 W</strong></td>
-</tr>
-</tbody>
-</table>
-<p>The emitters alone account for about 68 mA under the nominal forward-drop assumption. Measure blocked/unblocked sensor currents and the running Nano board to replace the allowances. Current uncertainty and regulator heating matter more than the regulator's headline current rating.</p>
-<h2 id="c-regulator-and-thermal-check">C · Regulator and thermal check<a class="headerlink" href="#c-regulator-and-thermal-check" title="Permanent link">¶</a></h2>
-<p>The schematic uses <strong>L7805ACV</strong>. Ignoring regulator ground current, <code>P_loss = (V_in − 5 V) × I_out</code>.</p>
-<table>
-<thead>
-<tr>
-<th>Input</th>
-<th style="text-align: right;">Dissipation at 232.42 mA</th>
-<th style="text-align: right;">Ideal linear conversion efficiency</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>9 V</td>
-<td style="text-align: right;"><strong>0.930 W</strong></td>
-<td style="text-align: right;">55.6%</td>
-</tr>
-<tr>
-<td>12 V</td>
-<td style="text-align: right;"><strong>1.627 W</strong></td>
-<td style="text-align: right;">41.7%</td>
-</tr>
-</tbody>
-</table>
-<p>Regulator ground current adds input demand and dissipation. A heatsink/thermal design cannot be accepted from these numbers alone: check the actual package's junction-to-ambient or heatsink path, ambient temperature, maximum junction temperature and mounting. At the earlier review example of 250 mA, 12 V input produces approximately <strong>1.75 W</strong> before ground-current loss.</p>
-<h2 id="d-external-source">D · External source<a class="headerlink" href="#d-external-source" title="Permanent link">¶</a></h2>
-<p>The team PRD specifies a <strong>9 V wall adapter</strong>, while the schematic allows 9–12 V at J1. A particular adapter is still unselected. Its usable continuous current must exceed the margin load plus regulator ground current, with appropriate polarity and connector fit. Until its rated output and regulator current are verified, remaining source capacity is <strong>unavailable</strong>. Start bring-up with a current-limited bench supply.</p>
-<p>The drawn 500 mA fuse does not establish a safe supply rating or guaranteed semiconductor protection. Check the time-current characteristic, inrush, wiring and regulator thermal limits before accepting it.</p>
-<h2 id="e-battery-runtime">E · Battery runtime<a class="headerlink" href="#e-battery-runtime" title="Permanent link">¶</a></h2>
-<p><strong>Not applicable to the current wall-powered concept.</strong> If a battery is selected later, add usable capacity, discharge limits, conversion loss and runtime at the verified load.</p>
-<h2 id="reusable-calculation">Reusable calculation<a class="headerlink" href="#reusable-calculation" title="Permanent link">¶</a></h2>
-<p><a class="download" href="../Team103_Encoder_Power_Budget.xlsx">Editable power-budget workbook</a> <a class="download" href="../budget-inputs.json">Machine-readable inputs</a></p>
-<p>The workbook follows sections A–E and exposes the assumptions. It is a working planning model; final supplier and measurement data must replace the marked allowances before claiming a completed worst-case course budget.</p>
+<p>At a regulated 9 V input, the LM7805 would dissipate approximately <code>(9 − 5) × 0.125 = 0.50 W</code>, plus its quiescent loss. This calculation is not a thermal qualification. Measure actual input voltage under load, rail current, regulator case temperature and startup behavior. Select any heatsink using the real package, ambient temperature and manufacturer thermal data. Do not size the fuse from motor stall current because that current does not pass through this PCB.</p>
+<p>The motor listing's 250 mA rated / 1.2 A stall figures refer to each <strong>12 V motor winding</strong>, not the encoder supply. Do not reuse the obsolete optical LED power budget. A current class-stock inventory and supplier quote are needed before claiming compliance with the $60/member course budget.</p>
 
 
 
@@ -984,13 +769,13 @@
         
         
           
-          <a href="../../Appendix/" class="md-footer__link md-footer__link--next" aria-label="Next: Review &amp; Resources">
+          <a href="../../06-PCB-Design/PCB-Design/" class="md-footer__link md-footer__link--next" aria-label="Next: PCB Design">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Next
               </span>
               <div class="md-ellipsis">
-                Review &amp; Resources
+                PCB Design
               </div>
             </div>
             <div class="md-footer__button md-icon">

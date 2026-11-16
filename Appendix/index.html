@@ -14,7 +14,7 @@
         <link rel="canonical" href="https://kek-koiki.github.io/kkoiki_RAS304_F26/Appendix/">
       
       
-        <link rel="prev" href="../05-Power-Budget/Power-Budget/">
+        <link rel="prev" href="../06-PCB-Design/PCB-Design/">
       
       
       
@@ -312,6 +312,25 @@
   
   
   
+  
+    <li class="md-tabs__item">
+      <a href="../06-PCB-Design/PCB-Design/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  PCB Design
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
     
   
   
@@ -545,6 +564,33 @@
       
   
   
+  
+  
+    <li class="md-nav__item">
+      <a href="../06-PCB-Design/PCB-Design/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    PCB Design
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
     
   
   
@@ -608,10 +654,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
       
         <li class="md-nav__item">
-  <a href="#external-review-walkthrough" class="md-nav__link">
+  <a href="#current-design-record" class="md-nav__link">
     <span class="md-ellipsis">
       
-        External review walkthrough
+        Current design record
       
     </span>
   </a>
@@ -619,32 +665,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#readiness-and-next-decisions" class="md-nav__link">
+  <a href="#before-release" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Readiness and next decisions
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#bench-verification-sequence" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Bench verification sequence
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#previous-sensor-design-assignment" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Previous sensor-design assignment
+        Before release
       
     </span>
   </a>
@@ -656,17 +680,6 @@
     <span class="md-ellipsis">
       
         Primary references
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#design-record" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Design record
       
     </span>
   </a>
@@ -708,10 +721,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
       
         <li class="md-nav__item">
-  <a href="#external-review-walkthrough" class="md-nav__link">
+  <a href="#current-design-record" class="md-nav__link">
     <span class="md-ellipsis">
       
-        External review walkthrough
+        Current design record
       
     </span>
   </a>
@@ -719,32 +732,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#readiness-and-next-decisions" class="md-nav__link">
+  <a href="#before-release" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Readiness and next decisions
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#bench-verification-sequence" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Bench verification sequence
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#previous-sensor-design-assignment" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Previous sensor-design assignment
+        Before release
       
     </span>
   </a>
@@ -756,17 +747,6 @@
     <span class="md-ellipsis">
       
         Primary references
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#design-record" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Design record
       
     </span>
   </a>
@@ -799,102 +779,27 @@
 
 
 <h1 id="review-resources">Review &amp; Resources<a class="headerlink" href="#review-resources" title="Permanent link">¶</a></h1>
-<h2 id="external-review-walkthrough">External review walkthrough<a class="headerlink" href="#external-review-walkthrough" title="Permanent link">¶</a></h2>
-<p>For the October 29, 2026 design review, use the <a href="../">overview</a> to introduce the subsystem, the <a href="../01-Block-Diagram/Block-Diagram/">block diagram</a> and <a href="../02-Component-Selection/Component-Selection/">component selection</a> to explain the architecture, then the <a href="../04-Schematic/schematic/">schematic</a> to follow one channel and its power/debug circuits. The <a href="../05-Power-Budget/Power-Budget/">power budget</a> supports the thermal discussion.</p>
-<h2 id="readiness-and-next-decisions">Readiness and next decisions<a class="headerlink" href="#readiness-and-next-decisions" title="Permanent link">¶</a></h2>
-<table>
-<thead>
-<tr>
-<th>Item</th>
-<th>Status</th>
-<th>Next action</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Individual page content and navigable assignment sections</td>
-<td>Updated for the encoder subsystem</td>
-<td>Keep content synchronized as design decisions change.</td>
-</tr>
-<tr>
-<td>Block diagram</td>
-<td>Updated to include amplification/filtering</td>
-<td>Review after final mechanical and interface decisions.</td>
-</tr>
-<tr>
-<td>Schematic downloads and visible raster image</td>
-<td>Revision B provided</td>
-<td>Correct C11 annotation mismatch before fabrication.</td>
-</tr>
-<tr>
-<td>Schematic ERC evidence</td>
-<td>Recorded pass</td>
-<td>Re-run after any electrical change.</td>
-</tr>
-<tr>
-<td>Component selection / priced BOM</td>
-<td>Orderable core parts, photos, unit prices and extended costs added</td>
-<td>Complete remaining alternative comparisons; reconfirm quotations and physical fit before ordering.</td>
-</tr>
-<tr>
-<td>Power budget</td>
-<td>Preliminary calculation with 25% margin</td>
-<td>Verify load currents, adapter rating, regulator ground current and thermal limits.</td>
-</tr>
-<tr>
-<td>MCC configuration</td>
-<td>Pin/peripheral plan documented</td>
-<td>Implement and capture the actual MCC configuration.</td>
-</tr>
-<tr>
-<td>Motors and disks</td>
-<td>Pending, intentionally deferred</td>
-<td>Confirm shaft dimensions, speed, gearing, slot count and bracket design.</td>
-</tr>
-<tr>
-<td>Ribbon interface</td>
-<td>Proposed only, intentionally deferred</td>
-<td>Agree pin mapping and protocol with Connor and the team.</td>
-</tr>
-<tr>
-<td>Encoder PCB and bench measurements</td>
-<td>Pending</td>
-<td>Complete layout, physical fit checks and bring-up.</td>
-</tr>
-<tr>
-<td>Team-site cross-link</td>
-<td>Team report linked from this site</td>
-<td>Ask the team to link Elijah's individual URL from its landing page.</td>
-</tr>
-</tbody>
-</table>
-<p>The <a href="https://ras304-f26-103.github.io/04-Product-Requirements/">team PRD</a> still reflects an earlier subsystem allocation and bus mapping. This individual site follows Elijah's revised encoder role and the two-motor decision. A team-level reconciliation remains necessary; this update does not change the team repository.</p>
-<h2 id="bench-verification-sequence">Bench verification sequence<a class="headerlink" href="#bench-verification-sequence" title="Permanent link">¶</a></h2>
-<ol>
-<li>Inspect connector orientation and continuity with power disconnected. Confirm fuse, regulator pins and the Nano external-power wiring.</li>
-<li>Power the disconnected logic board from a current-limited supply; measure VIN_FUSED and +5 V, then check full-load temperature with the complete assembly.</li>
-<li>Block and unblock each optical sensor. Probe TP4â€“TP7, U2 outputs and HC14 outputs for voltage levels, noise and saturation recovery.</li>
-<li>Rotate each disk in both directions. Check A/B phase order, known counts per revolution and the highest required edge rate.</li>
-<li>Implement firmware counting, a home/reference procedure and stable-state button debounce; verify interrupt loading and count snapshot integrity.</li>
-<li>Agree the final serial link and connect one board at a time. Test TX isolation, framing, stale-data behavior and power-off conditions.</li>
-</ol>
-<h2 id="previous-sensor-design-assignment">Previous sensor-design assignment<a class="headerlink" href="#previous-sensor-design-assignment" title="Permanent link">¶</a></h2>
-<p>The earlier <strong>EK_Sensor103</strong> KiCad/PCB exercise is retained here as a separate assignment artifact. Its DFM result does not certify the current two-motor encoder schematic or an encoder PCB.</p>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="JLCDFM_Results.jpg" data-desc-position="bottom"><img alt="Recorded JLCDFM result from the earlier sensor-design assignment" src="JLCDFM_Results.jpg"></a></p>
-<p>The prior conversation recorded <strong>0 danger findings and 7 warnings</strong>. The warning locations were not fully confirmed; an assumption that they came from EK copper lettering remains unverified.</p>
-<p><a class="download" href="EK_Sensor103_Project.zip">Sensor assignment project ZIP</a> <a class="download" href="EK103_JLCDFM_Results.pdf">Recorded DFM PDF</a> <a class="download" href="EK103_Schematic_PCB.pdf">Sensor schematic / PCB PDF</a></p>
+<h2 id="current-design-record">Current design record<a class="headerlink" href="#current-design-record" title="Permanent link">¶</a></h2>
+<p>The current design is Revision D. Earlier optical-sensor artwork and prices are superseded. The <a href="../04-Schematic/schematic/">schematic</a> and <a href="../06-PCB-Design/PCB-Design/">PCB Design</a> pages identify the current electrical and fabrication files.</p>
+<h2 id="before-release">Before release<a class="headerlink" href="#before-release" title="Permanent link">¶</a></h2>
+<ul>
+<li>Check the actual parts against the 1:1 print, especially jack, fuse clips, Nano sockets and regulator.</li>
+<li>Confirm teacher approval scope for the integrated encoder and unity-buffer analog path, and the instructor's manufacturing stackup.</li>
+<li>Review real KiCad and JLCDFM evidence for this exact Gerber ZIP.</li>
+<li>Verify 5 V UART compatibility and physical IDC numbering with the main-board owner.</li>
+<li>Measure 5 V regulation, current and regulator temperature before connecting the Nano and encoders.</li>
+<li>Verify both motors' encoder wire functions and pulses per revolution; check clean A/B transitions and firmware direction.</li>
+<li>Review costs with class-stock exclusions and approve the order explicitly.</li>
+</ul>
 <h2 id="primary-references">Primary references<a class="headerlink" href="#primary-references" title="Permanent link">¶</a></h2>
 <ul>
-<li><a href="https://ww1.microchip.com/downloads/aemDocuments/documents/MCU08/ProductDocuments/UserGuides/PIC18F57Q43-Curiosity-Nano-HW-UserGuide-DS40002186B.pdf">Microchip PIC18F57Q43 Curiosity Nano hardware user guide</a> â€” board pinout and external power.</li>
-<li><a href="https://www.vishay.com/docs/81147/tcst2103.pdf">Vishay TCST2103 family datasheet</a> â€” sensor package, optical/electrical characteristics and lead markings.</li>
-<li><a href="https://www.microchip.com/en-us/product/MCP6004">Microchip MCP6004</a> â€” quad amplifier documentation.</li>
-<li><a href="https://www.ti.com/product/SN74HC14">Texas Instruments SN74HC14</a> â€” Schmitt inverter electrical specifications.</li>
-<li><a href="https://www.st.com/en/power-management/l78.html">ST L78 family</a> â€” regulator pinout, operating limits and thermal specifications.</li>
-<li><a href="https://ras304-f26-103.github.io/">Team 103 report</a> â€” shared project context; older role/interface assignments need team reconciliation.</li>
+<li><a href="https://www.robotshop.com/products/e-s-motor-25dx54l-12v-gear-motor-with-magnetic-encoder-108-rpm">Teacher's exact motor</a></li>
+<li><a href="https://cdn.robotshop.com/rbm/a00a7635-653b-4220-aac9-b0c23c5c5e2c/7/7ef8b36b-a206-40b0-a32b-885875d30965/ba82ad34_25SG-370CA-encoder.pdf">Supplier encoder wiring attachment</a> — contains conflicting pulse-count information relative to the listing.</li>
+<li><a href="https://ww1.microchip.com/downloads/aemDocuments/documents/MCU08/ProductDocuments/UserGuides/PIC18F57Q43-Curiosity-Nano-HW-UserGuide-DS40002186B.pdf">Microchip Nano hardware guide</a></li>
+<li><a href="https://www.ti.com/lit/ds/symlink/sn74hc14.pdf">TI HC14 datasheet</a></li>
+<li><a href="https://ww1.microchip.com/downloads/en/DeviceDoc/MCP6001-1R-1U-2-4-1-MHz-Low-Power-Op-Amp-DS20001733L.pdf">MCP6004 datasheet</a></li>
 </ul>
-<h2 id="design-record">Design record<a class="headerlink" href="#design-record" title="Permanent link">¶</a></h2>
-<p>October 27: local KiCad review rebuilt the schematic grid, corrected ERC findings and exported Revision B. October 28: individual datasheet replaced the template examples, embedded the reviewed circuit, updated the block diagram to include conditioning, documented component rationale and added a preliminary power model. Source symbol geometry includes custom and adapted library work; EK labels alone do not establish personal authorship.</p>
-<p>October 28 sourcing refinement: added a detailed four-channel architecture diagram, local supplier product photos, example manufacturer part numbers, a priced BOM and an external-power purchasing candidate. Prices are dated references; motor and ribbon decisions remain deferred.</p>
+<p>Revision D is an engineering review design. Electrical bench tests and component fit checks remain pending. KiCad checks do not prove a working physical board. No order has been placed.</p>
 
 
 
@@ -933,7 +838,7 @@
       <nav class="md-footer__inner md-grid" aria-label="Footer">
         
           
-          <a href="../05-Power-Budget/Power-Budget/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Power Budget">
+          <a href="../06-PCB-Design/PCB-Design/" class="md-footer__link md-footer__link--prev" aria-label="Previous: PCB Design">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"></path></svg>
@@ -943,7 +848,7 @@
                 Previous
               </span>
               <div class="md-ellipsis">
-                Power Budget
+                PCB Design
               </div>
             </div>
           </a>
