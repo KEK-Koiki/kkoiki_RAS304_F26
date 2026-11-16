@@ -2,53 +2,46 @@
 title: Schematic Design
 ---
 
-
 # Schematic Design
 
-Revision B implements four optical channels for two motors, local 5 V regulation, a PIC18F57Q43 Nano, debug I/O and the proposed serial interface to the main board. The full schematic is embedded below; select the image to zoom, or open the PDF to inspect small labels.
+Revision D replaces the four optical interrupters with the two teacher-supplied **E-S Motor 25SG-370CA-78-EN integrated magnetic encoders**. The four A/B signals still pass through RC filters, MCP6004 op-amp buffers, SN74HC14 Schmitt inverters and the PIC18F57Q43 Curiosity Nano.
 
-![Revision B two-motor optical encoder schematic, Elijah Koiki, Team 103](Team103_Encoder_EK.png)
+![Revision D encoder interface schematic](Schematic_RevD.png)
 
-*Figure 2. Revision B, reviewed October 27, 2026 in KiCad 10.0.7.*
+*Figure 2. Revision D · Elijah Koiki · Team 103 · KiCad 10.0.7 · November 15, 2026.*
 
-[High-resolution schematic PDF](Team103_Encoder_EK.pdf){.download} [Complete KiCad project ZIP](Team103_Encoder_EK_Project.zip){.download} [ERC report JSON](erc_after.json){.download} [Engineering review notes](REVIEW_AND_TESTS.txt){.download}
+[High-resolution schematic PDF](Team103_Encoder_RevD_Schematic.pdf){.download} [ERC report](erc.rpt){.download}
 
-## How the circuit works
+## Protected local power
 
-### 1. Protected local power
+J1 is a **9 V center-positive barrel input**, using the selected CUI PJ-102AH footprint. Its center pin feeds F1 and the HTC LM7805; sleeve is common ground and the switched contact is unused. The regulator marking supplied by the student is **HTC LM7805 317**. Pins are 1 IN, 2 GND/tab, 3 OUT, drawn together on one side. Actual jack, fuse clips and regulator fit must be checked with the 1:1 print. Input, output and local bypass capacitors support the 5 V rail; D1 indicates power.
 
-J1 takes a center-positive 9–12 V source. F1 feeds VIN_FUSED, and the L7805ACV generates +5 V. Input/output capacitors and local decoupling support the regulator and ICs; the green power LED indicates that the rail is present. Test points expose VIN_FUSED, +5 V and ground. Regulator thermal performance must be verified using the [power budget](../05-Power-Budget/Power-Budget.md).
+Nano **VTG edge 51 = +5 V**, **VOFF edge 55 = GND**, **VBUS edge 56 = NC**. This disables the Nano regulator for external-powered USB programming/debugging. VOFF is permanently grounded on this carrier; remove the Nano from the carrier for USB-only operation. Never apply the 9 V input to VTG. See [Microchip's hardware guide](https://ww1.microchip.com/downloads/aemDocuments/documents/MCU08/ProductDocuments/UserGuides/PIC18F57Q43-Curiosity-Nano-HW-UserGuide-DS40002186B.pdf).
 
-The Nano is represented as a passive connector: +5 V enters VTG edge 51 and VOFF edge 55 is grounded, following the external-power approach documented in the Nano user guide. VBUS edge 56 is not connected in this design. Check board orientation and the guide before connecting external power and USB.
+## Encoder harnesses
 
-### 2. Optical current to analog voltage
+Each motor uses one four-position screw terminal, J2 or J3. The [encoder attachment](https://cdn.robotshop.com/rbm/a00a7635-653b-4220-aac9-b0c23c5c5e2c/7/7ef8b36b-a206-40b0-a32b-885875d30965/ba82ad34_25SG-370CA-encoder.pdf) on the [teacher's motor listing](https://www.robotshop.com/products/e-s-motor-25dx54l-12v-gear-motor-with-magnetic-encoder-108-rpm) identifies the following functions. Confirm them against the actual harness and sensor PCB before power-up.
 
-Four off-board TCST2103 sensors monitor the two disks. Each emitter uses a 220 Ω series resistor, giving approximately `(5 − 1.25) / 220 = 17 mA` under the stated nominal forward-drop assumption. The phototransistor collector works with a 4.7 kΩ pull-up and a 1 nF capacitor. TP4–TP7 expose the raw channels for blocked/unblocked testing.
-
-### 3. Amplification and digital edges
-
-U2 is a quad MCP6004. Each non-inverting stage has nominal gain 1.5; a high raw signal can drive its output into positive saturation. That behavior makes saturation recovery, rail levels and pulse width key bench tests. The SN74HC14 then applies Schmitt hysteresis and inversion before RB0–RB3 receive the signals. The filter's nominal 33.9 kHz pole is a calculation, not a demonstrated operating-rate limit.
-
-### 4. Counting and reporting
-
-The PIC's proposed firmware tracks transitions in each A/B pair and reports counts and timing to the main board. RC6 TX passes through JP1 to J6; removing JP1 isolates the transmit path. RC7 receives ENC_RX. The proposed connection is **5 V logic UART**, not RS-232 voltage levels. Shared multidriver operation has not been approved; the team must resolve addressing/topology and avoid output contention.
-
-### 5. Debug and serviceability
-
-RA3 drives the yellow debug LED. RA4 reads SW1 with R19 and C11; firmware debounce remains necessary. RA0/RA1 are available at J7. Labeled connectors, channel test points and the TX jumper support independent bring-up of the power, sensing and communication stages.
-
-## Verification evidence
-
-| Check | Recorded result | Scope |
+| Board pin | Function | Motor wire |
 | --- | --- | --- |
-| Original schematic ERC | 2 errors, 125 warnings | Baseline from the local review records |
-| Revision B CLI and GUI ERC | **0 errors, 0 warnings** | KiCad 10.0.7, October 27, 2026 |
-| Netlist comparison | Connected PCB component pin sets unchanged | Original and Revision B electrical connectivity comparison |
-| Hardware sensing, firmware and physical fit | **Pending** | No working prototype or measurement record supplied |
-| Encoder PCB layout / DRC | **Pending** | The encoder project contains a schematic, not a validated PCB layout |
+| J2/J3 1 | Encoder +5 V | Blue |
+| J2/J3 2 | Common ground | Green |
+| J2/J3 3 | Encoder A | Yellow |
+| J2/J3 4 | Encoder B | White |
+| Off-board | Motor winding + / −, to motor driver | Red / black |
 
-The ERC report retains four default ignored categories: single global label, four-way junction, simulation model issue and footprint filter. No individual violations were excluded to obtain the reported pass. ERC checks schematic rules; it does not validate the optical or analog performance, Nano firmware directions, footprint fit or safe operating temperature.
+The encoder attachment specifies 3.5–20 V supply, up to 10 mA, and approximately 0-to-Vcc A/B outputs. **12 V applies to the motor windings; this PCB supplies the encoder at 5 V.** Its 64 counts/motor-revolution description conflicts with the listing's 11 PPR. Firmware counts per output revolution must be calibrated rather than hardcoded from either conflicting description.
 
-## Open items before fabrication
+## Filtering and digital conditioning
 
-Confirm optical mounting and the maximum pulse rate; measure amplifier recovery and clean HC14 output levels; resolve the **C11 100 nF / 1 ms versus 10 ms annotation mismatch**; select and verify missing footprints; check external power and thermal behavior; and agree the final ribbon mapping with the team. The detailed [review checklist](../Appendix/index.md) provides the bring-up sequence.
+Each input has a 10 kΩ pull-up and a 1 kΩ / 1 nF RC filter: nominal τ = 1 µs and pole ≈159 kHz. The four MCP6004 stages are unity buffers, avoiding the previous gain-1.5 stage's saturation on full-swing logic pulses. HC14 hysteresis cleans the edges and inverts both A/B phases. Direction still depends on harness phase ordering and the firmware convention.
+
+All four op-amps are used. Unused HC14 inputs 11 and 13 each have a 10 kΩ pull-down; unused outputs 10 and 12 are NC. Supply bypass capacitors are provided. The general course analog-gain requirement needs instructor confirmation for this teacher-approved integrated-encoder change; unity buffers are explicitly identified here.
+
+## Main-board interface
+
+J6 is a keyed **2×4 IDC ribbon connector**. The user confirmed this mapping: **1 = encoder TX, 2 = encoder RX, 8 = common ground**, 3–7 unused. Pin 8 is electrically the same GND net as both encoder grounds, the power supply and Nano. RC6/RC7 use the planned 5 V UART interface and require firmware PPS configuration. JP1 can isolate TX. Main-board logic-level compatibility must be verified before connection.
+
+## Verification and PCB files
+
+ERC and DRC evidence, editable project, Gerbers, layout views and fabrication status are on the new [PCB Design page](../06-PCB-Design/PCB-Design.md). Revision D is an engineering review design. Electrical bench tests and component fit checks remain pending. KiCad checks do not prove a working physical board. No order has been placed.

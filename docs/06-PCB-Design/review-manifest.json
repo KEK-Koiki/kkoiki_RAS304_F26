@@ -1,0 +1,28 @@
+{
+  "revision": "D",
+  "release": "REVIEW ONLY; no order approval",
+  "erc": "0 errors, 0 warnings",
+  "drc": "0 violations, 0 unconnected, CLI parity 0",
+  "jlcdfm": "PENDING LOGIN; not run",
+  "sha256": {
+    "Team103_Encoder_RevD_EK.kicad_pro": "1b6065892e65adea0110bc712b0d3490ccff11e697607670538243bc483bef06",
+    "Team103_Encoder_RevD_EK.kicad_sch": "82b61f7fe0a237bdcd38ac864c901c9b622dcab07c31a5ca370186e7ae3d6cfd",
+    "Team103_Encoder_RevD_EK.kicad_pcb": "c69a165d842223403cf9c99bcc2a133ffbd36e3704a50cd332cc8130f5c8ca40",
+    "EK.kicad_sym": "b5aa6c156855371899fded2a6cd8b073ff4d378b44a3f4a30b4d35136eed6894",
+    "sym-lib-table": "1929ce37435ff5f05bd40db3ffab4ff0f9a928ca0f6814ff6f557584f5b9816f",
+    "fp-lib-table": "8e4cb352b2dc4038d3b8f6ac518f7391f72a329b108e1edb493a913258ae8cd1",
+    "README_REVIEW_FIRST.md": "ccb273dfb5aba0df64b2a23f59a686f43f856cf3a4244516ae15ac0cd2065cd0",
+    "EK.pretty\\EK_CuriosityNano_2x28_15.24mm.kicad_mod": "db5322ab737843f6891557c6f9ee1152b28c24ef7b204d325b8660cf4506012f",
+    "EK.pretty\\EK_LED_D3.0mm_A1K2.kicad_mod": "9e93e21285044d9a16b141aef0a93d563e598f2e4a9212d78f9c22919306b273",
+    "deliverables\\gerbers\\Team103_Encoder_RevD_EK-B_Cu.gbr": "f8b6f102a4dc9e2e3ab4b9a1d0ef81f063340c80503121e261645badcc9c5f9b",
+    "deliverables\\gerbers\\Team103_Encoder_RevD_EK-B_Mask.gbr": "2c77de965eb3dc0eb51edc23311bb8ae2f4daecabba298afc1f21c86582772a0",
+    "deliverables\\gerbers\\Team103_Encoder_RevD_EK-B_Silkscreen.gbr": "76025314a3ad3de38448f90c09bee9f2736a2d978c1aecc91bc23f6a132e8318",
+    "deliverables\\gerbers\\Team103_Encoder_RevD_EK-Edge_Cuts.gbr": "69e2697eb9047cd41cbae589f9472433c27c0eb1c71293ed6c39335065f6411d",
+    "deliverables\\gerbers\\Team103_Encoder_RevD_EK-F_Cu.gbr": "c7b86d4ddcad8a22a8841fce035a88c57677fe52d8803d80fff7396c153d803b",
+    "deliverables\\gerbers\\Team103_Encoder_RevD_EK-F_Mask.gbr": "dc34513d82a3f90157f560c3f9396890030b5b00fe577315fb2ace86dd147d63",
+    "deliverables\\gerbers\\Team103_Encoder_RevD_EK-F_Silkscreen.gbr": "2a8d38fe0dcdf023b0a30679d3386be0298154e67ac60d1a4486481719c23540",
+    "deliverables\\gerbers\\Team103_Encoder_RevD_EK-job.gbrjob": "293538b409e7b25eb8aac958482575cbad72de6c17795a37b7c0f5950707e1d5",
+    "deliverables\\gerbers\\Team103_Encoder_RevD_EK-NPTH.drl": "4b4f7ba562a2bea38934a4ad1ad5ef0240037aa8cf1e993fac0d51ae8b399502",
+    "deliverables\\gerbers\\Team103_Encoder_RevD_EK-PTH.drl": "4cdb8ae26d5639493df02c774112d59851215a03df68e667f1781e5daebfdc87"
+  }
+}

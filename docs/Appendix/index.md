@@ -2,61 +2,28 @@
 title: Review & Resources
 ---
 
-
 # Review & Resources
 
-## External review walkthrough
+## Current design record
 
-For the October 29, 2026 design review, use the [overview](../index.md) to introduce the subsystem, the [block diagram](../01-Block-Diagram/Block-Diagram.md) and [component selection](../02-Component-Selection/Component-Selection.md) to explain the architecture, then the [schematic](../04-Schematic/schematic.md) to follow one channel and its power/debug circuits. The [power budget](../05-Power-Budget/Power-Budget.md) supports the thermal discussion.
+The current design is Revision D. Earlier optical-sensor artwork and prices are superseded. The [schematic](../04-Schematic/schematic.md) and [PCB Design](../06-PCB-Design/PCB-Design.md) pages identify the current electrical and fabrication files.
 
-## Readiness and next decisions
+## Before release
 
-| Item | Status | Next action |
-| --- | --- | --- |
-| Individual page content and navigable assignment sections | Updated for the encoder subsystem | Keep content synchronized as design decisions change. |
-| Block diagram | Updated to include amplification/filtering | Review after final mechanical and interface decisions. |
-| Schematic downloads and visible raster image | Revision B provided | Correct C11 annotation mismatch before fabrication. |
-| Schematic ERC evidence | Recorded pass | Re-run after any electrical change. |
-| Component selection / priced BOM | Orderable core parts, photos, unit prices and extended costs added | Complete remaining alternative comparisons; reconfirm quotations and physical fit before ordering. |
-| Power budget | Preliminary calculation with 25% margin | Verify load currents, adapter rating, regulator ground current and thermal limits. |
-| MCC configuration | Pin/peripheral plan documented | Implement and capture the actual MCC configuration. |
-| Motors and disks | Pending, intentionally deferred | Confirm shaft dimensions, speed, gearing, slot count and bracket design. |
-| Ribbon interface | Proposed only, intentionally deferred | Agree pin mapping and protocol with Connor and the team. |
-| Encoder PCB and bench measurements | Pending | Complete layout, physical fit checks and bring-up. |
-| Team-site cross-link | Team report linked from this site | Ask the team to link Elijah's individual URL from its landing page. |
-
-The [team PRD](https://ras304-f26-103.github.io/04-Product-Requirements/) still reflects an earlier subsystem allocation and bus mapping. This individual site follows Elijah's revised encoder role and the two-motor decision. A team-level reconciliation remains necessary; this update does not change the team repository.
-
-## Bench verification sequence
-
-1. Inspect connector orientation and continuity with power disconnected. Confirm fuse, regulator pins and the Nano external-power wiring.
-2. Power the disconnected logic board from a current-limited supply; measure VIN_FUSED and +5 V, then check full-load temperature with the complete assembly.
-3. Block and unblock each optical sensor. Probe TP4â€“TP7, U2 outputs and HC14 outputs for voltage levels, noise and saturation recovery.
-4. Rotate each disk in both directions. Check A/B phase order, known counts per revolution and the highest required edge rate.
-5. Implement firmware counting, a home/reference procedure and stable-state button debounce; verify interrupt loading and count snapshot integrity.
-6. Agree the final serial link and connect one board at a time. Test TX isolation, framing, stale-data behavior and power-off conditions.
-
-## Previous sensor-design assignment
-
-The earlier **EK_Sensor103** KiCad/PCB exercise is retained here as a separate assignment artifact. Its DFM result does not certify the current two-motor encoder schematic or an encoder PCB.
-
-![Recorded JLCDFM result from the earlier sensor-design assignment](JLCDFM_Results.jpg)
-
-The prior conversation recorded **0 danger findings and 7 warnings**. The warning locations were not fully confirmed; an assumption that they came from EK copper lettering remains unverified.
-
-[Sensor assignment project ZIP](EK_Sensor103_Project.zip){.download} [Recorded DFM PDF](EK103_JLCDFM_Results.pdf){.download} [Sensor schematic / PCB PDF](EK103_Schematic_PCB.pdf){.download}
+- Check the actual parts against the 1:1 print, especially jack, fuse clips, Nano sockets and regulator.
+- Confirm teacher approval scope for the integrated encoder and unity-buffer analog path, and the instructor's manufacturing stackup.
+- Review real KiCad and JLCDFM evidence for this exact Gerber ZIP.
+- Verify 5 V UART compatibility and physical IDC numbering with the main-board owner.
+- Measure 5 V regulation, current and regulator temperature before connecting the Nano and encoders.
+- Verify both motors' encoder wire functions and pulses per revolution; check clean A/B transitions and firmware direction.
+- Review costs with class-stock exclusions and approve the order explicitly.
 
 ## Primary references
 
-- [Microchip PIC18F57Q43 Curiosity Nano hardware user guide](https://ww1.microchip.com/downloads/aemDocuments/documents/MCU08/ProductDocuments/UserGuides/PIC18F57Q43-Curiosity-Nano-HW-UserGuide-DS40002186B.pdf) â€” board pinout and external power.
-- [Vishay TCST2103 family datasheet](https://www.vishay.com/docs/81147/tcst2103.pdf) â€” sensor package, optical/electrical characteristics and lead markings.
-- [Microchip MCP6004](https://www.microchip.com/en-us/product/MCP6004) â€” quad amplifier documentation.
-- [Texas Instruments SN74HC14](https://www.ti.com/product/SN74HC14) â€” Schmitt inverter electrical specifications.
-- [ST L78 family](https://www.st.com/en/power-management/l78.html) â€” regulator pinout, operating limits and thermal specifications.
-- [Team 103 report](https://ras304-f26-103.github.io/) â€” shared project context; older role/interface assignments need team reconciliation.
+- [Teacher's exact motor](https://www.robotshop.com/products/e-s-motor-25dx54l-12v-gear-motor-with-magnetic-encoder-108-rpm)
+- [Supplier encoder wiring attachment](https://cdn.robotshop.com/rbm/a00a7635-653b-4220-aac9-b0c23c5c5e2c/7/7ef8b36b-a206-40b0-a32b-885875d30965/ba82ad34_25SG-370CA-encoder.pdf) — contains conflicting pulse-count information relative to the listing.
+- [Microchip Nano hardware guide](https://ww1.microchip.com/downloads/aemDocuments/documents/MCU08/ProductDocuments/UserGuides/PIC18F57Q43-Curiosity-Nano-HW-UserGuide-DS40002186B.pdf)
+- [TI HC14 datasheet](https://www.ti.com/lit/ds/symlink/sn74hc14.pdf)
+- [MCP6004 datasheet](https://ww1.microchip.com/downloads/en/DeviceDoc/MCP6001-1R-1U-2-4-1-MHz-Low-Power-Op-Amp-DS20001733L.pdf)
 
-## Design record
-
-October 27: local KiCad review rebuilt the schematic grid, corrected ERC findings and exported Revision B. October 28: individual datasheet replaced the template examples, embedded the reviewed circuit, updated the block diagram to include conditioning, documented component rationale and added a preliminary power model. Source symbol geometry includes custom and adapted library work; EK labels alone do not establish personal authorship.
-
-October 28 sourcing refinement: added a detailed four-channel architecture diagram, local supplier product photos, example manufacturer part numbers, a priced BOM and an external-power purchasing candidate. Prices are dated references; motor and ribbon decisions remain deferred.
+Revision D is an engineering review design. Electrical bench tests and component fit checks remain pending. KiCad checks do not prove a working physical board. No order has been placed.
