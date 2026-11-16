@@ -22,9 +22,15 @@ Signal tracks are at least 0.508 mm (20 mil), power/GND tracks 1.016 mm (40 mil)
 
 ## Submission evidence
 
-The Canvas submission requires the Gerber ZIP, a real KiCad DRC screenshot showing this board and zero errors, and a real successful JLCDFM preview/report screenshot. The schematic URL and this page's URL are supplied as Canvas comments. **Current status: KiCad GUI DRC screenshot is ready; JLCDFM is blocked at account login and its proof is missing.** Evidence status is recorded in the local submission checklist; a machine DRC report alone is not a substitute for the required screenshot. JLCDFM success must not be inferred from KiCad success.
+The required Gerber ZIP, real KiCad zero-error DRC screenshot and real JLCDFM preview/analysis screenshot are prepared. Add the schematic page URL and this page URL as Canvas comments. Nothing has been submitted to Canvas or ordered.
 
-![Actual Revision D KiCad DRC: zero errors and warnings](Koiki_Elijah_DRC.png)
+![Final KiCad DRC: zero errors and warnings](Koiki_Elijah_DRC.png)
+
+![Completed JLCDFM analysis and actual board preview](Koiki_Elijah_DFM.png)
+
+[Supplementary silkscreen/drill screenshot](Koiki_Elijah_DFM_Silk_Drill.png){.download} [Full DFM findings and review notes](JLCDFM_REVIEW.md) [Raw result record](jlcdfm-results.json){.download}
+
+**DFM analysis completed, with findings retained.** Silkscreen clearances were corrected and now report zero issues. Default-rule assembly-separation, sharp-corner, track-end and NPTH-import findings remain visible; see the review notes. No custom thresholds were relaxed. This evidence is not an unconditional fabrication approval.
 
 [Engineering review checklist](README_REVIEW_FIRST.md)
 
@@ -32,6 +38,6 @@ The Canvas submission requires the Gerber ZIP, a real KiCad DRC screenshot showi
 
 The CAD stackup records 1.6 mm FR4 and 0.5 oz copper per side. The course mill-spec document states 0.059 inch thickness and the assignment requests 0.5 oz; JLCPCB commonly supplies 1.6 mm / 1 oz outer copper. Confirm the instructor's batch-order settings before release. The design's conservative copper widths do not themselves change the manufacturer's selected stackup. Drill output uses Excellon inch units.
 
-Before approval: fit the actual class jack, fuse clips, TO-220 regulator, Nano sockets and connectors to the print; review regulator temperature; confirm the analog rubric exception and stackup; verify 5 V logic compatibility; and complete the real DFM check. Parts and delivered fabrication costs require a current quote and class-stock inventory. The course budget is $60 per team member with the stated class-supplied exclusions. No budget pass is claimed from the obsolete optical-sensor BOM.
+Before approval: fit the actual class jack, fuse clips, TO-220 regulator, Nano sockets and connectors to the print; review regulator temperature; confirm the analog rubric exception and stackup; verify 5 V logic compatibility; and review the remaining DFM findings. Parts and delivered fabrication costs require a current quote and class-stock inventory. The course budget is $60 per team member with the stated class-supplied exclusions. No budget pass is claimed from the obsolete optical-sensor BOM.
 
 Revision D is an engineering review design. Electrical bench tests and component fit checks remain pending. KiCad checks do not prove a working physical board. No order has been placed. Ordering requires the student's explicit approval after review; this website does not authorize purchasing.
